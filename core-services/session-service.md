@@ -2,7 +2,7 @@
 
 The session service is what creates and handles the creation, retrieval, updating and clearing of the UmbCheckout Basket within the .NET session.
 
-You can access the session service by injecting `ISessionService.cs` which can be found within the namespace namespace `UmbCheckout.Core.Interfaces`
+You can access the session service by injecting `ISessionService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
 #### Create
 

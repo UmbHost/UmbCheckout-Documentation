@@ -2,7 +2,7 @@
 
 The basket service is what and handles all the UmbCheckout Basket operations.
 
-You can access the basket service by injecting `IBasketService.cs` which can be found within the namespace namespace `UmbCheckout.Core.Interfaces`
+You can access the basket service by injecting `IBasketService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
 #### Get
 

@@ -6,7 +6,7 @@ This feature requires a paid license
 
 The database service is what and handles the insertion, retrieval, updating and clearing of the UmbCheckout Basket within the database.
 
-You can access the database service by injecting `IDatabaseService.cs` which can be found within the namespace namespace `UmbCheckout.Core.Interfaces`
+You can access the database service by injecting `IDatabaseService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
 #### GetBasket
 
