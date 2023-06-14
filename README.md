@@ -1,5 +1,5 @@
 ---
-description: Documentation for UmbCheckout, an eCommerce solution for Umbraco
+description: Documentation for UmbCheckout an eCommerce solution for Umbraco
 ---
 
 # 🛒 UmbCheckout Documentation

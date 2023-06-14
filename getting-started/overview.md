@@ -1,5 +1,5 @@
 ---
-description: Getting Started with UmbCheckout, an eCommerce solution for Umbraco
+description: Getting Started with UmbCheckout
 ---
 
 # Overview
