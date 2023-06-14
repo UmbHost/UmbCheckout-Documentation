@@ -30,7 +30,7 @@ Task<Basket> Add(IEnumerable<LineItem> items);
 
 #### Reduce
 
-Reduces the specified item by a count of 1
+Reduces the specified item by a count of 1 or removes from the Basket if only 1
 
 ```csharp
 Task<Basket> Reduce(Guid id);
