@@ -6,11 +6,11 @@ description: Configuring UmbCheckout
 
 There is no additional coding required to make use of UmbCheckout after being installed.
 
-After the package is installed head to `Settings -> UmbCheckout -> Configuration` to set the Checkout **Success** and **Cancel** pages / URLs.
+After the package is installed head to Settings -> UmbCheckout -> Configuration to set the Checkout **Success** and **Cancel** pages / URLs.
 
 You will need to add your Stripe Secret API key into your `appsettings.json` below the `LicenseKey` as below:
 
-```
+```json
   "UmbCheckout": {
     "LicenseKey": "YOUR LICENSE KEY HERE",
     "Stripe": {

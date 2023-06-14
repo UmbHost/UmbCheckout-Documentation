@@ -6,7 +6,7 @@ description: Installing UmbCheckout
 
 UmbCheckout is installed using the NuGet package manager using either the below command:
 
-```
+```csharp
 dot add package UmbHost.UmbCheckout
 ```
 
@@ -20,7 +20,7 @@ UmbCheckout uses Umbraco Migrations to install all of the tables required to fun
 
 If you have purchased a license to enable more features, you simply need to add the following to your `appsettings.json` file:
 
-```
+```json
   "UmbCheckout": {
     "LicenseKey": "YOUR LICENSE KEY HERE"
   }

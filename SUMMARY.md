@@ -7,6 +7,13 @@
 * [Overview](getting-started/overview.md)
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
+* [Buy a License](https://my.umbhost.net)
+
+## Configuration
+
+* [Configuration Options](configuration/configuration-options.md)
+* [Shipping Rates](configuration/shipping-rates.md)
+* [Tax Rates](configuration/tax-rates.md)
 
 ## Core Services
 
