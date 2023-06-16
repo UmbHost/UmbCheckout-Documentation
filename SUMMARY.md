@@ -21,11 +21,15 @@
 * [Database Service](core-services/database-service.md)
 * [Basket Service](core-services/basket-service.md)
 
-## Stripe Services & Controllers
+## Payment Providers
 
-* [Stripe Session Service](stripe-services-and-controllers/stripe-session-service.md)
-* [Stripe Database Service](stripe-services-and-controllers/stripe-database-service.md)
-* [Stripe Basket Controller](stripe-services-and-controllers/stripe-basket-controller.md)
+* [Stripe](payment-providers/stripe/README.md)
+  * [Stripe Session Service](payment-providers/stripe/stripe-session-service.md)
+  * [Stripe Database Service](payment-providers/stripe/stripe-database-service.md)
+  * [Stripe Basket Controller](payment-providers/stripe/stripe-basket-controller.md)
+* [GoCardless](payment-providers/gocardless.md)
+* [PayPal](payment-providers/paypal.md)
+* [Klarna](payment-providers/klarna.md)
 
 ## Scheduled Tasks & Notifications
 
