@@ -6,8 +6,8 @@ description: Installing UmbCheckout
 
 UmbCheckout is installed using the NuGet package manager using either the below command:
 
-```csharp
-dot add package UmbHost.UmbCheckout
+```
+Coming Soon
 ```
 
 Alternatively, you can install using the NuGet package manager GUI within Visual Studio.
