@@ -21,6 +21,9 @@
 * [Session Service](core-services/session-service.md)
 * [Database Service](core-services/database-service.md)
 * [Basket Service](core-services/basket-service.md)
+* [Object Reference](core-services/object-reference/README.md)
+  * [Basket](core-services/object-reference/basket.md)
+  * [UmbCheckoutSession](core-services/object-reference/umbcheckoutsession.md)
 
 ## Payment Providers
 
@@ -28,6 +31,10 @@
   * [Stripe Session Service](payment-providers/stripe/stripe-session-service.md)
   * [Stripe Database Service](payment-providers/stripe/stripe-database-service.md)
   * [Stripe Basket Controller](payment-providers/stripe/stripe-basket-controller.md)
+  * [Object Reference](payment-providers/stripe/object-reference/README.md)
+    * [Session](payment-providers/stripe/object-reference/session.md)
+    * [TaxRate](payment-providers/stripe/object-reference/taxrate.md)
+    * [ShippingRate](payment-providers/stripe/object-reference/shippingrate.md)
 * [GoCardless](payment-providers/gocardless.md)
 * [PayPal](payment-providers/paypal.md)
 * [Klarna](payment-providers/klarna.md)
