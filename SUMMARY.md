@@ -5,6 +5,7 @@
 ## Getting Started
 
 * [Overview](getting-started/overview.md)
+* [License Comparison](getting-started/license-comparison.md)
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
 * [Buy a License](https://my.umbhost.net)
