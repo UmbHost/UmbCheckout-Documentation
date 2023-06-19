@@ -25,3 +25,12 @@ Alternatively, you can load the View Component without using the tag helper:
 ```cshtml
 @await Component.InvokeAsync(typeof(BasketLinkViewComponent))
 ```
+
+### Configurable Properties
+
+You can set the following properties
+
+| Property    | Use                                       |
+| ----------- | ----------------------------------------- |
+| basketAlias | The Content Type alias of the Basket page |
+| linkName    | The text shown on the link                |

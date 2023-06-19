@@ -20,3 +20,18 @@ You will need to add your Stripe Secret API key into your `appsettings.json` bel
 ```
 
 You can find your Stripe Secret API key [within your account](https://dashboard.stripe.com/apikeys) by heading to `Developers -> API keys`
+
+### Required Product Properties
+
+Your product needs to have the following required properties added
+
+| Alias            | Property Type |
+| ---------------- | ------------- |
+| umbCheckoutPrice | Decimal       |
+
+Your product can have the following optional properties
+
+| Alias                  | Property Type                                                 |
+| ---------------------- | ------------------------------------------------------------- |
+| umbCheckoutDescription | Text Area                                                     |
+| umbCheckoutMetaData    | [Meta Data](../property-editors/meta-data-property-editor.md) |
