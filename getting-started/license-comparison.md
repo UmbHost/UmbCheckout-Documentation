@@ -1,6 +1,6 @@
 # License Comparison
 
-The UmbCheckout core is opensource and usable under the GNU GPLv3 license, the table below outlines what the differences are between the free version and the paid for version.\
+The UmbCheckout core is opensource and usable under the GNU GPLv3 license during the development phase, this will change to the MIT license once the first stable release is out, the table below outlines what the differences are between the free version and the paid for version.\
 \
 The paid license is included with any shared hosting package purchased through [UmbHost Limited](https://umbhost.net)
 
