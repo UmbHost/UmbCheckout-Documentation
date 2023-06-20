@@ -7,8 +7,12 @@ description: Installing UmbCheckout
 UmbCheckout is installed using the NuGet package manager using either the below command:
 
 ```
-Coming Soon
+dotnet add package UmbCheckout --version 1.0.0-beta1
 ```
+
+You will also need to install a payment provider, currently there is only Stripe
+
+`dotnet add package UmbCheckout.Stripe --version 1.0.0-beta1`
 
 Alternatively, you can install using the NuGet package manager GUI within Visual Studio.
 
