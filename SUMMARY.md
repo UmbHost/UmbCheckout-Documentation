@@ -27,6 +27,7 @@
   * [LineItem](core-services/object-reference/lineitem.md)
   * [UmbCheckoutConfiguration](core-services/object-reference/umbcheckoutconfiguration.md)
   * [MultiUrlPicker](core-services/object-reference/multiurlpicker.md)
+* [Cookies](core-services/cookies.md)
 
 ## Payment Providers
 
