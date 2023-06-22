@@ -4,6 +4,10 @@ The UmbCheckout core is opensource and usable under the GNU GPLv3 license during
 \
 The paid license is included with any shared hosting package purchased through [UmbHost Limited](https://umbhost.net)
 
+You can purchase a license from the link below:
+
+[https://my.umbhost.net/store/umbraco-packages](https://my.umbhost.net/store/umbraco-packages)
+
 |                              |                                                          Free Version                                                          | Paid Version                                                                                                                         |
 | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------ |
 |            License           | GNU GPLv3 during development, [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/) after first stable release | Core: GNU GPLv3 during development, [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/) after first stable release |

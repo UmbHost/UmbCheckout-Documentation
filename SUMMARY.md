@@ -8,7 +8,7 @@
 * [License Comparison](getting-started/license-comparison.md)
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
-* [Buy a License](https://my.umbhost.net)
+* [Buy a License](https://my.umbhost.net/store/umbraco-packages)
 
 ## Configuration
 
