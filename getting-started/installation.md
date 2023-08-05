@@ -7,7 +7,7 @@ description: Installing UmbCheckout
 UmbCheckout is installed using the NuGet package manager using either the below command:
 
 ```
-dotnet add package UmbCheckout --version 1.0.0
+dotnet add package UmbCheckout
 ```
 
 You will also need to install a [payment provider](broken-reference).

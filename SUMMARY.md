@@ -2,7 +2,7 @@
 
 * [🛒 UmbCheckout Documentation](README.md)
 
-## Getting Started
+## 📔 Getting Started
 
 * [Overview](getting-started/overview.md)
 * [License Comparison](getting-started/license-comparison.md)
@@ -10,11 +10,11 @@
 * [Configuration](getting-started/configuration.md)
 * [Buy a License](https://my.umbhost.net/store/umbraco-packages)
 
-## Configuration
+## 🛠 Configuration
 
 * [Configuration Options](configuration/configuration-options.md)
 
-## Core Services
+## 🛒 Core Services
 
 * [Session Service](core-services/session-service.md)
 * [Database Service](core-services/database-service.md)
@@ -29,7 +29,7 @@
 * [Addons](core-services/addons/README.md)
   * [Database Service](core-services/addons/database-service.md)
 
-## Payment Providers
+## 💰 Payment Providers
 
 * [Stripe](payment-providers/stripe/README.md)
   * [Installation](payment-providers/stripe/installation.md)
@@ -58,21 +58,27 @@
     * [ShippingRate](payment-providers/stripe/object-reference/shippingrate.md)
   * [Property Editors](payment-providers/stripe/property-editors/README.md)
     * [Meta Data Property Editor](payment-providers/stripe/property-editors/meta-data-property-editor.md)
-* [Addons](payment-providers/addons/README.md)
-  * [Tax Rates](payment-providers/addons/tax-rates.md)
-  * [Services](payment-providers/addons/services/README.md)
-    * [Stripe Tax Rate ApiService](payment-providers/addons/services/stripe-tax-rate-apiservice.md)
-    * [Stripe Tax Rate Database Service](payment-providers/addons/services/stripe-tax-rate-database-service.md)
-  * [Notifications](payment-providers/addons/notifications/README.md)
-    * [OnStripeTaxRateSavedNotification](payment-providers/addons/notifications/onstripetaxratesavednotification.md)
-    * [OnStripeTaxRateDeletedNotification](payment-providers/addons/notifications/onstripetaxratedeletednotification.md)
-  * [Property Editors](payment-providers/addons/property-editors/README.md)
-    * [Tax Rates Property Editor](payment-providers/addons/property-editors/tax-rates-property-editor.md)
+  * [uSync](payment-providers/stripe/usync/README.md)
+    * [Installation](payment-providers/stripe/usync/installation.md)
+    * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
+  * [Addons](payment-providers/stripe/addons/README.md)
+    * [Tax Rates](payment-providers/stripe/addons/tax-rates.md)
+    * [Services](payment-providers/stripe/addons/services/README.md)
+      * [Stripe Tax Rate ApiService](payment-providers/stripe/addons/services/stripe-tax-rate-apiservice.md)
+      * [Stripe Tax Rate Database Service](payment-providers/stripe/addons/services/stripe-tax-rate-database-service.md)
+    * [Notifications](payment-providers/stripe/addons/notifications/README.md)
+      * [OnStripeTaxRateSavedNotification](payment-providers/stripe/addons/notifications/onstripetaxratesavednotification.md)
+      * [OnStripeTaxRateDeletedNotification](payment-providers/stripe/addons/notifications/onstripetaxratedeletednotification.md)
+    * [Property Editors](payment-providers/stripe/addons/property-editors/README.md)
+      * [Tax Rates Property Editor](payment-providers/stripe/addons/property-editors/tax-rates-property-editor.md)
+    * [uSync](payment-providers/stripe/addons/usync/README.md)
+      * [Installation](payment-providers/stripe/addons/usync/installation.md)
+      * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
 * [GoCardless](payment-providers/gocardless.md)
 * [PayPal](payment-providers/paypal.md)
 * [Klarna](payment-providers/klarna.md)
 
-## Scheduled Tasks & Notifications
+## ⏳ Scheduled Tasks & Notifications
 
 * [Remove Expired Baskets From Database](scheduled-tasks-and-notifications/remove-expired-baskets-from-database.md)
 * [Basket Notifications](scheduled-tasks-and-notifications/basket-notifications/README.md)
@@ -107,7 +113,13 @@
 * [Configuration Notifications](scheduled-tasks-and-notifications/configuration-notifications/README.md)
   * [OnConfigurationSavedNotification](scheduled-tasks-and-notifications/configuration-notifications/onconfigurationsavednotification.md)
 
-## View Components
+## 👨💻 View Components
 
 * [Basket View Component](view-components/basket-view-component.md)
 * [Basket Link View Component](view-components/basket-link-view-component.md)
+
+## 🔁 Synchronising
+
+* [uSync](synchronising/usync/README.md)
+  * [Installation](synchronising/usync/installation.md)
+  * [Synchronising Changes](synchronising/usync/synchronising-changes.md)

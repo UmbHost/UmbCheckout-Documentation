@@ -18,7 +18,7 @@ You can find your Stripe Secret API key [within your account](https://dashboard.
 
 Your product can have the following optional properties
 
-| Alias               | Property Type                                                        |
-| ------------------- | -------------------------------------------------------------------- |
-| umbCheckoutMetaData | [Meta Data](property-editors/meta-data-property-editor.md)           |
-| umbCheckoutTaxRates | [Tax Rates](../addons/property-editors/tax-rates-property-editor.md) |
+| Alias               | Property Type                                                     |
+| ------------------- | ----------------------------------------------------------------- |
+| umbCheckoutMetaData | [Meta Data](property-editors/meta-data-property-editor.md)        |
+| umbCheckoutTaxRates | [Tax Rates](addons/property-editors/tax-rates-property-editor.md) |
