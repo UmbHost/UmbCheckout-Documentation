@@ -7,14 +7,10 @@ description: Installing UmbCheckout
 UmbCheckout is installed using the NuGet package manager using either the below command:
 
 ```
-dotnet add package UmbCheckout --version 1.0.0-beta1
+dotnet add package UmbCheckout --version 1.0.0
 ```
 
-You will also need to install a payment provider, currently there is only Stripe
-
-```
-dotnet add package UmbCheckout.Stripe --version 1.0.0-beta1
-```
+You will also need to install a [payment provider](broken-reference).
 
 Alternatively, you can install using the NuGet package manager GUI within Visual Studio.
 
@@ -37,9 +33,9 @@ _Replacing_ `YOUR LICENSE KEY HERE` _with the key found in your_ [_account here_
 {% hint style="info" %}
 **When do I need a license?**
 
-UmbCheckout is fully functional when running on a local development server (localhost or .local domains).
+UmbCheckout requires a license to use any of the Addon packages.
 
-Hosting on a public domain without a license with disable the Tax Rates and being able to store the Basket in a Cookie or the Database.
+Using UmbCheckout without a license will disable the Tax Rates and disables being able to store the Basket in a Cookie or the Database.
 
 Licensed sites will also be able to make use of the support ticketing system.
 

@@ -1,6 +1,8 @@
-# OnBasketClearStartedNotification
+---
+description: Notification which is triggered before the Basket is cleared
+---
 
-Notification which is triggered before the Basket is cleared
+# OnBasketClearStartedNotification
 
 The following properties are available within the notification
 

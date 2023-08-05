@@ -1,3 +1,7 @@
+---
+description: A service to handle the Get, Update and Clearing of the Session
+---
+
 # Session Service
 
 The session service is what creates and handles the creation, retrieval, updating and clearing of the UmbCheckout Basket within the .NET session.
@@ -14,7 +18,13 @@ Task<UmbCheckoutSession> Get();
 
 #### Update
 
-Updates the current UmbCheckout session or creates a new session if not found
+Updates the current UmbCheckout session or create a new session if not found
+
+Parameters:
+
+| Name   | Detail                                   |
+| ------ | ---------------------------------------- |
+| basket | The [Basket](object-reference/basket.md) |
 
 ```csharp
 Task<UmbCheckoutSession> Update(Basket basket);

@@ -13,8 +13,6 @@
 ## Configuration
 
 * [Configuration Options](configuration/configuration-options.md)
-* [Shipping Rates](configuration/shipping-rates.md)
-* [Tax Rates](configuration/tax-rates.md)
 
 ## Core Services
 
@@ -28,24 +26,26 @@
   * [UmbCheckoutConfiguration](core-services/object-reference/umbcheckoutconfiguration.md)
   * [MultiUrlPicker](core-services/object-reference/multiurlpicker.md)
 * [Cookies](core-services/cookies.md)
+* [Addons](core-services/addons/README.md)
+  * [Database Service](core-services/addons/database-service.md)
 
 ## Payment Providers
 
 * [Stripe](payment-providers/stripe/README.md)
-  * [Stripe Session Service](payment-providers/stripe/stripe-session-service.md)
-  * [Stripe Shipping Rate Database Service](payment-providers/stripe/stripe-database-service.md)
-  * [Stripe Shipping Rate ApiService](payment-providers/stripe/stripe-shipping-rate-apiservice.md)
-  * [Stripe Tax Rate ApiService](payment-providers/stripe/stripe-tax-rate-apiservice.md)
-  * [Stripe Tax Rate Database Service](payment-providers/stripe/stripe-tax-rate-database-service.md)
-  * [Stripe Basket Controller](payment-providers/stripe/stripe-basket-controller.md)
-  * [Stripe Webhook Api](payment-providers/stripe/stripe-webhook-api.md)
+  * [Installation](payment-providers/stripe/installation.md)
+  * [Configuration](payment-providers/stripe/configuration.md)
+  * [Shipping Rates](payment-providers/stripe/shipping-rates.md)
+  * [Services](payment-providers/stripe/services/README.md)
+    * [Stripe Shipping Rate ApiService](payment-providers/stripe/services/stripe-shipping-rate-apiservice.md)
+    * [Stripe Shipping Rate Database Service](payment-providers/stripe/services/stripe-shipping-rate-database-service.md)
+    * [Stripe Session Service](payment-providers/stripe/services/stripe-session-service.md)
+    * [Stripe Basket Controller](payment-providers/stripe/services/stripe-basket-controller.md)
+    * [Stripe Webhook Api](payment-providers/stripe/services/stripe-webhook-api.md)
   * [Notifications](payment-providers/stripe/notifications/README.md)
     * [OnCheckoutSessionCompletedNotification](payment-providers/stripe/notifications/oncheckoutsessioncompletednotification.md)
     * [OnCheckoutSessionExpiredNotification](payment-providers/stripe/notifications/oncheckoutsessionexpirednotification.md)
     * [OnPaymentFailedNotification](payment-providers/stripe/notifications/onpaymentfailednotification.md)
     * [OnShippingRateSavedNotification](payment-providers/stripe/notifications/onshippingratesavednotification.md)
-    * [OnStripeTaxRateDeletedNotification](payment-providers/stripe/notifications/onstripetaxratedeletednotification.md)
-    * [OnStripeTaxRateSavedNotification](payment-providers/stripe/notifications/onstripetaxratesavednotification.md)
     * [OnShippingRateDeletedNotification](payment-providers/stripe/notifications/onshippingratedeletednotification.md)
     * [OnPaymentSuccessNotification](payment-providers/stripe/notifications/onpaymentsuccessnotification.md)
   * [Object Reference](payment-providers/stripe/object-reference/README.md)
@@ -56,6 +56,18 @@
     * [TaxRateResponse](payment-providers/stripe/object-reference/taxrateresponse.md)
     * [ShippingRateResponse](payment-providers/stripe/object-reference/shippingrateresponse.md)
     * [ShippingRate](payment-providers/stripe/object-reference/shippingrate.md)
+  * [Property Editors](payment-providers/stripe/property-editors/README.md)
+    * [Meta Data Property Editor](payment-providers/stripe/property-editors/meta-data-property-editor.md)
+* [Addons](payment-providers/addons/README.md)
+  * [Tax Rates](payment-providers/addons/tax-rates.md)
+  * [Services](payment-providers/addons/services/README.md)
+    * [Stripe Tax Rate ApiService](payment-providers/addons/services/stripe-tax-rate-apiservice.md)
+    * [Stripe Tax Rate Database Service](payment-providers/addons/services/stripe-tax-rate-database-service.md)
+  * [Notifications](payment-providers/addons/notifications/README.md)
+    * [OnStripeTaxRateSavedNotification](payment-providers/addons/notifications/onstripetaxratesavednotification.md)
+    * [OnStripeTaxRateDeletedNotification](payment-providers/addons/notifications/onstripetaxratedeletednotification.md)
+  * [Property Editors](payment-providers/addons/property-editors/README.md)
+    * [Tax Rates Property Editor](payment-providers/addons/property-editors/tax-rates-property-editor.md)
 * [GoCardless](payment-providers/gocardless.md)
 * [PayPal](payment-providers/paypal.md)
 * [Klarna](payment-providers/klarna.md)
@@ -92,13 +104,10 @@
   * [OnProviderGetSessionStartedNotification](scheduled-tasks-and-notifications/payment-provider-notifications/onprovidergetsessionstartednotification.md)
   * [OnProviderSessionClearedNotification](scheduled-tasks-and-notifications/payment-provider-notifications/onprovidersessionclearednotification.md)
   * [OnProviderSessionCreatedNotification](scheduled-tasks-and-notifications/payment-provider-notifications/onprovidersessioncreatednotification.md)
+* [Configuration Notifications](scheduled-tasks-and-notifications/configuration-notifications/README.md)
+  * [OnConfigurationSavedNotification](scheduled-tasks-and-notifications/configuration-notifications/onconfigurationsavednotification.md)
 
 ## View Components
 
 * [Basket View Component](view-components/basket-view-component.md)
 * [Basket Link View Component](view-components/basket-link-view-component.md)
-
-## Property Editors
-
-* [Tax Rates Property Editor](property-editors/tax-rates-property-editor.md)
-* [Meta Data Property Editor](property-editors/meta-data-property-editor.md)

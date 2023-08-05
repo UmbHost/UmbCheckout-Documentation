@@ -1,6 +1,8 @@
-# OnBasketRemoveManyStartedNotification
+---
+description: Notification which is triggered after a line items is removed from the Basket
+---
 
-Notification which is triggered after a line items is removed from the Basket
+# OnBasketRemoveManyStartedNotification
 
 The following properties are available within the notification
 

@@ -1,6 +1,6 @@
 # Stripe Basket Controller
 
-The `StripeBasketController` is a preconfigured Umbraco Surface Controller which interacts with the [BasketService](../../core-services/basket-service.md).
+The `StripeBasketController` is a preconfigured Umbraco Surface Controller which interacts with the [BasketService](../../../core-services/basket-service.md).
 
 It can be found within the namespace `UmbCheckout.Stripe.Controllers.Surface`
 

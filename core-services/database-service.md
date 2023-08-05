@@ -1,10 +1,10 @@
+---
+description: A service which handles storing of the Basket in the database
+---
+
 # Database Service
 
-{% hint style="info" %}
-This feature requires a paid license
-{% endhint %}
-
-The database service is what and handles the insertion, retrieval, updating and clearing of the UmbCheckout Basket within the database.
+The database service is what handles the retrieval of the UmbCheckout Basket within the database.
 
 You can access the database service by injecting `IDatabaseService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
@@ -12,30 +12,12 @@ You can access the database service by injecting `IDatabaseService` which can be
 
 The gets the stored Basket
 
+Parameters:
+
+| Name      | Detail                                                               |
+| --------- | -------------------------------------------------------------------- |
+| sessionId | The session to retrieve the [Basket](object-reference/basket.md) for |
+
 ```csharp
 Task<Basket?> GetBasket(string sessionId);
-```
-
-#### UpdateBasket
-
-Updates the stored Basket
-
-```csharp
-Task<Basket> UpdateBasket(string sessionId, Basket basket);
-```
-
-#### DeleteBasket
-
-Deleted the stored Basket
-
-```csharp
-Task DeleteBasket(string sessionId);
-```
-
-#### DeleteBaskets
-
-Deleted all of the stored Baskets older than the specified days
-
-```csharp
-Task DeleteBaskets(DateTime expiryDateTime);
 ```

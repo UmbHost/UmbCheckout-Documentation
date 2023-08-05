@@ -22,9 +22,9 @@ Gets a specified Shipping Rate
 
 Parameters:
 
-| Name | Detail                                                              |
-| ---- | ------------------------------------------------------------------- |
-| key  | Key of the Stripe [Shipping Rate](object-reference/shippingrate.md) |
+| Name | Detail                                                                 |
+| ---- | ---------------------------------------------------------------------- |
+| key  | Key of the Stripe [Shipping Rate](../object-reference/shippingrate.md) |
 
 ```csharp
 Task<ShippingRate?> GetShippingRate(Guid key);
@@ -36,9 +36,9 @@ Gets a specified Shipping Rate
 
 Parameters:
 
-| Name  | Detail                                                                   |
-| ----- | ------------------------------------------------------------------------ |
-| value | StripeId of the Stripe [Shipping Rate](object-reference/shippingrate.md) |
+| Name  | Detail                                                                      |
+| ----- | --------------------------------------------------------------------------- |
+| value | StripeId of the Stripe [Shipping Rate](../object-reference/shippingrate.md) |
 
 ```csharp
 Task<ShippingRate?> GetShippingRate(string value);
@@ -50,9 +50,9 @@ Creates a Shipping Rate
 
 Parameters:
 
-| Name         | Detail                                                       |
-| ------------ | ------------------------------------------------------------ |
-| shippingRate | The Stripe [Shipping Rate](object-reference/shippingrate.md) |
+| Name         | Detail                                                          |
+| ------------ | --------------------------------------------------------------- |
+| shippingRate | The Stripe [Shipping Rate](../object-reference/shippingrate.md) |
 
 ```csharp
 Task<ShippingRate?> CreateShippingRate(ShippingRate shippingRate);
@@ -64,9 +64,9 @@ Updates a specified Shipping Rate
 
 Parameters:
 
-| Name         | Detail                                                       |
-| ------------ | ------------------------------------------------------------ |
-| shippingRate | The Stripe [Shipping Rate](object-reference/shippingrate.md) |
+| Name         | Detail                                                          |
+| ------------ | --------------------------------------------------------------- |
+| shippingRate | The Stripe [Shipping Rate](../object-reference/shippingrate.md) |
 
 ```csharp
 Task<ShippingRate?> UpdateShippingRate(ShippingRate shippingRate);
@@ -78,9 +78,9 @@ Deletes a specified Shipping Rate
 
 Parameters:
 
-| Name | Detail                                                              |
-| ---- | ------------------------------------------------------------------- |
-| key  | Key of the Stripe [Shipping Rate](object-reference/shippingrate.md) |
+| Name | Detail                                                                 |
+| ---- | ---------------------------------------------------------------------- |
+| key  | Key of the Stripe [Shipping Rate](../object-reference/shippingrate.md) |
 
 ```csharp
 Task<bool> DeleteShippingRate(Guid key);

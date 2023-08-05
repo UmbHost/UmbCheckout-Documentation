@@ -1,6 +1,10 @@
-# OnBasketAddManyStartedNotification
+---
+description: >-
+  Notification which is triggered before multiple line items are added to the
+  Basket
+---
 
-Notification which is triggered before multiple line items are added to the Basket
+# OnBasketAddManyStartedNotification
 
 The following properties are available within the notification
 

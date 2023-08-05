@@ -1,6 +1,8 @@
-# OnSessionUpdatedNotification
+---
+description: Notification which is triggered after the UmbCheckout session is updated
+---
 
-Notification which is triggered after the UmbCheckout session is updated
+# OnSessionUpdatedNotification
 
 The following properties are available within the notification
 

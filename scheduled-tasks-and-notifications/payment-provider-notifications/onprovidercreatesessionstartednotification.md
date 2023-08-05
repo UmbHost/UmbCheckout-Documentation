@@ -1,6 +1,8 @@
-# OnProviderCreateSessionStartedNotification
+---
+description: Notification which is triggered before the payment provider session is created
+---
 
-Notification which is triggered before the payment provider session is created
+# OnProviderCreateSessionStartedNotification
 
 The following properties are available within the notification
 
