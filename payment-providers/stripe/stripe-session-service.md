@@ -1,3 +1,7 @@
+---
+description: A service which handles all things around the Stripe Session
+---
+
 # Stripe Session Service
 
 The Stripe session service is what creates and handles the creation, updating and clearing of the Stripe session.
@@ -6,7 +10,13 @@ You can access the Stripe session service by injecting `ISessionService` which c
 
 #### GetSession
 
-Gets the current Stripe session
+Gets a Stripe session
+
+Parameters:
+
+| Name | Detail                   |
+| ---- | ------------------------ |
+| id   | Id of the Stripe Session |
 
 ```csharp
 Session GetSession(string id);
@@ -14,7 +24,13 @@ Session GetSession(string id);
 
 #### GetSessionAsync
 
-Gets the current Stripe session asynchronously
+Gets a Stripe session asynchronously
+
+Parameters:
+
+| Name | Detail                   |
+| ---- | ------------------------ |
+| id   | Id of the Stripe Session |
 
 ```csharp
 Task<Session> GetSessionAsync(string id);
@@ -24,6 +40,12 @@ Task<Session> GetSessionAsync(string id);
 
 Creates a Stripe session
 
+Parameters:
+
+| Name   | Detail                                        |
+| ------ | --------------------------------------------- |
+| basket | The basket to be stored in the Stripe Session |
+
 ```csharp
 Session CreateSession(Basket basket);
 ```
@@ -31,6 +53,12 @@ Session CreateSession(Basket basket);
 #### CreateSessionAsync
 
 Creates a Stripe session asynchronously
+
+Parameters:
+
+| Name   | Detail                                        |
+| ------ | --------------------------------------------- |
+| basket | The basket to be stored in the Stripe Session |
 
 ```csharp
 Task<Session> CreateSessionAsync(Basket basket);
@@ -40,6 +68,12 @@ Task<Session> CreateSessionAsync(Basket basket);
 
 Clears the Stripe session
 
+Parameters:
+
+| Name | Detail                   |
+| ---- | ------------------------ |
+| id   | Id of the Stripe Session |
+
 ```csharp
 void ClearSession(string id);
 ```
@@ -47,6 +81,12 @@ void ClearSession(string id);
 #### ClearSessionAsync
 
 Clears the Stripe session asynchronously
+
+Parameters:
+
+| Name | Detail                   |
+| ---- | ------------------------ |
+| id   | Id of the Stripe Session |
 
 ```csharp
 Task ClearSessionAsync(string id);
