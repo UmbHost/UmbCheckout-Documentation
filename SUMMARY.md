@@ -29,6 +29,12 @@
 * [Addons](core-services/addons/README.md)
   * [Database Service](core-services/addons/database-service.md)
 
+## 🆘 Support
+
+* [Issue Tracker](https://github.com/UmbHost/UmbCheckout/issues)
+* [Milestones](https://github.com/UmbHost/UmbCheckout/milestones)
+* [Support Tickets](support/support-tickets.md)
+
 ## 💰 Payment Providers
 
 * [Stripe](payment-providers/stripe/README.md)
@@ -123,3 +129,10 @@
 * [uSync](synchronising/usync/README.md)
   * [Installation](synchronising/usync/installation.md)
   * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
+
+## 🏗 Source Code Repositories
+
+* [UmbCheckout](https://github.com/UmbHost/UmbCheckout)
+* [UmbCheckout.Stripe](https://github.com/UmbHost/UmbCheckout.Stripe)
+* [UmbCheckout.uSync](https://github.com/UmbHost/UmbCheckout.uSync)
+* [UmbCheckout.Stripe.uSync](https://github.com/UmbHost/UmbCheckout.Stripe.uSync)
