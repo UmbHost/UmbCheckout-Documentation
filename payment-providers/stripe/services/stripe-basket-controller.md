@@ -73,3 +73,25 @@ Starts the Stripe Checkout process, the example below would typically be used on
     <button type="submit">Checkout</button>
 }
 ```
+
+#### Change return page
+
+If you would like to change the page which the user is redirected to after carrying out one of the above actions you simply need to pass in the page Guid
+
+```html
+<input type="hidden" name="redirectGuid" value="4a1f4198-e143-48ba-a0f5-1a7ef2df23aa" />
+```
+
+The example below shows how to do this with the Add method
+
+```csharp
+@using (Html.BeginUmbracoForm<StripeBasketController>(nameof(StripeBasketController.Add), FormMethod.Post))
+{
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" value="1" min="1" /> <br />
+    <input type="hidden" name="id" value="@Model.Key" />
+    <input type="hidden" name="currencyCode" value="GBP" />
+    <input type="hidden" name="redirectGuid" value="4a1f4198-e143-48ba-a0f5-1a7ef2df23aa" />
+    <button type="submit">Buy</button>
+}
+```
