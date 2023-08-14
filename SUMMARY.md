@@ -80,6 +80,8 @@
     * [uSync](payment-providers/stripe/addons/usync/README.md)
       * [Installation](payment-providers/stripe/addons/usync/installation.md)
       * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
+  * [View Components](payment-providers/stripe/view-components/README.md)
+    * [Basket View Component](payment-providers/stripe/view-components/basket-view-component.md)
 * [GoCardless](payment-providers/gocardless.md)
 * [PayPal](payment-providers/paypal.md)
 * [Klarna](payment-providers/klarna.md)
@@ -121,7 +123,6 @@
 
 ## 👨💻 View Components
 
-* [Basket View Component](view-components/basket-view-component.md)
 * [Basket Link View Component](view-components/basket-link-view-component.md)
 
 ## 🔁 Synchronising
