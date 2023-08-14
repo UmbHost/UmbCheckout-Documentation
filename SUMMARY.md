@@ -121,6 +121,12 @@
 * [Configuration Notifications](scheduled-tasks-and-notifications/configuration-notifications/README.md)
   * [OnConfigurationSavedNotification](scheduled-tasks-and-notifications/configuration-notifications/onconfigurationsavednotification.md)
 
+## 🔌 Extensions
+
+* [ConvertExtensions](extensions/convertextensions.md)
+* [CultureInfoExtensions](extensions/cultureinfoextensions.md)
+* [DecimalExtensions](extensions/decimalextensions.md)
+
 ## 👨💻 View Components
 
 * [Basket Link View Component](view-components/basket-link-view-component.md)
