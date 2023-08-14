@@ -1,7 +1,4 @@
 # Stripe
 
-You can install the Stripe payment provider with the following command:
-
-```
-dotnet add package UmbCheckout.Stripe --version 1.0.0-beta1
-```
+You will need to signup for a Stripe account to use this payment provider.\
+You can [signup for Stripe here](https://stripe.com).
