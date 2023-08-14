@@ -123,9 +123,9 @@
 
 ## 🔌 Extensions
 
-* [ConvertExtensions](extensions/convertextensions.md)
-* [CultureInfoExtensions](extensions/cultureinfoextensions.md)
-* [DecimalExtensions](extensions/decimalextensions.md)
+* [Convert Extensions](extensions/convert-extensions.md)
+* [CultureInfo Extensions](extensions/cultureinfo-extensions.md)
+* [Decimal Extensions](extensions/decimal-extensions.md)
 
 ## 👨💻 View Components
 

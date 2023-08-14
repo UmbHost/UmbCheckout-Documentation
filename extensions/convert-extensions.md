@@ -1,4 +1,8 @@
-# ConvertExtensions
+---
+description: Useful extensions which convert from one type to another
+---
+
+# Convert Extensions
 
 These extensions can be found within the namespace `UmbCheckout.Shared.Extensions`
 

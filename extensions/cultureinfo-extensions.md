@@ -1,4 +1,8 @@
-# CultureInfoExtensions
+---
+description: Useful extensions to return culture related data
+---
+
+# CultureInfo Extensions
 
 These extensions can be found within the namespace `UmbCheckout.Shared.Extensions`
 
