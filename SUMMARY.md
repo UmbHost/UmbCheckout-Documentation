@@ -40,6 +40,7 @@
 * [Stripe](payment-providers/stripe/README.md)
   * [Installation](payment-providers/stripe/installation.md)
   * [Configuration](payment-providers/stripe/configuration.md)
+  * [Payment Flow / Lifecycle](payment-providers/stripe/payment-flow-lifecycle.md)
   * [Shipping Rates](payment-providers/stripe/shipping-rates.md)
   * [Services](payment-providers/stripe/services/README.md)
     * [Stripe Shipping Rate ApiService](payment-providers/stripe/services/stripe-shipping-rate-apiservice.md)
