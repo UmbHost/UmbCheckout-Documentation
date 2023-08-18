@@ -30,6 +30,18 @@ If you have purchased a license to enable more features, you simply need to add 
 
 _Replacing_ `YOUR LICENSE KEY HERE` _with the key found in your_ [_account here_](https://my.umbhost.net)_._
 
+You are also required to configure the [UmbracoApplicationUrl](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings#umbraco-application-url) within the [Web routing settings](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings) within your appsettings.json file
+
+```json
+"Umbraco": {
+  "CMS": {
+    "WebRouting": {
+      "UmbracoApplicationUrl": "http://www.mysite.com/"
+    }
+  }
+}
+```
+
 {% hint style="info" %}
 **When do I need a license?**
 
@@ -38,6 +50,8 @@ UmbCheckout requires a license to use any of the Addon packages.
 Using UmbCheckout without a license will disable the Tax Rates and disables being able to store the Basket in a Cookie or the Database.
 
 Licensed sites will also be able to make use of the support ticketing system.
+
+If you require a development license, please contact UmbHost to request a 60 day trial license.
 
 _(These restrictions may change in the future)_
 
