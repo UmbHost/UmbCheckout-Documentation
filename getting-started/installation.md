@@ -4,10 +4,39 @@ description: Installing UmbCheckout
 
 # Installation
 
-UmbCheckout is installed using the NuGet package manager using either the below command:
+UmbCheckout is installed using the NuGet package manager using the below command:
 
 ```
 dotnet add package UmbCheckout
+```
+
+Next, you need to enable .NET sessions, if not already enabled.\
+To do this add the `app.UseSession();` line to your startup.cs before `app.UseUmbraco()`\
+It should look similar to the below:
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+
+    app.UseSession();
+
+    app.UseUmbraco()
+        .WithMiddleware(u =>
+        {
+            u.UseBackOffice();
+            u.UseWebsite();
+        })
+        .WithEndpoints(u =>
+        {
+            u.UseInstallerEndpoints();
+            u.UseBackOfficeEndpoints();
+            u.UseWebsiteEndpoints();
+        });
+}
 ```
 
 You will also need to install a [payment provider](broken-reference).

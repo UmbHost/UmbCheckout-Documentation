@@ -49,6 +49,7 @@
     * [Stripe Basket Controller](payment-providers/stripe/services/stripe-basket-controller.md)
     * [Stripe Webhook Api](payment-providers/stripe/services/stripe-webhook-api.md)
   * [Notifications](payment-providers/stripe/notifications/README.md)
+    * [StripeResponseNotificationHandler](payment-providers/stripe/notifications/striperesponsenotificationhandler.md)
     * [OnCheckoutSessionCompletedNotification](payment-providers/stripe/notifications/oncheckoutsessioncompletednotification.md)
     * [OnCheckoutSessionExpiredNotification](payment-providers/stripe/notifications/oncheckoutsessionexpirednotification.md)
     * [OnPaymentFailedNotification](payment-providers/stripe/notifications/onpaymentfailednotification.md)
