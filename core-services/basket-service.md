@@ -52,7 +52,7 @@ Parameters:
 
 | Name | Detail                                                           |
 | ---- | ---------------------------------------------------------------- |
-| id   | [Item](object-reference/lineitem.md) to be reduced in the Basket |
+| key  | [Item](object-reference/lineitem.md) to be reduced in the Basket |
 
 ```csharp
 Task<Basket> Reduce(Guid id);
@@ -66,7 +66,7 @@ Parameters:
 
 | Name | Detail                                                             |
 | ---- | ------------------------------------------------------------------ |
-| id   | [Item](object-reference/lineitem.md) to be removed from the Basket |
+| key  | [Item](object-reference/lineitem.md) to be removed from the Basket |
 
 ```csharp
 Task<Basket> Remove(Guid id);
@@ -80,7 +80,7 @@ Parameters:
 
 | Name | Detail                                                              |
 | ---- | ------------------------------------------------------------------- |
-| ids  | [Items](object-reference/lineitem.md) to be removed from the Basket |
+| keys | [Items](object-reference/lineitem.md) to be removed from the Basket |
 
 ```csharp
 Task<Basket> Remove(IEnumerable<Guid> ids);

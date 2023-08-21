@@ -4,7 +4,7 @@ The LineItem object contains the below properties
 
 | Property Name | Type    | Use                                                                                                                   |
 | ------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| Id            | Guid    | The Umbraco Node Key                                                                                                  |
+| Key           | Guid    | The Umbraco Node Key                                                                                                  |
 | Name          | string  | The item name which fallsback to the Umbraco Node Name                                                                |
 | Description   | string? | The item description which fallsback to the Node property alias`umbCheckoutDescription`  and finally to `description` |
 | CurrencyCode  | string  | The Currency Symbol                                                                                                   |
