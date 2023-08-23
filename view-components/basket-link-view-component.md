@@ -30,8 +30,8 @@ Alternatively, you can load the View Component without using the tag helper:
 
 You can set the following properties
 
-| Property     | Use                                       |
-| ------------ | ----------------------------------------- |
-| basketAlias  | The Content Type alias of the Basket page |
-| linkName     | The text shown on the link                |
-| linkCssClass | The CSS class to be added to the \<a> tag |
+| Property     | Property Alias | Use                                       |
+| ------------ | -------------- | ----------------------------------------- |
+| basketAlias  | basket-alias   | The Content Type alias of the Basket page |
+| linkName     | link-name      | The text shown on the link                |
+| linkCssClass | link-css-class | The CSS class to be added to the \<a> tag |

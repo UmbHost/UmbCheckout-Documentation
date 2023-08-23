@@ -85,6 +85,7 @@
       * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
   * [View Components](payment-providers/stripe/view-components/README.md)
     * [Basket View Component](payment-providers/stripe/view-components/basket-view-component.md)
+    * [Add to Basket Button View Component](payment-providers/stripe/view-components/add-to-basket-button-view-component.md)
 * [GoCardless](payment-providers/gocardless.md)
 * [PayPal](payment-providers/paypal.md)
 * [Klarna](payment-providers/klarna.md)

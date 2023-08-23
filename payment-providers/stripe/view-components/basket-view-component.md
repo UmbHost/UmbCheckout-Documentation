@@ -1,10 +1,10 @@
 # Basket View Component
 
-A prebuilt basket which uses a HTML table is included.
+A prebuilt basket that uses an HTML table is included.
 
-The table is unstyled and either requires styling within the partial cshtml file or using CSS.
+The table is unstyled and either requires styling within the partial `cshtml` file or using CSS.
 
-The cshtml partial can be found at the following path:
+The `cshtml` partial can be found at the following path:
 
 Views -> Partials -> UmbCheckout -> \_StripeBasket.cshtml
 
@@ -30,25 +30,25 @@ Alternatively, you can load the View Component without using the tag helper:
 
 You can set the following properties
 
-| Property                | Use                                                  | Default Value                                                      |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------ |
-| tableCssClass           | The CSS class to be added to the \<table> tag        | null                                                               |
-| productNameColumnText   | The text shown in the product name column header     | Name                                                               |
-| productPriceColumnText  | The text shown in the product price column header    | Price                                                              |
-| quantityColumnText      | The text shown in the product quantity column header | Quantity                                                           |
-| reduceColumnText        | The text shown in the product remove column header   | Reduce                                                             |
-| increaseColumnText      | The text shown in the product increase column header | Increase                                                           |
-| removeColumnText        | The text shown in the product remove column header   | Remove                                                             |
-| reduceButtonCssClass    | The CSS class to be added to the reduce button       | null                                                               |
-| reduceButtonText        | The text shown on the reduce button                  | -                                                                  |
-| increaseButtonCssClass  | The CSS class to be added to the increase button     | null                                                               |
-| increaseButtonText      | The text shown on the increase button                | +                                                                  |
-| removeButtonCssClass    | The CSS class to be added to the remove ase button   | null                                                               |
-| removeButtonText        | The text shown on the remove button                  | Remove                                                             |
-| emptyBasketText         | The text shown when the Basket is empty              | Your basket is empty!                                              |
-| subTotalText            | The text shown before the SubTotal                   | Sub Total:                                                         |
-| formatCurrency          | The culture to format the SubTotal in                | GBP                                                                |
-| subTotalInformationText | The text shown below the SubTotal                    | Coupons, Shipping and Tax are calculated on the next checkout step |
-| checkoutButtonCssClass  | The CSS class to be added to the checkout button     | null                                                               |
-| checkoutButtonText      | The text shown on the checkout button                | Checkout                                                           |
+| Property                | Property Alias             | Use                                                  | Default Value                                                      |
+| ----------------------- | -------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------ |
+| tableCssClass           | table-css-class            | The CSS class to be added to the \<table> tag        | null                                                               |
+| productNameColumnText   | product-name-column-text   | The text shown in the product name column header     | Name                                                               |
+| productPriceColumnText  | product-price-column-text  | The text shown in the product price column header    | Price                                                              |
+| quantityColumnText      | quantity-column-text       | The text shown in the product quantity column header | Quantity                                                           |
+| reduceColumnText        | reduce-column-text         | The text shown in the product remove column header   | Reduce                                                             |
+| increaseColumnText      | increase-column-text       | The text shown in the product increase column header | Increase                                                           |
+| removeColumnText        | remove-column-text         | The text shown in the product remove column header   | Remove                                                             |
+| reduceButtonCssClass    | reduce-button-css-class    | The CSS class to be added to the reduce button       | null                                                               |
+| reduceButtonText        | reduce-button-text         | The text shown on the reduce button                  | -                                                                  |
+| increaseButtonCssClass  | increase-button-css-class  | The CSS class to be added to the increase button     | null                                                               |
+| increaseButtonText      | increase-button-text       | The text shown on the increase button                | +                                                                  |
+| removeButtonCssClass    | remove-button-css-class    | The CSS class to be added to the remove ase button   | null                                                               |
+| removeButtonText        | remove-button-text         | The text shown on the remove button                  | Remove                                                             |
+| emptyBasketText         | empty-basket-text          | The text shown when the Basket is empty              | Your basket is empty!                                              |
+| subTotalText            | sub-total-text             | The text shown before the SubTotal                   | Sub Total:                                                         |
+| formatCurrency          | format-currency            | The culture to format the SubTotal in                | GBP                                                                |
+| subTotalInformationText | sub-total-information-text | The text shown below the SubTotal                    | Coupons, Shipping and Tax are calculated on the next checkout step |
+| checkoutButtonCssClass  | checkout-button-css-class  | The CSS class to be added to the checkout button     | null                                                               |
+| checkoutButtonText      | checkout-button-text       | The text shown on the checkout button                | Checkout                                                           |
 
