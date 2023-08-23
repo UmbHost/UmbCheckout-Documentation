@@ -13,6 +13,7 @@
 ## 🛠 Configuration
 
 * [Configuration Options](configuration/configuration-options.md)
+* [Product Variants](configuration/product-variants.md)
 
 ## 🛒 Core Services
 
