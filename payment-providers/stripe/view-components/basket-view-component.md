@@ -51,4 +51,5 @@ You can set the following properties
 | subTotalInformationText | sub-total-information-text | The text shown below the SubTotal                    | Coupons, Shipping and Tax are calculated on the next checkout step |
 | checkoutButtonCssClass  | checkout-button-css-class  | The CSS class to be added to the checkout button     | null                                                               |
 | checkoutButtonText      | checkout-button-text       | The text shown on the checkout button                | Checkout                                                           |
+| productNameAlias        | product-name-alias         | The alias which should be used for the product name  | null                                                               |
 

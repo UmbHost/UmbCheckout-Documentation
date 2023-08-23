@@ -30,10 +30,11 @@ Alternatively, you can load the View Component without using the tag helper:
 
 You can set the following properties
 
-| Property     | Property Alias | Use                                                                  | Default Value |
-| ------------ | -------------- | -------------------------------------------------------------------- | ------------- |
-| product      | product        | <mark style="color:red;">**\[REQUIRED]**</mark> The Umbraco product  | null          |
-| linkName     | link-name      | The text shown on the link                                           | Add to Basket |
-| linkCssClass | link-css-class | The CSS class to be added to the button                              | null          |
-| returnGuid   | return-guid    | The Guid of the Umbraco page to return to after adding to the Basket | null          |
+| Property         | Property Alias     | Use                                                                  | Default Value |
+| ---------------- | ------------------ | -------------------------------------------------------------------- | ------------- |
+| product          | product            | <mark style="color:red;">**\[REQUIRED]**</mark> The Umbraco product  | null          |
+| linkName         | link-name          | The text shown on the link                                           | Add to Basket |
+| linkCssClass     | link-css-class     | The CSS class to be added to the button                              | null          |
+| returnGuid       | return-guid        | The Guid of the Umbraco page to return to after adding to the Basket | null          |
+| productNameAlias | product-name-alias | The alias which should be used for the product name                  | null          |
 
