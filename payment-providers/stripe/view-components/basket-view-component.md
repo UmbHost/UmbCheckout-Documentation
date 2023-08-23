@@ -17,7 +17,7 @@ To be able to use the Basket View Component you will need to add the following t
 This will allow you to use the following tag helper:
 
 ```cshtml
-<vc:stripe-basket></vc:basket>
+<vc:stripe-basket></vc:stripe-basket>
 ```
 
 Alternatively, you can load the View Component without using the tag helper:
