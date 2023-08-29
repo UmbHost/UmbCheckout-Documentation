@@ -23,6 +23,7 @@
 * [Basket Service](core-services/basket-service.md)
 * [Object Reference](core-services/object-reference/README.md)
   * [Basket](core-services/object-reference/basket.md)
+  * [UmbCheckoutMetaData](core-services/object-reference/umbcheckoutmetadata.md)
   * [UmbCheckoutSession](core-services/object-reference/umbcheckoutsession.md)
   * [LineItem](core-services/object-reference/lineitem.md)
   * [UmbCheckoutConfiguration](core-services/object-reference/umbcheckoutconfiguration.md)
@@ -30,6 +31,8 @@
 * [Cookies](core-services/cookies.md)
 * [Addons](core-services/addons/README.md)
   * [Database Service](core-services/addons/database-service.md)
+* [Property Editors](core-services/property-editors/README.md)
+  * [MetaData Property Editor](core-services/property-editors/metadata-property-editor.md)
 
 ## 🆘 Support
 
@@ -67,8 +70,6 @@
     * [TaxRateResponse](payment-providers/stripe/object-reference/taxrateresponse.md)
     * [ShippingRateResponse](payment-providers/stripe/object-reference/shippingrateresponse.md)
     * [ShippingRate](payment-providers/stripe/object-reference/shippingrate.md)
-  * [Property Editors](payment-providers/stripe/property-editors/README.md)
-    * [Meta Data Property Editor](payment-providers/stripe/property-editors/meta-data-property-editor.md)
   * [uSync](payment-providers/stripe/usync/README.md)
     * [Installation](payment-providers/stripe/usync/installation.md)
     * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
