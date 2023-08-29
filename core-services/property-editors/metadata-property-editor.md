@@ -2,7 +2,7 @@
 
 The MetaData property editor allows you to add metadata to your product, this is passed over to the Payment Provider.
 
-The returned type is `Dictionary<string, string>`
+The returned type is: `Dictionary<string, string>`
 
 <figure><img src="../../.gitbook/assets/MetaDataPropertyEditor.png" alt=""><figcaption></figcaption></figure>
 
