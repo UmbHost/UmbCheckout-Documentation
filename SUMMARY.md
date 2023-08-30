@@ -4,12 +4,12 @@
 
 ## 📔 Getting Started
 
-* [Starter Kits](getting-started/starter-kits/README.md)
-  * [Stripe](getting-started/starter-kits/stripe.md)
 * [Overview](getting-started/overview.md)
 * [License Comparison](getting-started/license-comparison.md)
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
+* [Starter Kits](getting-started/starter-kits/README.md)
+  * [Stripe](getting-started/starter-kits/stripe.md)
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
 * [Buy a License](https://my.umbhost.net/store/umbraco-packages)
 
