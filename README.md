@@ -1,5 +1,21 @@
 ---
 description: Documentation for UmbCheckout an eCommerce solution for Umbraco
+cover: .gitbook/assets/Asset 3.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 🛒 UmbCheckout Documentation
