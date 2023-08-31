@@ -7,12 +7,12 @@
 * [Overview](getting-started/overview.md)
 * [License Comparison](getting-started/license-comparison.md)
 * [Installation](getting-started/installation.md)
-* [Affiliate Scheme](getting-started/affiliate-scheme.md)
 * [Configuration](getting-started/configuration.md)
 * [Starter Kits](getting-started/starter-kits/README.md)
   * [Stripe](getting-started/starter-kits/stripe.md)
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
 * [Developer License](getting-started/developer-license.md)
+* [Affiliate Scheme](getting-started/affiliate-scheme.md)
 * [Buy a License](https://my.umbhost.net/store/umbraco-packages)
 
 ## 🛠 Configuration
