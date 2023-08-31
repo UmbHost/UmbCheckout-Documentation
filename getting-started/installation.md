@@ -80,7 +80,7 @@ Using UmbCheckout without a license will disable the Tax Rates and disables bein
 
 Licensed sites will also be able to make use of the support ticketing system.
 
-If you require a development license, please contact UmbHost to request a 60 day trial license.
+If you require a development license, [please see this linked page](developer-license.md).
 
 _(These restrictions may change in the future)_
 

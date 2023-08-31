@@ -11,6 +11,7 @@
 * [Starter Kits](getting-started/starter-kits/README.md)
   * [Stripe](getting-started/starter-kits/stripe.md)
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
+* [Developer License](getting-started/developer-license.md)
 * [Buy a License](https://my.umbhost.net/store/umbraco-packages)
 
 ## 🛠 Configuration

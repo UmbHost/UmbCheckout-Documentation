@@ -25,3 +25,5 @@ You can purchase a license from the link below:
 {% hint style="info" %}
 \*When the feature is released
 {% endhint %}
+
+[_If you require a developer license, please see this linked page_](developer-license.md)
