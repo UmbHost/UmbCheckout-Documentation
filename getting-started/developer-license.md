@@ -11,3 +11,5 @@ To request a developer license please [create an account](https://my.umbhost.net
 **Please include the domains to be added to the license in the request.**
 
 It is only possible to request 1 license per domain.
+
+Production and Staging licenses are available on request for every domain hosted on an active UmbHost hosting package.
