@@ -38,4 +38,4 @@ The best place to start is the [Getting Started](http://127.0.0.1:5000/o/uDVI1KE
 
 If you require further assistance please take a look at the [issue tracker](https://github.com/UmbHost/UmbCheckout/issues).
 
-If you have a license and require further assistance please [open a ticket here](https://my.umbhost.net/submitticket.php?step=2\&deptid=2).
+If you have a license with an active support subscription and require further assistance please [open a ticket here](https://my.umbhost.net/submitticket.php?step=2\&deptid=2).
