@@ -7,6 +7,7 @@
 * [Overview](getting-started/overview.md)
 * [License Comparison](getting-started/license-comparison.md)
 * [Installation](getting-started/installation.md)
+* [Affiliate Scheme](getting-started/affiliate-scheme.md)
 * [Configuration](getting-started/configuration.md)
 * [Starter Kits](getting-started/starter-kits/README.md)
   * [Stripe](getting-started/starter-kits/stripe.md)
