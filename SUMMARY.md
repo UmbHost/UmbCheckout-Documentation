@@ -9,7 +9,7 @@
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
 * [Starter Kits](getting-started/starter-kits/README.md)
-  * [Stripe](getting-started/starter-kits/stripe/README.md)
+  * [Stripe](getting-started/starter-kits/stripe.md)
     * [Installation](getting-started/starter-kits/stripe/installation.md)
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
 * [Developer License](getting-started/developer-license.md)
