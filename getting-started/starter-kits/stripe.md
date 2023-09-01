@@ -20,7 +20,7 @@ The front-end UI makes use of Bootstrap 5.3 as an out-of-the-box configuration, 
 
 You can find the custom.css file on disk in the following path: wwwroot -> css -> custom.css Alternatively, you can edit the file directly from within the Umbraco backoffice at the following path Settings -> Stylesheets -> custom.css
 
-You can find the custom.js file on disk in the following path: wwwroot -> script -> custom.js\
+You can find the custom.js file on disk in the following path: wwwroot -> scripts -> custom.js\
 Alternatively, you can edit the file directly from within the Umbraco backoffice at the following path\
 Settings -> Scripts -> custom.js
 
