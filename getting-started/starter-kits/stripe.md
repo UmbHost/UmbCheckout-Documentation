@@ -8,6 +8,8 @@ Our UmbCheckout Stripe Starter Kit comes fully configured and can be installed r
 
 The source code for the Starter Kit can be found on the [GitHub repository here](https://github.com/UmbHost/UmbCheckout.StarterKit).
 
+The starter kit has been built using the [InMemoryAuto Models builder mode](https://docs.umbraco.com/umbraco-cms/reference/configuration/modelsbuildersettings#models-mode).
+
 The video below is an example of how to install the ready-to-go starter kit in under 2 minutes.
 
 {% embed url="https://www.youtube.com/watch?v=zmZfQlfcjuM" %}
@@ -15,6 +17,12 @@ The video below is an example of how to install the ready-to-go starter kit in u
 #### UI
 
 The front-end UI makes use of Bootstrap 5.3 as an out-of-the-box configuration, to override any Bootstrap styles simply edit the custom.css file from within the backoffice.
+
+You can find the custom.css file on disk in the following path: wwwroot -> css -> custom.css Alternatively, you can edit the file directly from within the Umbraco backoffice at the following path Settings -> Stylesheets -> custom.css
+
+You can find the custom.js file on disk in the following path: wwwroot -> script -> custom.js\
+Alternatively, you can edit the file directly from within the Umbraco backoffice at the following path\
+Settings -> Scripts -> custom.js
 
 If you require a more in-depth customisation you are free to replace the Bootstrap implementation as you see fit.
 
