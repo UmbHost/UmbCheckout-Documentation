@@ -6,7 +6,7 @@ description: Information about our Starter Kit configured for Stripe
 
 Our UmbCheckout Stripe Starter Kit comes fully configured and can be installed ready for the content population in 2 minutes!
 
-The source code for the Starter Kit can be found on the [GitHub repository here](https://github.com/UmbHost/UmbCheckout.StarterKit).
+The source code for the Starter Kit can be found on the [GitHub repository here](https://github.com/UmbHost/UmbCheckout.StarterKit.Stripe).
 
 The starter kit has been built using the [InMemoryAuto Models builder mode](https://docs.umbraco.com/umbraco-cms/reference/configuration/modelsbuildersettings#models-mode).
 
@@ -27,6 +27,8 @@ Settings -> Scripts -> custom.js
 If you require a more in-depth customisation you are free to replace the Bootstrap implementation as you see fit.
 
 #### Pre-Installed Packages
+
+The UmbCheckout Starter Kit for Stripe is licensed under the MIT license, any installed packages may use different licenses, be sure to check and use accordingly.
 
 We highly enjoy working with what the community creates, so we have made use of many open-source packages within the starter kit, you can see the list below along with links to the source code and licenses.
 
