@@ -14,7 +14,7 @@ The flow / lifecycle works like this:
 4. The Stripe API returns a unique payment URL
 5. The customer is redirected to the Hosted Stripe payment page
 6. On payment success, the Customer is returned to the payment success page, or on payment failure / cancel the Customer is returned to the payment canceled page
-7. After the transaction, a [webhook](services/stripe-webhook-api/) sends the response and triggers a [Notification](notifications/)
+7. After the transaction, a [webhook](services/stripe-webhook-api.md) sends the response and triggers a [Notification](notifications/)
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-08-18 130555.png" alt=""><figcaption></figcaption></figure>
 

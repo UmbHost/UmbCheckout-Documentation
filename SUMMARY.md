@@ -58,7 +58,7 @@
     * [Stripe Shipping Rate Database Service](payment-providers/stripe/services/stripe-shipping-rate-database-service.md)
     * [Stripe Session Service](payment-providers/stripe/services/stripe-session-service.md)
     * [Stripe Basket Controller](payment-providers/stripe/services/stripe-basket-controller.md)
-    * [Stripe Webhook Api](payment-providers/stripe/services/stripe-webhook-api/README.md)
+    * [Stripe Webhook Api](payment-providers/stripe/services/stripe-webhook-api.md)
       * [How to test the Stripe Webhook on localhost](payment-providers/stripe/services/stripe-webhook-api/how-to-test-the-stripe-webhook-on-localhost.md)
   * [Notification Handlers](payment-providers/stripe/notification-handlers/README.md)
     * [StripeResponseNotificationHandler](payment-providers/stripe/notification-handlers/striperesponsenotificationhandler.md)
