@@ -1,5 +1,7 @@
 # Stripe Webhook Api
 
+Please ensure you have added the webhook secret as per the [configuration](../configuration.md).
+
 You can configure Stripe to send the webhook request to the below api:
 
 `/umbraco/api/StripeWebhookApi/CheckoutEvents`
