@@ -28,6 +28,7 @@
 * [Basket Service](core-services/basket-service.md)
 * [Object Reference](core-services/object-reference/README.md)
   * [Basket](core-services/object-reference/basket.md)
+  * [Customer](core-services/object-reference/customer.md)
   * [UmbCheckoutMetaData](core-services/object-reference/umbcheckoutmetadata.md)
   * [UmbCheckoutSession](core-services/object-reference/umbcheckoutsession.md)
   * [LineItem](core-services/object-reference/lineitem.md)
