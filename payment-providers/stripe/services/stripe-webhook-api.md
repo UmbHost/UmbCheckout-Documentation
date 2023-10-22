@@ -2,6 +2,14 @@
 
 Please ensure you have added the webhook secret as per the [configuration](../configuration.md).
 
+{% hint style="info" %}
+Please ensure you have configured the Stripe API version to:
+
+```
+2023-08-16
+```
+{% endhint %}
+
 You can configure Stripe to send the webhook request to the below api:
 
 `/umbraco/api/StripeWebhookApi/CheckoutEvents`
