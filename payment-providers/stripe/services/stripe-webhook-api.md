@@ -3,7 +3,7 @@
 Please ensure you have added the webhook secret as per the [configuration](../configuration.md).
 
 {% hint style="info" %}
-Please ensure you have configured the Stripe API version to:
+Please ensure you have configured the [Stripe API version](https://dashboard.stripe.com/developers) to:
 
 ```
 2023-08-16

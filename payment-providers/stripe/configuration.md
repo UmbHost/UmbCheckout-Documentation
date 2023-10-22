@@ -28,7 +28,7 @@ If you are going to use the [Stripe Webhook](services/stripe-webhook-api.md) (Re
 
 You can create your WebHook Secret [within your account](https://dashboard.stripe.com/webhooks) by heading to `Developers -> Webhooks`
 
-You will also need to ensure your Webhooks are configured for Stripe API version:
+You will also need to ensure your Webhooks are configured for [Stripe API ](https://dashboard.stripe.com/developers)version:
 
 ```
 2023-08-16
