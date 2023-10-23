@@ -104,9 +104,11 @@
     * [Basket View Component](payment-providers/stripe/view-components/basket-view-component.md)
     * [Add to Basket Button View Component](payment-providers/stripe/view-components/add-to-basket-button-view-component.md)
   * [Umbraco Forms Workflow](payment-providers/stripe/umbraco-forms-workflow.md)
-* [GoCardless](payment-providers/gocardless.md)
 * [PayPal](payment-providers/paypal.md)
 * [Klarna](payment-providers/klarna.md)
+* [Apple Pay](payment-providers/apple-pay.md)
+* [Google Pay](payment-providers/google-pay.md)
+* [Bacs Direct Debit / SEPA Direct Debit](payment-providers/bacs-direct-debit-sepa-direct-debit.md)
 
 ## ⏳ Scheduled Tasks & Notifications
 
