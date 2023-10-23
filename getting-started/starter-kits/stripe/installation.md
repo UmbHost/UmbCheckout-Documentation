@@ -38,7 +38,7 @@ Next, you are required to configure the [UmbracoApplicationUrl](https://docs.umb
 }
 ```
 
-The final step is to add your [Stripe API keys](../../../payment-providers/stripe/configuration.md) to the appsettings.json
+The final step is to add your [Stripe API keys](../../../payment-providers/payment-providers/stripe/configuration.md) to the appsettings.json
 
 ```json
   "UmbCheckout": {

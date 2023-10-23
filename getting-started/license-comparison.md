@@ -8,19 +8,19 @@ You can purchase a license from the link below:
 
 [https://my.umbhost.net/store/umbraco-packages](https://my.umbhost.net/store/umbraco-packages)
 
-|                              | Free Version | Paid Version                                       |
-| :--------------------------: | :----------: | -------------------------------------------------- |
-|       Access to source       |       ✅      | <p>Core: ✅<br>Addons: ❌</p>                        |
-|   Access to Shipping Rates   |       ✅      | ✅                                                  |
-|      Access to Tax Rates     |       ❌      | ✅                                                  |
-| Store Basket in .NET Session |       ✅      | ✅                                                  |
-|   Store Basket in a Cookie   |       ❌      | ✅                                                  |
-| Store Basket in the Database |       ❌      | ✅                                                  |
-|     Stripe Subscriptions     |       ❌      | \*✅                                                |
-|     GitHub Issue Tracker     |       ✅      | <p>Core: ✅<br>Addons: ❌</p>                        |
-|        Support Tickets       |       ❌      | ✅                                                  |
-|       Payment Providers      |    Stripe    | <p>Stripe<br>*PayPal<br>*GoCardless<br>*Klarna</p> |
-|          Annual Fee          |       ❌      | <p>Updates: ❌<br>Support: ✅</p>                    |
+|                              | Free Version | Paid Version                    |
+| :--------------------------: | :----------: | ------------------------------- |
+|       Access to source       |       ✅      | <p>Core: ✅<br>Addons: ❌</p>     |
+|   Access to Shipping Rates   |       ✅      | ✅                               |
+|      Access to Tax Rates     |       ❌      | ✅                               |
+| Store Basket in .NET Session |       ✅      | ✅                               |
+|   Store Basket in a Cookie   |       ❌      | ✅                               |
+| Store Basket in the Database |       ❌      | ✅                               |
+|     Stripe Subscriptions     |       ❌      | \*✅                             |
+|     GitHub Issue Tracker     |       ✅      | <p>Core: ✅<br>Addons: ❌</p>     |
+|        Support Tickets       |       ❌      | ✅                               |
+|       Payment Providers      |    Stripe    | Stripe                          |
+|          Annual Fee          |       ❌      | <p>Updates: ❌<br>Support: ✅</p> |
 
 {% hint style="info" %}
 \*When the feature is released

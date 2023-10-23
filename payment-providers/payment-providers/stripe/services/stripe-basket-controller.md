@@ -1,6 +1,6 @@
 # Stripe Basket Controller
 
-The `StripeBasketController` is a preconfigured Umbraco Surface Controller which interacts with the [BasketService](../../../core-services/basket-service.md).
+The `StripeBasketController` is a preconfigured Umbraco Surface Controller which interacts with the [BasketService](../../../../core-services/basket-service.md).
 
 It can be found within the namespace `UmbCheckout.Stripe.Controllers.Surface`
 
@@ -25,9 +25,9 @@ Adds an item to the Basket, the example below would typically be used on the Pro
 
 This method sets the following TempData
 
-| Key                            | Value                                                                                                                                               |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UmbCheckout\_Added\_To\_Basket | Key of the [LineItem](../../../core-services/object-reference/lineitem.md) added to the [Basket](../../../core-services/object-reference/basket.md) |
+| Key                            | Value                                                                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UmbCheckout\_Added\_To\_Basket | Key of the [LineItem](../../../../core-services/object-reference/lineitem.md) added to the [Basket](../../../../core-services/object-reference/basket.md) |
 
 #### Increase
 
@@ -43,9 +43,9 @@ Increases the specified item quantity, the example below would typically be used
 
 This method sets the following TempData
 
-| Key                            | Value                                                                                                                                                   |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UmbCheckout\_Added\_To\_Basket | Key of the [LineItem](../../../core-services/object-reference/lineitem.md) increased in the [Basket](../../../core-services/object-reference/basket.md) |
+| Key                            | Value                                                                                                                                                         |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UmbCheckout\_Added\_To\_Basket | Key of the [LineItem](../../../../core-services/object-reference/lineitem.md) increased in the [Basket](../../../../core-services/object-reference/basket.md) |
 
 #### Reduce
 
@@ -63,9 +63,9 @@ Reduces the specified item quantity, the example below would typically be used o
 
 This method sets the following TempData
 
-| Key                          | Value                                                                                                                                                 |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UmbCheckout\_Basket\_Reduced | Key of the [LineItem](../../../core-services/object-reference/lineitem.md) reduced in the [Basket](../../../core-services/object-reference/basket.md) |
+| Key                          | Value                                                                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UmbCheckout\_Basket\_Reduced | Key of the [LineItem](../../../../core-services/object-reference/lineitem.md) reduced in the [Basket](../../../../core-services/object-reference/basket.md) |
 
 #### Remove
 
@@ -83,9 +83,9 @@ Removes the specified item, the example below would typically be used on the Bas
 
 This method sets the following TempData
 
-| Key                          | Value                                                                                                                                                   |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UmbCheckout\_Basket\_Removed | Key of the [LineItem](../../../core-services/object-reference/lineitem.md) removed from the [Basket](../../../core-services/object-reference/basket.md) |
+| Key                          | Value                                                                                                                                                         |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UmbCheckout\_Basket\_Removed | Key of the [LineItem](../../../../core-services/object-reference/lineitem.md) removed from the [Basket](../../../../core-services/object-reference/basket.md) |
 
 #### Checkout
 
@@ -100,9 +100,9 @@ Starts the Stripe Checkout process, the example below would typically be used on
 
 This method sets the following TempData
 
-| Key                      | Value                                                                                                                                                           |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UmbCheckout\_EmptyBasket | Returns true if there are 0 [LineItem](../../../core-services/object-reference/lineitem.md)s in the [Basket](../../../core-services/object-reference/basket.md) |
+| Key                      | Value                                                                                                                                                                 |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UmbCheckout\_EmptyBasket | Returns true if there are 0 [LineItem](../../../../core-services/object-reference/lineitem.md)s in the [Basket](../../../../core-services/object-reference/basket.md) |
 
 #### Change return page
 

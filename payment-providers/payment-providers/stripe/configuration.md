@@ -16,7 +16,7 @@ You will need to add your Stripe Secret API key into your `appsettings.json` bel
 
 You can find your Stripe Secret API key [within your account](https://dashboard.stripe.com/apikeys) by heading to `Developers -> API keys`
 
-If you are going to use the [Stripe Webhook](services/stripe-webhook-api.md) (Recommended) then you will need to add the following secret into your `appsettings.json`
+If you are going to use the [Stripe Webhook](services/stripe-webhook-api/) (Recommended) then you will need to add the following secret into your `appsettings.json`
 
 ```json
   "UmbCheckout": {
@@ -36,7 +36,7 @@ You will also need to ensure your Webhooks are configured for [Stripe API ](http
 
 Your product can have the following optional properties
 
-| Alias               | Property Type                                                                 |
-| ------------------- | ----------------------------------------------------------------------------- |
-| umbCheckoutMetaData | [Meta Data](../../core-services/property-editors/metadata-property-editor.md) |
-| umbCheckoutTaxRates | [Tax Rates](addons/property-editors/tax-rates-property-editor.md)             |
+| Alias               | Property Type                                                                    |
+| ------------------- | -------------------------------------------------------------------------------- |
+| umbCheckoutMetaData | [Meta Data](../../../core-services/property-editors/metadata-property-editor.md) |
+| umbCheckoutTaxRates | [Tax Rates](addons/property-editors/tax-rates-property-editor.md)                |
