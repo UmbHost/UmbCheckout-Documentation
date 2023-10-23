@@ -103,6 +103,7 @@
   * [View Components](payment-providers/stripe/view-components/README.md)
     * [Basket View Component](payment-providers/stripe/view-components/basket-view-component.md)
     * [Add to Basket Button View Component](payment-providers/stripe/view-components/add-to-basket-button-view-component.md)
+  * [Umbraco Forms Workflow](payment-providers/stripe/umbraco-forms-workflow.md)
 * [GoCardless](payment-providers/gocardless.md)
 * [PayPal](payment-providers/paypal.md)
 * [Klarna](payment-providers/klarna.md)
@@ -164,3 +165,4 @@
 * [UmbCheckout.Stripe](https://github.com/UmbHost/UmbCheckout.Stripe)
 * [UmbCheckout.uSync](https://github.com/UmbHost/UmbCheckout.uSync)
 * [UmbCheckout.Stripe.uSync](https://github.com/UmbHost/UmbCheckout.Stripe.uSync)
+* [UmbCheckout.Stripe.Forms](https://github.com/UmbHost/UmbCheckout.Stripe.Forms)
