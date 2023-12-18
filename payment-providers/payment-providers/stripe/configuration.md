@@ -9,7 +9,12 @@ You will need to add your Stripe Secret API key into your `appsettings.json` bel
 ```json
   "UmbCheckout": {
     "Stripe": {
-      "ApiKey": "STRIPE SECRET API KEY"
+      "Test": {
+        "ApiKey": "TEST STRIPE SECRET API KEY"
+      },
+      "Live": {
+        "ApiKey": "LIVE STRIPE SECRET API KEY"
+      }
     }
   }
 ```
@@ -21,7 +26,12 @@ If you are going to use the [Stripe Webhook](services/stripe-webhook-api/) (Reco
 ```json
   "UmbCheckout": {
     "Stripe": {
-      "WebHookSecret": "STRIPE WEBHOOK SECRET"
+      "Test": {
+        "WebHookSecret": "STRIPE TEST WEBHOOK SECRET"
+      },
+      "Live": {
+        "WebHookSecret": "LIVE STRIPE WEBHOOK SECRET"
+      }
     }
   }
 ```
