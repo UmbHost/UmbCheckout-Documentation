@@ -181,6 +181,10 @@
   * [Installation](synchronising/usync/installation.md)
   * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
 
+## ✉️ Umbraco Forms
+
+* [Workflow](umbraco-forms/workflow.md)
+
 ## 🏗️ Source Code Repositories
 
 * [UmbCheckout](https://github.com/UmbHost/UmbCheckout)
