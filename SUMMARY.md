@@ -16,7 +16,7 @@
 * [Affiliate Scheme](getting-started/affiliate-scheme.md)
 * [Buy a License](https://my.umbhost.net/store/umbraco-packages)
 
-## 🛠 Configuration
+## 🛠️ Configuration
 
 * [Configuration Options](configuration/configuration-options.md)
 * [Product Variants](configuration/product-variants.md)
@@ -80,6 +80,19 @@
       * [OnShippingRateSavedNotification](payment-providers/payment-providers/stripe/notifications/onshippingratesavednotification.md)
       * [OnShippingRateDeletedNotification](payment-providers/payment-providers/stripe/notifications/onshippingratedeletednotification.md)
       * [OnPaymentSuccessNotification](payment-providers/payment-providers/stripe/notifications/onpaymentsuccessnotification.md)
+    * [Webhooks](payment-providers/payment-providers/stripe/webhooks/README.md)
+      * [OnChargeFailedWebhook](payment-providers/payment-providers/stripe/webhooks/onchargefailedwebhook.md)
+      * [OnChargeSucceededWebhook](payment-providers/payment-providers/stripe/webhooks/onchargesucceededwebhook.md)
+      * [OnCheckoutSessionCompletedWebhook](payment-providers/payment-providers/stripe/webhooks/oncheckoutsessioncompletedwebhook.md)
+      * [OnCheckoutSessionExpiredWebhook](payment-providers/payment-providers/stripe/webhooks/oncheckoutsessionexpiredwebhook.md)
+      * [OnPaymentFailedWebhook](payment-providers/payment-providers/stripe/webhooks/onpaymentfailedwebhook.md)
+      * [OnPaymentIntentCancelledWebhook](payment-providers/payment-providers/stripe/webhooks/onpaymentintentcancelledwebhook.md)
+      * [OnPaymentIntentCreatedWebhook](payment-providers/payment-providers/stripe/webhooks/onpaymentintentcreatedwebhook.md)
+      * [OnPaymentIntentPaymentFailedWebhook](payment-providers/payment-providers/stripe/webhooks/onpaymentintentpaymentfailedwebhook.md)
+      * [OnPaymentIntentSucceededWebhook](payment-providers/payment-providers/stripe/webhooks/onpaymentintentsucceededwebhook.md)
+      * [OnPaymentSuccessWebhook](payment-providers/payment-providers/stripe/webhooks/onpaymentsuccesswebhook.md)
+      * [OnShippingRateDeletedWebhook](payment-providers/payment-providers/stripe/webhooks/onshippingratedeletedwebhook.md)
+      * [OnShippingRateSavedWebhook](payment-providers/payment-providers/stripe/webhooks/onshippingratesavedwebhook.md)
     * [Object Reference](payment-providers/payment-providers/stripe/object-reference/README.md)
       * [TaxRate](payment-providers/payment-providers/stripe/object-reference/taxrate.md)
       * [Property](payment-providers/payment-providers/stripe/object-reference/property.md)
@@ -155,7 +168,7 @@
 * [CultureInfo Extensions](extensions/cultureinfo-extensions.md)
 * [Decimal Extensions](extensions/decimal-extensions.md)
 
-## 👨💻 View Components
+## 👨‍💻 View Components
 
 * [Basket Link View Component](view-components/basket-link-view-component.md)
 
@@ -165,7 +178,7 @@
   * [Installation](synchronising/usync/installation.md)
   * [Synchronising Changes](synchronising/usync/synchronising-changes.md)
 
-## 🏗 Source Code Repositories
+## 🏗️ Source Code Repositories
 
 * [UmbCheckout](https://github.com/UmbHost/UmbCheckout)
 * [UmbCheckout.Stripe](https://github.com/UmbHost/UmbCheckout.Stripe)
