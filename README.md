@@ -30,7 +30,7 @@ Once the nuget package is installed it's completely possible to integrate it usi
 
 **The documentation is aimed at developers** who have a basic understanding of Umbraco and at least an understanding of the Razor syntax.
 
-The best place to start is the [Getting Started](http://127.0.0.1:5000/o/uDVI1KElzKJfw9ON52uk/s/h5UHoyl8SSRgUKuYYLss/) section for details how to install and carry out the initial configuration.
+The best place to start is the [Getting Started](https://app.gitbook.com/o/uDVI1KElzKJfw9ON52uk/s/h5UHoyl8SSRgUKuYYLss/) section for details how to install and carry out the initial configuration.
 
 **Before you can use this package you will need a** [**Stripe account**](https://dashboard.stripe.com/register)**.**
 
