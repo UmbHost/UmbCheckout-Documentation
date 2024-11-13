@@ -11,3 +11,4 @@ The Basket object contains the below properties
 | LineItems           | IEnumerable<[LineItem](lineitem.md)> | The line items (products) contained in the Basket          |
 | ItemCount           | long                                 | The total count of line item quantity                      |
 | Total               | decimal                              | The sub total of the Basket, excluding Tax and Shipping    |
+| MetaData            | Dictionary\<string, string>          | Used to store meta data against the basket                 |
