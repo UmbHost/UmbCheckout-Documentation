@@ -3,11 +3,10 @@
 Please ensure you have added the webhook secret as per the [configuration](../../configuration.md).
 
 {% hint style="info" %}
-Please ensure you have configured the [Stripe API version](https://dashboard.stripe.com/developers) to:
+The minimum [Stripe API version](https://dashboard.stripe.com/developers) is `2023-08-16`
 
-```
-2023-08-16
-```
+If you cannot use this version, please install a newer version of the [Stripe.net NuGet package](https://www.nuget.org/packages/Stripe.net), which matches the Stripe API versions available in your account.\
+Use the [Stripe.net changelog](https://github.com/stripe/stripe-dotnet/blob/master/CHANGELOG.md) to find which version of the API you need.
 {% endhint %}
 
 You can configure Stripe to send the webhook request to the below api:
