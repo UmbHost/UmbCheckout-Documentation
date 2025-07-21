@@ -8,7 +8,7 @@ coverY: 0
 {% hint style="warning" %}
 There are license and subscription changes planned for V2.0.\
 \
-[Take a read on the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
+[Take a read in the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
 \
 [Discuss the change in the GitHub Discussion here](https://github.com/UmbHost/UmbCheckout/discussions/98)
 {% endhint %}
