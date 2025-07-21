@@ -1,5 +1,13 @@
 # License Comparison
 
+{% hint style="warning" %}
+There are license and subscription changes planned for V2.0.\
+\
+[Take a read on the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
+\
+[Discuss the change in the GitHub Discussion here](https://github.com/UmbHost/UmbCheckout/discussions/98)
+{% endhint %}
+
 The UmbCheckout core is opensource and usable under the GNU GPLv3 license during the development phase, this will change to the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/) license once the first stable release is out, the table below outlines what the differences are between the free version and the paid for version.\
 \
 The paid license is included with any shared hosting package purchased through [UmbHost Limited](https://umbhost.net)

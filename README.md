@@ -1,24 +1,17 @@
 ---
-description: Documentation for UmbCheckout an eCommerce solution for Umbraco
 cover: .gitbook/assets/Asset 3.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # 🛒 UmbCheckout Documentation
+
+{% hint style="warning" %}
+There are license and subscription changes planned for V2.0.\
+\
+[Take a read on the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
+\
+[Discuss the change in the GitHub Discussion here](https://github.com/UmbHost/UmbCheckout/discussions/98)
+{% endhint %}
 
 UmbCheckout is an eCommerce solution for Umbraco v10+ integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
 
