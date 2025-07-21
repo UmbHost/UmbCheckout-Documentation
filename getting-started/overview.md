@@ -6,7 +6,11 @@ description: Getting Started with UmbCheckout
 
 In this section you can follow the steps required to install and configure UmbCheckout.
 
-Before you begin you will need to have installed Umbraco V10+ and be ready to configure the checkout flow.
+{% hint style="success" %}
+[Support for Umbraco 17 is planned for V2.1](https://github.com/UmbHost/UmbCheckout/issues/90)
+{% endhint %}
+
+Before you begin you will need to have installed Umbraco V10 or 13 and be ready to configure the checkout flow.
 
 You can see the UmbCheckout demo here:
 

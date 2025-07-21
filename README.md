@@ -13,7 +13,13 @@ There are license and subscription changes planned for V2.0.\
 [Discuss the change in the GitHub Discussion here](https://github.com/UmbHost/UmbCheckout/discussions/98)
 {% endhint %}
 
-UmbCheckout is an eCommerce solution for Umbraco v10+ integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
+{% hint style="success" %}
+[Support for Umbraco 17 is planned for V2.1](https://github.com/UmbHost/UmbCheckout/issues/90)
+{% endhint %}
+
+UmbCheckout is an eCommerce solution for Umbraco v10 or v13
+
+&#x20;integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
 
 If you need a lightweight eCommerce solution for a site powered by Umbraco V10+ then UmbCheckout will allow you to make use of the Stripe Checkout service with minimal coding required.
 

@@ -1,5 +1,6 @@
 ---
 description: Earn commission on each license or hosting referral
+hidden: true
 ---
 
 # Affiliate Scheme

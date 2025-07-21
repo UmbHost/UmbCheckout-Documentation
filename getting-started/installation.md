@@ -4,6 +4,12 @@ description: Installing UmbCheckout
 
 # Installation
 
+{% hint style="success" %}
+[Support for Umbraco 17 is planned for V2.1](https://github.com/UmbHost/UmbCheckout/issues/90)
+{% endhint %}
+
+**UmbCheckout currently only supports Umbraco v10 or v13.**
+
 UmbCheckout is installed using the NuGet package manager using the below command:
 
 ```
