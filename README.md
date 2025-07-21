@@ -19,7 +19,7 @@ There are license and subscription changes planned for V2.0.\
 
 UmbCheckout is an eCommerce solution for Umbraco v10 or v13 integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
 
-If you need a lightweight eCommerce solution for a site powered by Umbraco V10+ then UmbCheckout will allow you to make use of the Stripe Checkout service with minimal coding required.
+If you need a lightweight eCommerce solution for a site powered by Umbraco V10+ or V13 then UmbCheckout will allow you to make use of the Stripe Checkout service with minimal coding required.
 
 Once the nuget package is installed it's completely possible to integrate it using the Views area of the Umbraco backoffice!
 
