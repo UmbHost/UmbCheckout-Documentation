@@ -29,7 +29,7 @@ layout:
 {% hint style="danger" %}
 The planned support for Umbraco 17 has been paused at this time.\
 \
-We do not have a timeframe when or of this will happen
+We do not have a timeframe when or if this will happen.
 {% endhint %}
 
 {% hint style="warning" %}
