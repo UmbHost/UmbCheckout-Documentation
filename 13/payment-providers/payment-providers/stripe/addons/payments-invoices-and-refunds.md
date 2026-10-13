@@ -19,4 +19,12 @@ The Stripe add-on adds an **UmbCheckout** section to the backoffice, next to Set
 
 The add-on creates the user groups **UmbCheckout**, **UmbCheckout Invoices** and **UmbCheckout Refunds**. Add users to them in Users -> User Groups to give them access.
 
-Each item links to the payment, invoice or refund in the Stripe Dashboard.
+Each item links to the payment, invoice or refund in the Stripe Dashboard (the test or live dashboard, following the Stripe settings).
+
+The **To** date of the date filters includes the whole of the chosen day. The status filters only accept Stripe's own statuses.
+
+### Refunds
+
+* The **Refund** button asks for confirmation before refunding the payment.
+* A refund sent twice (for example after a timeout) isn't made twice.
+* Each refund is recorded in Umbraco's audit log, with the user, the payment and the refund.

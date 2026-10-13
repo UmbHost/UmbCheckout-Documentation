@@ -4,6 +4,8 @@ There are a number of settings which can be configured within the backoffice on 
 
 Settings -> UmbCheckout -> Configuration
 
+Only users with access to the Settings section can change it. The same applies to the Stripe settings and shipping rates. The configuration and Stripe settings are cached, and saving them clears the cache on every server of a load-balanced site.
+
 The configuration options and their possible options are as below:
 
 | Name                           | Type    | Options                                                                                                                                                                 |

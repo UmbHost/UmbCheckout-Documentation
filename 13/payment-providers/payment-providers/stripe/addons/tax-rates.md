@@ -20,7 +20,7 @@ You can enter Tax Rates into your Umbraco site by going to the following area:
 
 Settings -> UmbCheckout -> Stripe -> Stripe Tax Rates -> Create Tax Rate
 
-The Stripe Tax Rates item is only shown on licensed sites.
+The Stripe Tax Rates item is only shown on licensed sites. Managing tax rates needs access to the Settings section, like shipping rates.
 
 The tax rate settings are as follows:
 

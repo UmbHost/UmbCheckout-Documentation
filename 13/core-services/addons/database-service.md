@@ -8,7 +8,7 @@ description: A service which handles storing of the Basket in the database
 This feature requires a paid license
 {% endhint %}
 
-The database service is what handles the insertion, updating, and clearing of the UmbCheckout Basket within the database.
+The database service is what handles the insertion, updating, and clearing of the UmbCheckout Basket within the database. Clearing a Basket also deletes its stored copy.
 
 You can access the database service by injecting `IDatabaseService` which can be found within the namespace `UmbCheckout.Core.Addons.Interfaces`
 

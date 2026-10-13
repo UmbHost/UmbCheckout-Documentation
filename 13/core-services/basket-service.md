@@ -8,6 +8,10 @@ The basket service is what and handles all the UmbCheckout Basket operations.
 
 You can access the basket service by injecting `IBasketService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
+{% hint style="info" %}
+Every method also has an overload that takes a `CancellationToken` as its last parameter. Pass the request's token (`HttpContext.RequestAborted`) so the work stops when the shopper leaves. If you mock or decorate this service, set up or override the token overloads too: UmbCheckout calls those.
+{% endhint %}
+
 #### Get
 
 Gets the [Basket](object-reference/basket.md)

@@ -15,3 +15,5 @@ The workflow settings are as follows:
 | Email alias | The alias of the field used to capture the email address (`emailAddress` by default) |
 
 The Basket's `CustomerReferenceId` is set to `{form id}@{record id}` and sent to Stripe as the checkout session's client reference ID, so the payment can be matched to the form entry.
+
+The workflow charges the Basket as stored, and if it fails it logs one error.

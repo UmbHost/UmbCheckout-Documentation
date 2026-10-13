@@ -4,7 +4,7 @@ description: What data do we collect and why?
 
 # Anonymous Telemetry
 
-By default, anonymous telemetry is sent to us every time you save the UmbCheckout configuration and after a remote license check has been completed.
+By default, anonymous telemetry is sent to us every time you save the UmbCheckout configuration and after a remote license check has been completed. It is sent in the background with a 5 second time limit, so it never slows the site or the license check down.
 
 #### Why do we collect this data?
 

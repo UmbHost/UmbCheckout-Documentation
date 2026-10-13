@@ -8,6 +8,10 @@ The Stripe session service is what creates and handles the creation, updating an
 
 You can access the Stripe session service by injecting `IStripeSessionService` which can be found within the namespace `UmbCheckout.Stripe.Interfaces`
 
+{% hint style="info" %}
+Every method also has an overload that takes a `CancellationToken` as its last parameter. Pass the request's token (`HttpContext.RequestAborted`) so the work stops when the shopper leaves. If you mock or decorate this service, set up or override the token overloads too: UmbCheckout calls those.
+{% endhint %}
+
 #### GetSession
 
 Gets a Stripe session

@@ -5,6 +5,7 @@
 ## 📔 Getting Started
 
 * [Overview](getting-started/overview.md)
+* [Changes in the v13 Update](getting-started/v13-update.md)
 * [License Comparison](getting-started/license-comparison.md)
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
