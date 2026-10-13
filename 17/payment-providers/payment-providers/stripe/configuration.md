@@ -4,7 +4,7 @@ description: Configuring Stripe Payment Provider
 
 # Configuration
 
-You will need to add your Stripe Secret API key into your `appsettings.json` below the `LicenseKey` as below:
+You will need to add your Stripe Secret API key to the site's configuration, as below. Keep the keys out of committed settings files: use [user secrets](https://learn.microsoft.com/aspnet/core/security/app-secrets) in development and environment variables or your host's secret store elsewhere (for example `UmbCheckout__Stripe__Live__ApiKey`).
 
 ```json
   "UmbCheckout": {
@@ -21,7 +21,9 @@ You will need to add your Stripe Secret API key into your `appsettings.json` bel
 
 You can find your Stripe Secret API key [within your account](https://dashboard.stripe.com/apikeys) by heading to `Developers -> API keys`
 
-If you are going to use the [Stripe Webhook](services/stripe-webhook-api/) (Recommended) then you will need to add the following secret into your `appsettings.json`
+If the key for the active mode is missing, checkout and the Stripe screens show "No Stripe API key is configured for test mode. Set UmbCheckout:Stripe:Test:ApiKey." (or live) instead of an error page.
+
+You also need the [Stripe Webhook](services/stripe-webhook-api/): it records payments, so a paid Basket is cleared even if the customer doesn't return to the success page. Add its signing secret in the same way:
 
 ```json
   "UmbCheckout": {
@@ -38,7 +40,7 @@ If you are going to use the [Stripe Webhook](services/stripe-webhook-api/) (Reco
 
 You can create your WebHook Secret [within your account](https://dashboard.stripe.com/webhooks) by heading to `Developers -> Webhooks`
 
-You will also need to ensure your Webhooks are configured for the [Stripe API ](https://dashboard.stripe.com/developers)version used by the Stripe.net package UmbCheckout is built with. UmbCheckout 1.5 uses Stripe.net 50.x, which uses API version:
+You will also need to ensure your Webhooks are configured for the [Stripe API ](https://dashboard.stripe.com/developers)version used by the Stripe.net package UmbCheckout is built with. UmbCheckout 17 uses Stripe.net 50.x, which uses API version:
 
 ```
 2026-01-28.clover

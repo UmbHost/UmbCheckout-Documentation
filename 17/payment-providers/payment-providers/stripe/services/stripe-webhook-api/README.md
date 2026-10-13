@@ -2,20 +2,28 @@
 
 Please ensure you have added the webhook secret as per the [configuration](../../configuration.md).
 
+### Adding the endpoint in Stripe
+
+In the Stripe Dashboard, go to `Developers -> Webhooks -> Add endpoint` and enter:
+
+`https://<your site>/umbraco/api/stripewebhookapi/checkoutevents`
+
+Then copy the endpoint's signing secret into `UmbCheckout:Stripe:Test:WebHookSecret` (or `Live`, for the live endpoint).
+
 {% hint style="info" %}
-Create your webhook endpoint on the [Stripe API version](https://dashboard.stripe.com/developers) used by the Stripe.net package UmbCheckout is built with. UmbCheckout 1.5 uses Stripe.net 50.x, which uses `2026-01-28.clover`
-
-If you cannot use this version, please install a newer version of the [Stripe.net NuGet package](https://www.nuget.org/packages/Stripe.net), which matches the Stripe API versions available in your account.\
-Use the [Stripe.net changelog](https://github.com/stripe/stripe-dotnet/blob/master/CHANGELOG.md) to find which version of the NuGet package you need.
-
-**NOTE:** When upgrading between major versions of the Stripe.net NuGet package, there may be breaking changes, if you encounter these and have a paid license, open a [support ticket](../../../../../support/support-tickets.md); otherwise, open an issue on [the tracker](https://github.com/UmbHost/UmbCheckout/issues)
+UmbCheckout 17 uses Stripe.net 50.x, which uses [Stripe API version](https://dashboard.stripe.com/developers) `2026-01-28.clover`. Create the endpoint on that version where you can: the Stripe API and CLI accept an `api_version`, while the Dashboard may only offer your account's default. Events on another version are still handled, with a warning in the log once per version.
 {% endhint %}
 
-You can configure Stripe to send the webhook request to the below api:
+Select at least these events:
 
-`https://<your site>/umbraco/api/StripeWebhookApi/CheckoutEvents`
+* `checkout.session.completed`
+* `checkout.session.async_payment_succeeded`
 
-This will trigger the following notifications
+UmbCheckout uses them to record that a checkout session has been paid (delayed payment methods such as Bacs and SEPA Direct Debit report payment with `async_payment_succeeded`). Add any other events in the table below that your own code handles.
+
+### Events and notifications
+
+The endpoint publishes the following notifications:
 
 | Stripe event                               | Notification                                                                                                |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -31,13 +39,37 @@ This will trigger the following notifications
 | `payment_intent.payment_failed`            | [OnPaymentIntentPaymentFailedNotification](../../notifications/onpaymentintentpaymentfailednotification.md) |
 | `consent.promotions`                       | [OnPromotionalEmailConsentNotification](../../notifications/onpromotionalemailconsentnotification.md)       |
 
-In Stripe, select the events you want to receive when you add the endpoint. Other event types are logged as unhandled and ignored.
+Other event types are accepted and ignored.
 
+### Each event is handled once
 
+Stripe delivers each event at least once, and retries for up to 3 days until it gets a success response.
+
+* Once your notification handlers have completed for an event, a redelivery is acknowledged without running them again. Handled event IDs are kept for 30 days.
+* If a handler throws, or the server stops while handlers are running, the endpoint answers with an error and Stripe's retry runs **all** the handlers again. Write handlers that are safe to run twice.
+
+| Situation                                       | Response | What Stripe does         |
+| ----------------------------------------------- | -------- | ------------------------ |
+| Handled, or an event type UmbCheckout ignores   | 202      | Done                     |
+| Already handled                                 | 200      | Done                     |
+| Being handled by another request or server      | 409      | Retries                  |
+| A handler threw                                 | 500      | Retries                  |
+| The webhook secret for the active mode is unset | 500      | Retries (and an error is logged) |
+| The signature or payload is invalid             | 400      | Retries                  |
+
+The endpoint uses the live webhook secret when **Use live API details** is ticked in the [Stripe settings](../../configuration.md#stripe-settings), and the test one otherwise.
+
+### Load-balanced sites
+
+The endpoint works on every server, including front-end-only servers that don't run the backoffice. Each event is still handled once across all servers.
+
+### Replacing the webhook controller
+
+To change how the endpoint behaves, subclass `UmbCheckout.Stripe.Controllers.Api.StripeWebhookApiController`. When a subclass exists, UmbCheckout's own controller is removed, so only one endpoint answers:
+
+* a subclass without its own `[Route]` takes over `/umbraco/api/stripewebhookapi/checkoutevents`;
+* a subclass with its own `[Route]` answers only at that route, so point the Stripe endpoint at it.
 
 {% hint style="info" %}
-To be able to test the Webhook on localhost you need to install the [Stripe CLI](https://github.com/stripe/stripe-cli) you can find the instructions on how to configure the CLI to test the Webhook on the Stripe website using the link below, look for step 3 entitled "**Test the webhook**":
-
-[https://stripe.com/docs/webhooks/quickstart?lang=dotnet#run](https://stripe.com/docs/webhooks/quickstart?lang=dotnet#run)
+To be able to test the Webhook on localhost you need to install the [Stripe CLI](https://github.com/stripe/stripe-cli), see [How to test the Stripe Webhook on localhost](how-to-test-the-stripe-webhook-on-localhost.md).
 {% endhint %}
-

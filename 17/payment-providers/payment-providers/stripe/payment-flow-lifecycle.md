@@ -8,13 +8,23 @@ When you use the Stripe payment provider it makes use of the [Stripe Checkout](h
 
 The flow / lifecycle works like this:
 
-1. The customer browses the website and adds a product to the [Basket](../../../core-services/object-reference/basket.md)
+1. The customer browses the website and adds a product to the [Basket](../../../core-services/object-reference/basket.md). The price and currency are read from the product on the server
 2. Customer views their basket and initiates the Checkout process
-3. UmbCheckout converts the [Basket](../../../core-services/object-reference/basket.md) for Stripe and sends this over via the Stripe API
-4. The Stripe API returns a unique payment URL
-5. The customer is redirected to the Hosted Stripe payment page
-6. On payment success, the Customer is returned to the payment success page, or on payment failure / cancel the Customer is returned to the payment canceled page
-7. After the transaction, a [webhook](services/stripe-webhook-api/) sends the response and triggers a [Notification](notifications/)
+3. UmbCheckout prices every line again from the published products. If anything changed, the customer goes back to the Basket page to see the change (see [Prices, Currencies and Baskets](../../../configuration/prices-currencies-and-baskets.md#prices-are-checked-again-at-checkout))
+4. UmbCheckout converts the [Basket](../../../core-services/object-reference/basket.md) for Stripe and sends this over via the Stripe API, then records the checkout session's ID on the Basket
+5. The Stripe API returns a unique payment URL
+6. The customer is redirected to the Hosted Stripe payment page
+7. On payment success, the Customer is returned to the payment success page, or on payment failure / cancel the Customer is returned to the payment canceled page
+8. After the transaction, a [webhook](services/stripe-webhook-api/) sends the response and triggers a [Notification](notifications/)
+
+### When the Basket is cleared
+
+A paid Basket is cleared in one of two ways, whichever happens first:
+
+* **The customer returns to the success page.** The [StripeResponseNotificationHandler](notification-handlers/striperesponsenotificationhandler.md) clears the Basket that the checkout session paid for.
+* **The customer doesn't return** (for example they closed the tab, or paid by a delayed method such as Bacs Direct Debit). The webhook records the checkout session as paid when Stripe sends `checkout.session.completed` (paid) or `checkout.session.async_payment_succeeded`. The next time the customer's Basket is read, on any page, it is cleared and `OnPaidBasketClearedNotification` is published (see [Extending UmbCheckout](../../../core-services/extending-umbcheckout.md#when-a-paid-basket-is-cleared)).
+
+An expired or unpaid checkout session never clears the Basket, so a customer who abandons the payment keeps their Basket. If the customer changes the Basket after starting checkout, and before the payment has been recorded, the Basket forgets the checkout session and is no longer cleared automatically. Once the payment has been recorded, the next read clears the Basket before any change is made.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-08-18 130555.png" alt=""><figcaption></figcaption></figure>
 
