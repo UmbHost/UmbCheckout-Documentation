@@ -26,3 +26,5 @@ The shipping rate settings are as follows:
 {% hint style="info" %}
 Currently only fixed rate shipping rates are supported. At checkout, only the rates that charge in the Basket's currency are offered
 {% endhint %}
+
+To calculate shipping yourself, for example per product, see [Custom Shipping Calculator](services/custom-shipping-calculator.md).

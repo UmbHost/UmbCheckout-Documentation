@@ -32,3 +32,5 @@ Changing a rate's Stripe ID updates the rate. Two rates can't have the same Stri
 {% hint style="info" %}
 Currently only fixed rate shipping rates are supported. At checkout, only the rates that charge in the Basket's currency are offered, at most 5 (see [Prices, Currencies and Baskets](../../../configuration/prices-currencies-and-baskets.md#shipping-rates-follow-the-basket-currency)).
 {% endhint %}
+
+To calculate shipping yourself, for example per product, see [Custom Shipping Calculator](services/custom-shipping-calculator.md).
