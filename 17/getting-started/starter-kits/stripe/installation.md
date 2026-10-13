@@ -38,13 +38,9 @@ Next, you are required to configure the [UmbracoApplicationUrl](https://docs.umb
 }
 ```
 
-The final step is to add your [Stripe API keys](../../../payment-providers/payment-providers/stripe/configuration.md) to the appsettings.json
+The final step is to add your [Stripe API keys](../../../payment-providers/payment-providers/stripe/configuration.md), for example with user secrets:
 
-```json
-  "UmbCheckout": {
-    "Stripe": {
-      "WebHookSecret": "",
-      "ApiKey": ""
-    }
-  }
+```
+dotnet user-secrets set "UmbCheckout:Stripe:Test:ApiKey" "sk_test_..."
+dotnet user-secrets set "UmbCheckout:Stripe:Test:WebHookSecret" "whsec_..."
 ```

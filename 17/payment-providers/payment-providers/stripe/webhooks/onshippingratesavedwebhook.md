@@ -1,5 +1,5 @@
 # OnShippingRateSavedWebhook
 
 {% hint style="info" %}
-Webhooks require Umbraco V13+ and UmbCheckout V1.4+
+Choose this event when you create a webhook in the backoffice under Settings -> Webhooks.
 {% endhint %}

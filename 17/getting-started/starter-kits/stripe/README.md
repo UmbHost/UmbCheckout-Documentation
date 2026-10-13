@@ -6,6 +6,10 @@ description: Information about our Starter Kit configured for Stripe
 
 Our UmbCheckout Stripe Starter Kit comes fully configured and can be installed ready for the content population in 2 minutes!
 
+{% hint style="info" %}
+Check the [starter kit's repository](https://github.com/UmbHost/UmbCheckout.StarterKit.Stripe) for the Umbraco versions it supports.
+{% endhint %}
+
 The source code for the Starter Kit can be found on the [GitHub repository here](https://github.com/UmbHost/UmbCheckout.StarterKit.Stripe).
 
 The starter kit has been built using the [InMemoryAuto Models builder mode](https://docs.umbraco.com/umbraco-cms/reference/configuration/modelsbuildersettings#models-mode).
