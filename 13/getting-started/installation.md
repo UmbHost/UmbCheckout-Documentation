@@ -5,7 +5,7 @@ description: Installing UmbCheckout
 # Installation
 
 {% hint style="info" %}
-These pages are for UmbCheckout 1.x on Umbraco 10 and 13. For Umbraco 17, choose **Umbraco 17 (v17)** in the version menu at the top of the page.
+These pages are for UmbCheckout 1.x on Umbraco 10 and 13. For Umbraco 17, choose **UmbCheckout 17** in the version menu at the top of the page.
 {% endhint %}
 
 **UmbCheckout currently only supports Umbraco v10 or v13.**

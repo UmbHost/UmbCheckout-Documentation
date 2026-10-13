@@ -6,8 +6,8 @@ There is one folder per major version. Each folder is a complete GitBook space w
 
 | Folder | Documents | GitBook space | Site variant label |
 | ------ | --------- | ------------- | ------------------ |
-| [`17/`](17/README.md) | UmbCheckout 17.x for Umbraco 17 | Git Sync project directory `17` | Umbraco 17 (v17), the default |
-| [`13/`](13/README.md) | UmbCheckout 1.x for Umbraco 13 | Git Sync project directory `13` | Umbraco 13 (v13) |
+| [`17/`](17/README.md) | UmbCheckout 17.x for Umbraco 17 | Git Sync project directory `17` | UmbCheckout 17, the default |
+| [`13/`](13/README.md) | UmbCheckout 1.x for Umbraco 13 | Git Sync project directory `13` | UmbCheckout 13 |
 
 Both spaces are variants of one docs site, so readers switch version with the dropdown next to the site title. How the spaces, Git Sync and the variants are set up in GitBook is in [GITBOOK-SETUP.md](GITBOOK-SETUP.md).
 

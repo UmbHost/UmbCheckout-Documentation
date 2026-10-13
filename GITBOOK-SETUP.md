@@ -8,8 +8,8 @@ These are the steps to do in GitBook. They're based on GitBook's documentation a
 
 | Space | Git Sync folder | Variant label | Variant slug | URLs |
 | ----- | --------------- | ------------- | ------------ | ---- |
-| **The existing live space**, renamed "UmbCheckout 17" | `17` | Umbraco 17 (v17) | none (the default) | `docs.umbcheckout.net/<page>`, as today |
-| **A duplicate of the live space**, named "UmbCheckout 13" | `13` | Umbraco 13 (v13) | `v13` | `docs.umbcheckout.net/v13/<page>` |
+| **The existing live space**, renamed "UmbCheckout 17" | `17` | UmbCheckout 17 | none (the default) | `docs.umbcheckout.net/<page>`, as today |
+| **A duplicate of the live space**, named "UmbCheckout 13" | `13` | UmbCheckout 13 | `v13` | `docs.umbcheckout.net/v13/<page>` |
 
 **Why the live space becomes v17:**
 - The default variant is served at the site root without a slug. So the live space, as the default, keeps every URL it has today, and its page IDs, history and search ranking.
@@ -82,10 +82,10 @@ From now on an edit in either space commits to `master` in that space's folder o
 1. Open the docs site, then **Site structure** in the site sidebar.
 2. In the site's section (there's one, holding the live space), click **Add variant** and choose **UmbCheckout 13**.
 3. In the variants table, click **Edit** on each row and set:
-   - **UmbCheckout 17:** name **Umbraco 17 (v17)**.
-   - **UmbCheckout 13:** name **Umbraco 13 (v13)**, slug **v13**. Slugs must be unique across your organisation, so choose another slug if `v13` is taken.
+   - **UmbCheckout 17:** name **UmbCheckout 17**.
+   - **UmbCheckout 13:** name **UmbCheckout 13**, slug **v13**. Slugs must be unique across your organisation, so choose another slug if `v13` is taken.
    - Click **Save** each time.
-4. On the **Umbraco 17 (v17)** row, open the **Actions menu** and choose **Set as default**, if it isn't already. The default is served at the root with no slug.
+4. On the **UmbCheckout 17** row, open the **Actions menu** and choose **Set as default**, if it isn't already. The default is served at the root with no slug.
 5. Publish the site if your plan needs a separate publish step. The version dropdown now shows both labels.
 
 Don't use **New section** for this: sections are tabs for different content, and variants are the documented way to offer versions of the same content.
@@ -110,8 +110,8 @@ If you'd rather manage them in the site, add them under site **Settings → Redi
 
 ## Checks after setup
 
-- [ ] `docs.umbcheckout.net/` opens the v17 home page, with a version dropdown showing "Umbraco 17 (v17)" and "Umbraco 13 (v13)".
-- [ ] Choosing "Umbraco 13 (v13)" opens `docs.umbcheckout.net/v13/`.
+- [ ] `docs.umbcheckout.net/` opens the v17 home page, with a version dropdown showing "UmbCheckout 17" and "UmbCheckout 13".
+- [ ] Choosing "UmbCheckout 13" opens `docs.umbcheckout.net/v13/`.
 - [ ] Each space's sidebar matches that folder's `SUMMARY.md`. The images show on the "MetaData Property Editor", "Tax Rates Property Editor" and "Payment Flow / Lifecycle" pages in both versions.
 - [ ] `docs.umbcheckout.net/core-services/database-service` redirects to the v17 add-on Database Service page.
 - [ ] An edit made in GitBook to the v13 space commits only under `13/` in the repository.
