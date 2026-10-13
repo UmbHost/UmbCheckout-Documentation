@@ -8,7 +8,7 @@ Upon purchasing a paid license or hosting package, you can request a developer l
 
 If your license is part of a hosting package, it will only remain valid for the life of the subscription.
 
-To request a developer license please [create an account](https://my.umbhost.net/register.php) and then [open a support ticket here](https://my.umbhost.net/submitticket.php?step=2\&deptid=2).
+To request a developer license please [create an account and open a support ticket in UmbPanel](https://www.umbpanel.io).
 
 **Please include the domains to be added to the license in the request.**
 

@@ -6,8 +6,8 @@ description: Getting Started with UmbCheckout
 
 In this section you can follow the steps required to install and configure UmbCheckout.
 
-{% hint style="success" %}
-[Support for Umbraco 17 is planned for V2.1](https://github.com/UmbHost/UmbCheckout/issues/90)
+{% hint style="info" %}
+These pages are for UmbCheckout 1.x on Umbraco 13. For Umbraco 17, choose **Umbraco 17 (v17)** in the version menu at the top of the page.
 {% endhint %}
 
 Before you begin you will need to have installed Umbraco V10 or 13 and be ready to configure the checkout flow.

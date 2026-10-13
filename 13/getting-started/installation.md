@@ -4,8 +4,8 @@ description: Installing UmbCheckout
 
 # Installation
 
-{% hint style="success" %}
-[Support for Umbraco 17 is planned for V2.1](https://github.com/UmbHost/UmbCheckout/issues/90)
+{% hint style="info" %}
+These pages are for UmbCheckout 1.x on Umbraco 13. For Umbraco 17, choose **Umbraco 17 (v17)** in the version menu at the top of the page.
 {% endhint %}
 
 **UmbCheckout currently only supports Umbraco v10 or v13.**
@@ -45,7 +45,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-You will also need to install a [payment provider](broken-reference).
+You will also need to install a [payment provider](../payment-providers/payment-providers/README.md).
 
 Alternatively, you can install using the NuGet package manager GUI within Visual Studio.
 
@@ -63,7 +63,7 @@ If you have purchased a license to enable more features, you simply need to add 
   }
 ```
 
-_Replacing_ `YOUR LICENSE KEY HERE` _with the key found in your_ [_account here_](https://my.umbhost.net)_._
+_Replacing_ `YOUR LICENSE KEY HERE` _with the key found in your_ [_UmbPanel account_](https://www.umbpanel.io)_._
 
 You are also required to configure the [UmbracoApplicationUrl](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings#umbraco-application-url) within the [Web routing settings](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings) within your appsettings.json file
 

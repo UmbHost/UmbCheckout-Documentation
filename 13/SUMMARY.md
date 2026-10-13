@@ -14,7 +14,7 @@
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
 * [Developer License](getting-started/developer-license.md)
 * [Affiliate Scheme](getting-started/affiliate-scheme.md)
-* [Buy a License](https://my.umbhost.net/store/umbraco-packages)
+* [Buy a License](https://umbcheckout.net)
 
 ## 🛠️ Configuration
 

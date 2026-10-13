@@ -1,7 +1,7 @@
 # License Comparison
 
 {% hint style="warning" %}
-There are license and subscription changes planned for V2.0.\
+The license and subscription changes announced for V2.0 apply to UmbCheckout 17 on Umbraco 17. Licenses for UmbCheckout 1.x on Umbraco 13 keep working as they do today.\
 \
 [Take a read in the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
 \
@@ -14,7 +14,7 @@ The paid license is included with any shared hosting package purchased through [
 
 You can purchase a license from the link below:
 
-[https://my.umbhost.net/store/umbraco-packages](https://my.umbhost.net/store/umbraco-packages)
+[https://umbcheckout.net](https://umbcheckout.net)
 
 |                              |    Free Version   | Paid & Hosted Version           |
 | :--------------------------: | :---------------: | ------------------------------- |

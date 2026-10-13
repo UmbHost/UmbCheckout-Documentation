@@ -26,14 +26,14 @@ layout:
 
 # 🛒 UmbCheckout Documentation
 
-{% hint style="danger" %}
-The planned support for Umbraco 17 has been paused at this time.\
+{% hint style="info" %}
+These pages document **UmbCheckout 1.x for Umbraco 13**.\
 \
-We do not have a timeframe when or if this will happen.
+For Umbraco 17, choose **Umbraco 17 (v17)** in the version menu at the top of the page.
 {% endhint %}
 
 {% hint style="warning" %}
-There are license and subscription changes planned for V2.0.\
+The license and subscription changes announced for V2.0 apply to UmbCheckout 17 on Umbraco 17. Licenses for UmbCheckout 1.x on Umbraco 13 keep working as they do today.\
 \
 [Take a read in the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
 \
@@ -50,7 +50,7 @@ Once the nuget package is installed it's completely possible to integrate it usi
 
 **The documentation is aimed at developers** who have a basic understanding of Umbraco and at least an understanding of the Razor syntax.
 
-The best place to start is the [Getting Started](https://app.gitbook.com/o/uDVI1KElzKJfw9ON52uk/s/h5UHoyl8SSRgUKuYYLss/) section for details how to install and carry out the initial configuration.
+The best place to start is the [Getting Started](getting-started/overview.md) section for details how to install and carry out the initial configuration.
 
 **Before you can use this package you will need a** [**Stripe account**](https://dashboard.stripe.com/register)**.**
 
@@ -58,4 +58,4 @@ The best place to start is the [Getting Started](https://app.gitbook.com/o/uDVI1
 
 If you require further assistance please take a look at the [issue tracker](https://github.com/UmbHost/UmbCheckout/issues).
 
-If you have a license with an active support subscription and require further assistance please [open a ticket here](https://my.umbhost.net/submitticket.php?step=2\&deptid=2).
+If you have a license with an active support subscription and require further assistance please [open a ticket in UmbPanel](https://www.umbpanel.io).
