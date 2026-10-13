@@ -1,0 +1,14 @@
+---
+description: >-
+  Notification which is triggered before a single line item is added to the
+  Basket
+---
+
+# OnBasketAddStartedNotification
+
+The following properties are available within the notification
+
+| Property Name | Type                                                                      |
+| ------------- | ------------------------------------------------------------------------- |
+| LineItem      | [LineItem](../../core-services/object-reference/lineitem.md)              |
+| Basket        | [Basket](../../core-services/object-reference/basket.md)                  |
