@@ -29,6 +29,7 @@
 * [Session Service](core-services/session-service.md)
 * [Database Service](core-services/database-service.md)
 * [Basket Service](core-services/basket-service.md)
+* [Cancellation Tokens](core-services/cancellation-tokens.md)
 * [Object Reference](core-services/object-reference/README.md)
   * [Basket](core-services/object-reference/basket.md)
   * [Customer](core-services/object-reference/customer.md)

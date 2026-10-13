@@ -39,7 +39,9 @@ Stripe delivers each event at least once, and retries for up to 3 days until it 
 
 * Once your notification handlers have completed for an event, a redelivery is acknowledged without running them again. Handled event IDs are kept for 30 days.
 * If a handler throws, the endpoint answers with an error (500) and Stripe's retry runs **all** the handlers again. Write handlers that are safe to run twice.
-* If the webhook secret for the active mode isn't set, the error is logged.
+* While the handlers run, the event is claimed with a lease of 10 minutes. If a delivery dies, a retry takes the event over once the lease has expired. A late attempt that outlived its lease can't mark the event handled or release it, because that takes the lease token of the delivery that holds the claim.
+* If the event can't be claimed (for example the database can't be reached), the endpoint answers with an error (500) and Stripe retries.
+* If the webhook secret for the active mode isn't set, the endpoint answers with an error (500), and the error is logged once for each mode while the site runs. Further posts are logged at Debug level, so they can't fill the log.
 * Events sent on another Stripe API version are still handled, with a warning in the log.
 
 
@@ -50,3 +52,6 @@ To be able to test the Webhook on localhost you need to install the [Stripe CLI]
 [https://stripe.com/docs/webhooks/quickstart?lang=dotnet#run](https://stripe.com/docs/webhooks/quickstart?lang=dotnet#run)
 {% endhint %}
 
+### Replacing the event store
+
+The records of which events are being handled or are done are kept by `IStripeWebhookEventStore` (`UmbCheckout.Stripe.Interfaces`). Register your own implementation to keep them elsewhere. `ClaimAsync(eventId, cancellationToken)` returns the outcome (`Claimed`, `AlreadyHandled` or `InProgress`) and, for a claim, a lease token. `CompleteAsync` and `ForgetAsync` have overloads that take that token. The token-less members still work: by default `ClaimAsync` calls `TryClaimAsync`.

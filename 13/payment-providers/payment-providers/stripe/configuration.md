@@ -21,7 +21,7 @@ You will need to add your Stripe Secret API key into your `appsettings.json` bel
 
 You can find your Stripe Secret API key [within your account](https://dashboard.stripe.com/apikeys) by heading to `Developers -> API keys`
 
-If the key for the active mode is missing, or Stripe can't be reached, checkout and the Stripe screens show a clear message instead of an error page.
+If the key for the active mode is missing, or Stripe can't be reached, checkout and the Stripe screens show a clear message instead of an error page. If Stripe rejects the key, the message is "Stripe rejected the API key for the active mode (test or live). Check the Stripe settings.": the key itself, including its last 4 characters, is never shown or logged.
 
 If you are going to use the [Stripe Webhook](services/stripe-webhook-api/) (Recommended) then you will need to add the following secret into your `appsettings.json`
 
