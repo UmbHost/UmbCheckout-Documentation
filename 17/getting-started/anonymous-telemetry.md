@@ -19,6 +19,7 @@ We collect the following data:
 | umbracoId            | The Umbraco Guid for the site                                                 |
 | umbracoVersion       | The Umbraco version                                                           |
 | umbCheckoutVersion   | The UmbCheckout version                                                       |
+| installedPackages    | The UmbCheckout sub packages which are installed                              |
 | isLicensed           | Whether the site is running on a paid license                                 |
 | isDevelopmentLicense | Whether the site is running on a development license                          |
 | environmentName      | The sites hosting environment name (Development, Staging, Production, etc...) |

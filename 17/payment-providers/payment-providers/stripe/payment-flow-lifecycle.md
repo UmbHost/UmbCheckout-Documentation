@@ -22,7 +22,9 @@ The flow / lifecycle works like this:
 A paid Basket is cleared in one of two ways, whichever happens first:
 
 * **The customer returns to the success page.** The [StripeResponseNotificationHandler](notification-handlers/striperesponsenotificationhandler.md) clears the Basket that the checkout session paid for.
-* **The customer doesn't return** (for example they closed the tab, or paid by a delayed method such as Bacs Direct Debit). The webhook records the checkout session as paid when Stripe sends `checkout.session.completed` (paid) or `checkout.session.async_payment_succeeded`. The next time the customer's Basket is read, on any page, it is cleared and `OnPaidBasketClearedNotification` is published (see [Extending UmbCheckout](../../../core-services/extending-umbcheckout.md#when-a-paid-basket-is-cleared)).
+* **The customer doesn't return** (for example they closed the tab, or paid by a delayed method such as Bacs Direct Debit). The webhook records the checkout session as paid when Stripe sends `checkout.session.completed` (paid) or `checkout.session.async_payment_succeeded`. The next time the customer's Basket is read, on any page and from whichever store it comes (session, cookie or database), it is cleared and `OnPaidBasketClearedNotification` is published (see [Extending UmbCheckout](../../../core-services/extending-umbcheckout.md#when-a-paid-basket-is-cleared)).
+
+A checkout session created by UmbCheckout 1.x has no Basket details. When the customer returns to the success page for one, the Basket that recorded that session is cleared. A Basket that didn't record a session is cleared only if the checkout session was created in the last 24 hours, so an old success link clears nothing.
 
 An expired or unpaid checkout session never clears the Basket, so a customer who abandons the payment keeps their Basket. If the customer changes the Basket after starting checkout, and before the payment has been recorded, the Basket forgets the checkout session and is no longer cleared automatically. Once the payment has been recorded, the next read clears the Basket before any change is made.
 

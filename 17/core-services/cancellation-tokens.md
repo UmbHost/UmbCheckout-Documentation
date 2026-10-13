@@ -7,7 +7,7 @@ description: Passing a CancellationToken to UmbCheckout's services
 Every public async service method in UmbCheckout 17 can take a `CancellationToken`. Pass the request's token (`HttpContext.RequestAborted`, or the `cancellationToken` your notification handler receives), so work stops when the shopper leaves.
 
 * New methods take it as an optional last parameter (`CancellationToken cancellationToken = default`).
-* Methods that existed in v13 keep their old signature, and gain an overload with a `CancellationToken` as the last parameter. These overloads are default interface methods that call the old method, so classes that implement the interfaces still compile. The old overloads are `[Obsolete]` and will be removed in the next major version: call the overload with the token (see [Upgrading from v13](../getting-started/upgrading-from-v13.md#breaking-changes)).
+* Methods that existed in v13 keep their old signature, and gain an overload with a `CancellationToken` as the last parameter. These overloads are default interface methods that call the old method, so classes that implement the interfaces still compile. The old overloads are `[Obsolete]`, "Scheduled for removal in 17.1" ([UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)): call the overload with the token (see [Upgrading from v13](../getting-started/upgrading-from-v13.md#breaking-changes)).
 * UmbCheckout's own controllers, view components, Forms workflow and notification handlers pass the request's token.
 * When a shopper leaves during checkout, the call to Stripe stops, and the request ends quietly (no error page, no error log). A Stripe timeout is logged as a warning.
 * A refund's call to Stripe is never cancelled, so it always reaches the audit log.

@@ -97,8 +97,16 @@ Whether a checkout session has been paid is answered by `IPaidCheckoutSessions` 
 
 ### Webhook notifications must be safe to repeat
 
-Stripe delivers each webhook event at least once. Once your handlers have completed for an event, a redelivery is acknowledged without running them again. If a handler throws, or the server stops while handlers run, Stripe's retry runs all the handlers again. Write webhook notification handlers so that running them twice does no harm (for example, check whether you've already sent that order's email).
+Stripe delivers each webhook event at least once. Once your handlers have completed for an event, a redelivery is acknowledged without running them again. If a handler throws, or the server stops while handlers run, Stripe's retry runs all the handlers again. Write webhook notification handlers so that running them twice does no harm (for example, check whether you've already sent that order's email). To keep the records of handled events elsewhere, replace `IStripeWebhookEventStore` (see [Replacing the event store](../payment-providers/payment-providers/stripe/services/stripe-webhook-api/README.md#replacing-the-event-store)).
 
 ### Replace a service
 
 Every UmbCheckout service is a public interface registered in Umbraco's dependency injection, so a site can read every entity through it, decorate it or replace it. When you mock or decorate a service, cover the overloads that take a `CancellationToken`: UmbCheckout calls those (see [Cancellation tokens](cancellation-tokens.md)).
+
+### Settings cache
+
+The configuration and the Stripe settings are cached in memory. A save clears the cache on the server that saved it and, through Umbraco's distributed cache, on every other server of a load-balanced site. The cache is a public type, `SettingsCache<TEntity>` (`UmbCheckout.Shared.Persistence`), with `TryGet`, `TrySet` and `Clear`.
+
+### Stripe error details
+
+`StripeKeyRejection` (`UmbCheckout.Stripe.Helpers`) tells a Stripe failure caused by a rejected API key (HTTP 401 or 403) from any other. Stripe's own message for a rejected key echoes the key's last 4 characters, so use `StripeKeyRejection.DetailFor(exception)` to get a message that is safe to show or log: it is the fixed `StripeKeyRejection.Detail` for a rejected key, and Stripe's message otherwise.
