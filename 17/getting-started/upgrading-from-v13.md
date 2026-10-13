@@ -29,7 +29,7 @@ UmbCheckout 17 keeps the screens, settings, data and front-end of UmbCheckout 1.
 * **Baskets are stored in the database only when "Store Basket In The Database" is on** (they used to follow the cookie setting), and viewing a Basket no longer extends its expiry. Basket dates are stored in UTC.
 * **The webhook** handles each event once, answers 500 when a handler throws or the webhook secret is missing (so Stripe retries), and accepts events on other API versions with a warning.
 * **The success page** clears only the Basket the returning checkout session paid for, and only on the configured success page.
-* **Telemetry** no longer sends the list of installed UmbCheckout packages (see [Anonymous Telemetry](anonymous-telemetry.md)).
+* **Telemetry** still sends the list of installed UmbCheckout packages, as `installedPackages` (see [Anonymous Telemetry](anonymous-telemetry.md)).
 
 ### Breaking changes
 
@@ -46,12 +46,12 @@ These affect code that calls UmbCheckout's services. Members that were removed a
 | `BasketAdd.CurrencyCode`                                                                                                   | Removed: the currency is decided on the server                                                                                                                    |
 | `StripeWebhookApiController` was an `UmbracoApiController`                                                                 | A plain ASP.NET Core controller with the route `umbraco/api/stripewebhookapi`; see [replacing the webhook controller](../payment-providers/payment-providers/stripe/services/stripe-webhook-api/README.md#replacing-the-webhook-controller) |
 
-**Obsolete, still working** (scheduled for removal in the next major version):
+**Obsolete, still working** (scheduled for removal in 17.1, [UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)):
 
 * `IStripeSessionService.GetSession`, `CreateSession` and `ClearSession`: they block a thread. Use the `…Async` methods with a `CancellationToken`.
 * `LicenseService.RunLicenseCheck`: the license is checked in the background. Read `UmbCheckoutSettings.IsLicensed`, or call `RequestCheck`.
 * The constructors of `SessionService` and `BasketService` without `IEventMessagesFactory` (and, for `SessionService`, `IPaidCheckoutSessions`).
-* The constructor of `UmbCheckoutTelemetryNotificationHandler` without an `ILogger`.
+* The constructors of `UmbCheckoutTelemetryNotificationHandler` without an `IPackagingService` and an `ILogger`.
 * The overloads without a `CancellationToken`. Use the overload that takes a `CancellationToken` as its last parameter (pass `CancellationToken.None` if you have no token). The compiler warning names the replacement.
   * `ISessionService` (and `SessionService`): `Get`, `Update` and `Clear`, every overload.
   * `IBasketService` (and `BasketService`): `Get`, `Add`, `Reduce`, `Remove`, `Clear`, `TotalItems` and `SubTotal`.

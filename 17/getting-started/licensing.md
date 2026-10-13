@@ -52,6 +52,8 @@ The license is checked in the background, never while a page is loading.
 * **When an instance shuts down gracefully,** it releases its place on the license, so a replacement (for example during a deployment) can take it straight away.
 * **If an instance crashes,** its place is freed once it has been silent for 90 minutes.
 * **When the license has no room for another instance,** that instance is unlicensed (status **Invalid**, and the banner shows), and the log says "The licence has no room for another instance". It tries again regularly, so it is licensed once a place is free.
+* **After an outage of more than 30 days,** the licensed features switch off while the site is running, not only after a restart, and the log says so. They come back when the license server confirms the license.
+* **If the license can't be evaluated when the site starts,** the site still starts. The failure is logged and the add-on tables aren't created; they are created once a license is confirmed, on the first licensed request.
 * An expired, suspended or cancelled license switches the licensed features off at the next check.
 
 The **Re-Check License** button on the configuration screen checks with the license server at once and shows the result. It can be used once every 5 minutes.
@@ -65,6 +67,7 @@ The license server is only ever contacted at `www.umbpanel.io` over HTTPS. If yo
 | Active              | Licensed                                                                                      |
 | Development         | Licensed features are on in [development mode](developer-license.md#development-mode)         |
 | Domain not licensed | This request is for a domain the license doesn't list                                        |
+| Not licensed for this site | The license is active but doesn't cover this site: for example the path or domain doesn't match, or a debugger is attached |
 | Invalid             | The key isn't valid for this site, or the license has no room for another instance            |
 | Expired, Suspended  | The subscription has ended or been suspended                                                  |
 | Unlicensed          | No license key, no valid `UmbracoApplicationUrl`, or the license hasn't been checked yet      |

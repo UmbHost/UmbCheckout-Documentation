@@ -21,7 +21,7 @@ You will need to add your Stripe Secret API key to the site's configuration, as 
 
 You can find your Stripe Secret API key [within your account](https://dashboard.stripe.com/apikeys) by heading to `Developers -> API keys`
 
-If the key for the active mode is missing, checkout and the Stripe screens show "No Stripe API key is configured for test mode. Set UmbCheckout:Stripe:Test:ApiKey." (or live) instead of an error page.
+If the key for the active mode is missing, checkout and the Stripe screens show "No Stripe API key is configured for test mode. Set UmbCheckout:Stripe:Test:ApiKey." (or live) instead of an error page. If Stripe rejects the key, the message is "Stripe rejected the API key for the active mode (test or live). Check the Stripe settings.": the key itself, including its last 4 characters, is never shown or logged.
 
 You also need the [Stripe Webhook](services/stripe-webhook-api/): it records payments, so a paid Basket is cleared even if the customer doesn't return to the success page. Add its signing secret in the same way:
 

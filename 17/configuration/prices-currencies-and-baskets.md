@@ -23,14 +23,15 @@ Stripe takes amounts as whole numbers of the currency's smallest unit. UmbChecko
 
 A price with more decimal places than its currency allows is rounded once, half away from zero (so 1.005 GBP becomes 1.01), when it is read from the product. A warning naming the product is logged, so an editor can correct it.
 
-Prices are shown in the site culture, with the currency's own symbol and number of decimal places.
+Prices are shown in the site culture, with the currency's own symbol. The number of decimal places comes from the same table that is used to charge, so the price shown always matches the amount charged. Currency codes are trimmed and upper-cased, so ` gbp ` is read as `GBP`.
 
 ### Prices are checked again at checkout
 
 When the shopper clicks **Checkout**, every line is priced again from the published product:
 
 * a changed price is updated;
-* a product that has been unpublished or deleted, has no price, or is now sold in another currency is removed.
+* a product that has been unpublished or deleted, has no price, or is now sold in another currency is removed;
+* a line from a Basket saved by UmbCheckout 1.x with a quantity outside 1–999,999 is removed, and so are the lines past the 100th.
 
 If anything changed, the shopper isn't sent to Stripe. They return to the Basket page, which shows "Your basket was updated to current prices before checkout; please check it and continue:" followed by the products that changed (the Basket View Component's `pricesChangedText`). Checking out again goes to Stripe, where the final amount is shown before payment.
 
@@ -41,7 +42,7 @@ If you build your own Basket page, show the `UmbCheckout_Basket_Repriced` TempDa
 A shopper has one Basket for each site root culture and currency. For example, a shopper who visits your UK site (GBP) and your US site (USD) has two separate Baskets, and each site shows and checks out its own.
 
 * A product sold in another currency than the page it is added from is refused, instead of going to a Basket the shopper can't see.
-* Baskets saved by UmbCheckout 1.x, which could mix currencies, are split into one Basket per currency the first time they are read. Lines with no currency are dropped and logged.
+* Baskets saved by UmbCheckout 1.x, which could mix currencies, are split into one Basket per currency the first time they are read. Lines with no currency are dropped and logged. A Basket cookie that was cleared earlier in the same request isn't brought back by the split.
 
 ### Limits
 

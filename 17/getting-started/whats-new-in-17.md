@@ -61,3 +61,16 @@ See [Payment Flow / Lifecycle](../payment-providers/payment-providers/stripe/pay
 ### Breaking changes
 
 See [Upgrading from v13](upgrading-from-v13.md#breaking-changes) for the API changes that affect custom code.
+
+### Updates to 17
+
+* **Licensing:** after an outage of more than 30 days the license switches off while the site runs, a license that doesn't cover the site reads "Not licensed for this site", and a site whose license can't be evaluated at startup still starts. See [Licensing](licensing.md#how-the-license-is-checked).
+* **Money:** display and charge use one table of decimal places, currency codes are trimmed and upper-cased, and re-pricing removes lines with a quantity outside 1–999,999 and lines past the 100th. See [Prices, Currencies and Baskets](../configuration/prices-currencies-and-baskets.md).
+* **Baskets:** a Basket whose checkout session has been paid is cleared on its next read from any Basket store, the success page for a checkout session created by UmbCheckout 1.x clears the matching Basket, and a Basket cookie cleared in a request isn't restored later in it. See [Payment Flow / Lifecycle](../payment-providers/payment-providers/stripe/payment-flow-lifecycle.md#when-the-basket-is-cleared).
+* **The webhook:** a lease token stops a late retry from completing or releasing a newer claim, a failed claim answers 500, and a missing webhook secret is logged as an error once for each mode. See [Stripe Webhook Api](../payment-providers/payment-providers/stripe/services/stripe-webhook-api/README.md).
+* **Backoffice:** payments, invoices and refunds need the UmbCheckout section, invoices need the Invoices permission, and viewing a charge or a refund, or refunding, needs the Refunds permission. Administrators pass both permission checks. See [Payments, Invoices and Refunds](../payment-providers/payment-providers/stripe/addons/payments-invoices-and-refunds.md#permissions).
+* **Stripe errors:** a key Stripe rejects shows a fixed message that never includes the key. A Stripe timeout is logged as a warning, a request the customer or editor abandoned ends quietly, and a refund always completes.
+* **Licensed add-ons:** the cookie-clear handler and the tax rate uSync items need a license.
+* **Telemetry:** the `installedPackages` list is sent. See [Anonymous Telemetry](anonymous-telemetry.md).
+* **Obsolete members:** the overloads without a `CancellationToken`, the blocking `IStripeSessionService` methods and the replaced constructors are `[Obsolete]`, scheduled for removal in 17.1 ([UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)). See [Upgrading from v13](upgrading-from-v13.md#breaking-changes).
+* **New public members:** `IPaidCheckoutSessions`, `OnPaidBasketClearedNotification`, `SettingsCache<TEntity>`, `StripeKeyRejection`, and `ClaimAsync` and token overloads of `CompleteAsync` and `ForgetAsync` on `IStripeWebhookEventStore`. See [Extending UmbCheckout](../core-services/extending-umbcheckout.md).

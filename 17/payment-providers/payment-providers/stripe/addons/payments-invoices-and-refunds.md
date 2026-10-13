@@ -19,6 +19,18 @@ The Stripe add-on adds an **UmbCheckout** section to the backoffice, next to Set
 
 The add-on creates the user groups **UmbCheckout**, **UmbCheckout Invoices** and **UmbCheckout Refunds**, each with access to the UmbCheckout section. Add users to them in Users -> User Groups to give them access. The Administrators group isn't given the section automatically.
 
+### Permissions
+
+The payments, invoices and refunds screens check three permissions on the server, so a user without them can't read the data by calling the API directly:
+
+| Permission          | Needed for                                                                  | Who has it                                                        |
+| ------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| UmbCheckout section | Everything in the section, including the payment list and payment details   | Users with access to the UmbCheckout section                      |
+| Invoices            | The invoices                                                                | Members of the **UmbCheckout Invoices** group, and administrators |
+| Refunds             | Viewing a charge or a refund, and refunding a payment                       | Members of the **UmbCheckout Refunds** group, and administrators  |
+
+Administrators pass the Invoices and Refunds checks without being in the groups, but still need access to the UmbCheckout section.
+
 On an unlicensed site the section is still there, but it shows a message instead of your Stripe data.
 
 ### Filtering
@@ -42,3 +54,6 @@ The **Refund** button is shown to members of the UmbCheckout Refunds group when 
 * It asks "Refund this payment in full? This can't be undone." before refunding.
 * The refund is always for the full amount.
 * Each refund is recorded in Umbraco's audit log, with the user, the payment and the refund.
+* A refund request that is cancelled (for example the editor closes the browser) still completes, and is recorded in the audit log.
+* If Stripe rejects the API key (a 401 or 403 answer), the screen shows a fixed message, "Stripe rejected the API key for the active mode (test or live). Check the Stripe settings.", and the log says the same. Stripe's own message includes the last 4 characters of the key, so it is never shown or logged.
+* A Stripe call that times out is logged as a warning. If the editor closes the screen while a list is loading, the request ends quietly.
