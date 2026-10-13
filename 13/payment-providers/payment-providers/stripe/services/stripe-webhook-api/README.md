@@ -31,7 +31,16 @@ This will trigger the following notifications
 | `payment_intent.payment_failed`            | [OnPaymentIntentPaymentFailedNotification](../../notifications/onpaymentintentpaymentfailednotification.md) |
 | `consent.promotions`                       | [OnPromotionalEmailConsentNotification](../../notifications/onpromotionalemailconsentnotification.md)       |
 
-In Stripe, select the events you want to receive when you add the endpoint. Other event types are logged as unhandled and ignored.
+In Stripe, select the events you want to receive when you add the endpoint. Select at least `checkout.session.completed` and `checkout.session.async_payment_succeeded`: UmbCheckout uses them to record paid checkout sessions, so a paid Basket is cleared even if the customer doesn't return to the success page. Other event types are logged as unhandled and ignored.
+
+### Each event is handled once
+
+Stripe delivers each event at least once, and retries for up to 3 days until it gets a success response.
+
+* Once your notification handlers have completed for an event, a redelivery is acknowledged without running them again. Handled event IDs are kept for 30 days.
+* If a handler throws, the endpoint answers with an error (500) and Stripe's retry runs **all** the handlers again. Write handlers that are safe to run twice.
+* If the webhook secret for the active mode isn't set, the error is logged.
+* Events sent on another Stripe API version are still handled, with a warning in the log.
 
 
 

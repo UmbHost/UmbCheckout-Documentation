@@ -164,6 +164,7 @@
   * [OnSessionGetStartedNotification](scheduled-tasks-and-notifications/session-notifications/onsessiongetstartednotification.md)
   * [OnSessionUpdatedNotification](scheduled-tasks-and-notifications/session-notifications/onsessionupdatednotification.md)
   * [OnSessionUpdateStartedNotification](scheduled-tasks-and-notifications/session-notifications/onsessionupdatestartednotification.md)
+  * [OnPaidBasketClearedNotification](scheduled-tasks-and-notifications/session-notifications/onpaidbasketclearednotification.md)
 * [Payment Provider Notifications](scheduled-tasks-and-notifications/payment-provider-notifications/README.md)
   * [OnProviderClearSessionStartedNotification](scheduled-tasks-and-notifications/payment-provider-notifications/onproviderclearsessionstartednotification.md)
   * [OnProviderCreateSessionStartedNotification](scheduled-tasks-and-notifications/payment-provider-notifications/onprovidercreatesessionstartednotification.md)

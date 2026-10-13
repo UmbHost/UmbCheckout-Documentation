@@ -60,7 +60,7 @@ Task<ShippingRate?> CreateShippingRate(ShippingRate shippingRate);
 
 #### UpdateShippingRate
 
-Updates a specified Shipping Rate
+Updates a specified Shipping Rate, found by its Key, so its Stripe ID can be changed
 
 Parameters:
 
