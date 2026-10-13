@@ -70,6 +70,7 @@
       * [Stripe Session Service](payment-providers/payment-providers/stripe/services/stripe-session-service.md)
       * [Stripe Basket Controller](payment-providers/payment-providers/stripe/services/stripe-basket-controller.md)
       * [Other Stripe Services](payment-providers/payment-providers/stripe/services/other-stripe-services.md)
+      * [Custom Shipping Calculator](payment-providers/payment-providers/stripe/services/custom-shipping-calculator.md)
       * [Stripe Webhook Api](payment-providers/payment-providers/stripe/services/stripe-webhook-api/README.md)
         * [How to test the Stripe Webhook on localhost](payment-providers/payment-providers/stripe/services/stripe-webhook-api/how-to-test-the-stripe-webhook-on-localhost.md)
     * [Notification Handlers](payment-providers/payment-providers/stripe/notification-handlers/README.md)

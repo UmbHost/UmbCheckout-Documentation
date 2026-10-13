@@ -41,8 +41,8 @@ Task<BasketRepricing> RepriceAsync(Basket basket);
 
 ### IStripeShippingOptionsService
 
-Builds the shipping options sent to Stripe Checkout: the active shipping rates that charge in the Basket's currency, at most 5. Register your own implementation to choose shipping options differently.
+Builds the shipping options sent to Stripe Checkout: the active shipping rates that charge in the Basket's currency, at most 5. Register your own implementation to choose shipping options differently: see [Custom Shipping Calculator](custom-shipping-calculator.md).
 
 ```csharp
-Task<List<SessionShippingOptionOptions>> GetShippingOptions(Basket basket);
+Task<List<SessionShippingOptionOptions>> GetShippingOptions(Basket basket, CancellationToken cancellationToken);
 ```
