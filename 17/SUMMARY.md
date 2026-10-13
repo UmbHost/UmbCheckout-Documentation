@@ -28,8 +28,10 @@
 ## 🛒 Core Services
 
 * [Session Service](core-services/session-service.md)
-* [Database Service](core-services/database-service.md)
 * [Basket Service](core-services/basket-service.md)
+* [Configuration and Currency Services](core-services/configuration-and-currency-services.md)
+* [Extending UmbCheckout](core-services/extending-umbcheckout.md)
+* [Cancellation Tokens](core-services/cancellation-tokens.md)
 * [Object Reference](core-services/object-reference/README.md)
   * [Basket](core-services/object-reference/basket.md)
   * [Customer](core-services/object-reference/customer.md)
@@ -67,6 +69,7 @@
       * [Stripe Shipping Rate Database Service](payment-providers/payment-providers/stripe/services/stripe-shipping-rate-database-service.md)
       * [Stripe Session Service](payment-providers/payment-providers/stripe/services/stripe-session-service.md)
       * [Stripe Basket Controller](payment-providers/payment-providers/stripe/services/stripe-basket-controller.md)
+      * [Other Stripe Services](payment-providers/payment-providers/stripe/services/other-stripe-services.md)
       * [Stripe Webhook Api](payment-providers/payment-providers/stripe/services/stripe-webhook-api/README.md)
         * [How to test the Stripe Webhook on localhost](payment-providers/payment-providers/stripe/services/stripe-webhook-api/how-to-test-the-stripe-webhook-on-localhost.md)
     * [Notification Handlers](payment-providers/payment-providers/stripe/notification-handlers/README.md)
@@ -166,6 +169,7 @@
   * [OnSessionGetStartedNotification](scheduled-tasks-and-notifications/session-notifications/onsessiongetstartednotification.md)
   * [OnSessionUpdatedNotification](scheduled-tasks-and-notifications/session-notifications/onsessionupdatednotification.md)
   * [OnSessionUpdateStartedNotification](scheduled-tasks-and-notifications/session-notifications/onsessionupdatestartednotification.md)
+  * [OnPaidBasketClearedNotification](scheduled-tasks-and-notifications/session-notifications/onpaidbasketclearednotification.md)
 * [Payment Provider Notifications](scheduled-tasks-and-notifications/payment-provider-notifications/README.md)
   * [OnProviderClearSessionStartedNotification](scheduled-tasks-and-notifications/payment-provider-notifications/onproviderclearsessionstartednotification.md)
   * [OnProviderCreateSessionStartedNotification](scheduled-tasks-and-notifications/payment-provider-notifications/onprovidercreatesessionstartednotification.md)

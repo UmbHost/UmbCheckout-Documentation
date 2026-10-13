@@ -1,6 +1,6 @@
 # Add to Basket Button View Component
 
-A prebuilt button using a form that adds a product to the Basket.
+A prebuilt button using a form that adds a product to the Basket. If the product has children (see [Product Variants](../../../../configuration/product-variants.md)), it shows a select list of them.
 
 The table is unstyled and either requires styling within the partial `cshtml` file or using CSS.
 
@@ -44,5 +44,5 @@ You can set the following properties
 | labelCssClass        | label-css-class         | The CSS class added to the label elements                            | null          |
 | formGroupSpacerClass | form-group-spacer-class | The CSS class added to the outer form element Div                    | null          |
 | variantSelectLabel   | variant-select-label    | The text shown above the variant select input                        | null          |
-| currencyNodeKey      | currency-node-key       | The key of the node whose `umbCheckoutCurrencyCode` sets the currency | null          |
+| currencyNodeKey      | currency-node-key       | Ignored: the currency is decided by the product                      | null          |
 

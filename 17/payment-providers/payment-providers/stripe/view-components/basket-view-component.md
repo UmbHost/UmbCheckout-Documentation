@@ -26,6 +26,8 @@ Alternatively, you can load the View Component without using the tag helper:
 @await Component.InvokeAsync(typeof(StripeBasketViewComponent))
 ```
 
+Notices are shown as `<p class="umbcheckout-notice" role="status">`.
+
 ### Configurable Properties
 
 You can set the following properties
@@ -52,6 +54,8 @@ You can set the following properties
 | subTotalInformationText | sub-total-information-text | The text shown below the SubTotal                    | Coupons, Shipping and Tax are calculated on the next checkout step |
 | checkoutButtonCssClass  | checkout-button-css-class  | The CSS class to be added to the checkout button     | null                                                               |
 | checkoutButtonText      | checkout-button-text       | The text shown on the checkout button                | Checkout                                                           |
+| addToBasketFailedText   | add-to-basket-failed-text  | The notice shown when a product couldn't be added   | That item could not be added to your basket.                       |
+| pricesChangedText       | prices-changed-text        | The notice shown, before the changed products' names, when checkout found changed prices | Your basket was updated to current prices before checkout; please check it and continue: |
 | productNameAlias        | product-name-alias         | The alias which should be used for the product name  | null                                                               |
 | productAnchorLinkCssClass | product-anchor-link-css-class | The CSS class to be added to the product name link | null                                                          |
 

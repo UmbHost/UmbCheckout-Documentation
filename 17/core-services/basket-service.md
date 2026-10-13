@@ -6,7 +6,15 @@ description: A service which handles all things around the basket
 
 The basket service is what and handles all the UmbCheckout Basket operations.
 
-You can access the basket service by injecting `IBasketService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
+You can access the basket service by injecting `IBasketService` which can be found within the namespace `UmbCheckout.Core.Interfaces`
+
+{% hint style="info" %}
+Every method also has an overload that takes a `CancellationToken` as its last parameter. See [Cancellation Tokens](cancellation-tokens.md).
+{% endhint %}
+
+Adding throws an `ArgumentException` (or `ArgumentOutOfRangeException`) when a line has no currency, when a quantity is outside 1–999,999, when the Basket would hold more than 100 products, or when several lines added together have different currencies. A single line is added to the Basket for its own currency.
+
+If a [Saving notification handler](extending-umbcheckout.md) cancels a change, the Basket is left as it was.
 
 #### Get
 
@@ -96,7 +104,7 @@ Task<Basket> Clear();
 
 #### TotalItems
 
-Returns the total item quantity count
+Returns the total quantity of every line in the Basket
 
 ```csharp
 Task<long> TotalItems();

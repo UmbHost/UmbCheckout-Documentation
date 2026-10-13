@@ -11,3 +11,5 @@ The following properties are available within the notification
 | HttpContext   | HttpContext                                                                                  |
 | SessionKey    | string?                                                                                      |
 | Configuration | [UmbCheckoutConfiguration](../../core-services/object-reference/umbcheckoutconfiguration.md) |
+| SiteRootCulture | string?                                                                                    |
+| CurrencyCode  | string?                                                                                      |

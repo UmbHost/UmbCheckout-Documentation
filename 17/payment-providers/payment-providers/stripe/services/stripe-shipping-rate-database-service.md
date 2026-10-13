@@ -8,80 +8,54 @@ The Stripe Shipping Rate database service is what handles the insertion, retriev
 
 You can access the database service by injecting `IStripeShippingRateDatabaseService` which can be found within the namespace `UmbCheckout.Stripe.Interfaces`
 
-#### GetShippingRates
+Every method takes an optional `CancellationToken` as its last parameter. Reads publish `OnShippingRatesLoadedNotification`, and saves and deletes publish the cancellable `OnShippingRateSavingNotification` and `OnShippingRateDeletingNotification` (see [Extending UmbCheckout](../../../../core-services/extending-umbcheckout.md)).
+
+#### GetShippingRatesAsync
 
 Gets the Shipping Rates
 
 ```csharp
-Task<IEnumerable<ShippingRate>> GetShippingRates();
+Task<IEnumerable<ShippingRate>> GetShippingRatesAsync(CancellationToken cancellationToken = default);
 ```
 
-#### GetShippingRate
+#### GetShippingRateAsync
 
-Gets a specified Shipping Rate
-
-Parameters:
-
-| Name | Detail                                                                 |
-| ---- | ---------------------------------------------------------------------- |
-| key  | Key of the Stripe [Shipping Rate](../object-reference/shippingrate.md) |
-
-```csharp
-Task<ShippingRate?> GetShippingRate(Guid key);
-```
-
-#### GetShippingRate
-
-Gets a specified Shipping Rate
-
-Parameters:
+Gets a specified Shipping Rate by its key, or by its Stripe ID
 
 | Name  | Detail                                                                      |
 | ----- | --------------------------------------------------------------------------- |
+| key   | Key of the Stripe [Shipping Rate](../object-reference/shippingrate.md)      |
 | value | StripeId of the Stripe [Shipping Rate](../object-reference/shippingrate.md) |
 
 ```csharp
-Task<ShippingRate?> GetShippingRate(string value);
+Task<ShippingRate?> GetShippingRateAsync(Guid key, CancellationToken cancellationToken = default);
+Task<ShippingRate?> GetShippingRateAsync(string value, CancellationToken cancellationToken = default);
 ```
 
-#### UpdateShippingRate
+#### CreateShippingRateAsync
 
-Creates a Shipping Rate
-
-Parameters:
-
-| Name         | Detail                                                          |
-| ------------ | --------------------------------------------------------------- |
-| shippingRate | The Stripe [Shipping Rate](../object-reference/shippingrate.md) |
+Creates a Shipping Rate. Returns `null` when a rate with the same Stripe ID already exists.
 
 ```csharp
-Task<ShippingRate?> CreateShippingRate(ShippingRate shippingRate);
+Task<ShippingRate?> CreateShippingRateAsync(ShippingRate shippingRate, CancellationToken cancellationToken = default);
 ```
 
-#### UpdateShippingRate
+#### UpdateShippingRateAsync
 
 Updates a specified Shipping Rate
 
-Parameters:
-
-| Name         | Detail                                                          |
-| ------------ | --------------------------------------------------------------- |
-| shippingRate | The Stripe [Shipping Rate](../object-reference/shippingrate.md) |
-
 ```csharp
-Task<ShippingRate?> UpdateShippingRate(ShippingRate shippingRate);
+Task<ShippingRate?> UpdateShippingRateAsync(ShippingRate shippingRate, CancellationToken cancellationToken = default);
 ```
 
-#### DeleteShippingRate
+#### DeleteShippingRateAsync
 
 Deletes a specified Shipping Rate
-
-Parameters:
 
 | Name | Detail                                                                 |
 | ---- | ---------------------------------------------------------------------- |
 | key  | Key of the Stripe [Shipping Rate](../object-reference/shippingrate.md) |
 
 ```csharp
-Task<bool> DeleteShippingRate(Guid key);
+Task<bool> DeleteShippingRateAsync(Guid key, CancellationToken cancellationToken = default);
 ```

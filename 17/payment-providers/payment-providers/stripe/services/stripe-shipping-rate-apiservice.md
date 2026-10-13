@@ -8,6 +8,10 @@ The Stripe Shipping Rate API service is what handles the retrieval of the Shippi
 
 You can access the API service by injecting `IStripeShippingRateApiService` which can be found within the namespace `UmbCheckout.Stripe.Interfaces`
 
+{% hint style="info" %}
+Every method also has an overload that takes a `CancellationToken` as its last parameter. See [Cancellation Tokens](../../../../core-services/cancellation-tokens.md).
+{% endhint %}
+
 #### GetShippingRates
 
 Gets the Shipping Rates from the Stripe API
