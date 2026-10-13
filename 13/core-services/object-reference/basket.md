@@ -6,6 +6,7 @@ The Basket object contains the below properties
 | ------------------- | ------------------------------------ | ---------------------------------------------------------- |
 | Id                  | string                               | The Basket id                                              |
 | SessionId           | string                               | The UmbCheckout Session Id                                 |
+| SiteRootCulture     | string?                              | The culture of the site root the Basket belongs to         |
 | CustomerReferenceId | string?                              | A unique reference which can be used to identify the order |
 | Customer            | [Customer?](customer.md)             | Information relating to the customer                       |
 | LineItems           | IEnumerable<[LineItem](lineitem.md)> | The line items (products) contained in the Basket          |

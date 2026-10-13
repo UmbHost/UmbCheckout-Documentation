@@ -6,7 +6,7 @@ description: A service which handles all things around the Stripe Session
 
 The Stripe session service is what creates and handles the creation, updating and clearing of the Stripe session.
 
-You can access the Stripe session service by injecting `ISessionService` which can be found within the namespace `UmbCheckout.Stripe.Interfaces`
+You can access the Stripe session service by injecting `IStripeSessionService` which can be found within the namespace `UmbCheckout.Stripe.Interfaces`
 
 #### GetSession
 
@@ -14,12 +14,13 @@ Gets a Stripe session
 
 Parameters:
 
-| Name | Detail                   |
-| ---- | ------------------------ |
-| id   | Id of the Stripe Session |
+| Name    | Detail                                                |
+| ------- | ----------------------------------------------------- |
+| id      | Id of the Stripe Session                              |
+| options | Optional: the Stripe objects to expand on the session |
 
 ```csharp
-Session GetSession(string id);
+Session GetSession(string id, UmbCheckoutSessionGetOptions? options = null);
 ```
 
 #### GetSessionAsync
@@ -66,7 +67,7 @@ Task<Session> CreateSessionAsync(Basket basket);
 
 #### ClearSession
 
-Clears the Stripe session
+Clears (expires) the Stripe session, so it can no longer be paid
 
 Parameters:
 

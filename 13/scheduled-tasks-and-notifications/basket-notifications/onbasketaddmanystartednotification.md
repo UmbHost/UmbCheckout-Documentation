@@ -10,4 +10,4 @@ The following properties are available within the notification
 
 | Property Name | Type                                                                      |
 | ------------- | ------------------------------------------------------------------------- |
-| LineItems     | IEnumerable<[LineItem](../../core-services/object-reference/lineitem.md)> |
+| LineItem      | IEnumerable<[LineItem](../../core-services/object-reference/lineitem.md)> |

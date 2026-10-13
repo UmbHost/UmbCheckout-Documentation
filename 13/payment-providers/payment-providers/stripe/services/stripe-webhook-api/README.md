@@ -3,7 +3,7 @@
 Please ensure you have added the webhook secret as per the [configuration](../../configuration.md).
 
 {% hint style="info" %}
-The minimum [Stripe API version](https://dashboard.stripe.com/developers) is `2024-11-20`
+Create your webhook endpoint on the [Stripe API version](https://dashboard.stripe.com/developers) used by the Stripe.net package UmbCheckout is built with. UmbCheckout 1.5 uses Stripe.net 50.x, which uses `2026-01-28.clover`
 
 If you cannot use this version, please install a newer version of the [Stripe.net NuGet package](https://www.nuget.org/packages/Stripe.net), which matches the Stripe API versions available in your account.\
 Use the [Stripe.net changelog](https://github.com/stripe/stripe-dotnet/blob/master/CHANGELOG.md) to find which version of the NuGet package you need.
@@ -13,16 +13,25 @@ Use the [Stripe.net changelog](https://github.com/stripe/stripe-dotnet/blob/mast
 
 You can configure Stripe to send the webhook request to the below api:
 
-`/umbraco/api/StripeWebhookApi/CheckoutEvents`
+`https://<your site>/umbraco/api/StripeWebhookApi/CheckoutEvents`
 
 This will trigger the following notifications
 
-| Event                                | Notification                                                                                            |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| CheckoutSessionAsyncPaymentFailed    | [OnPaymentFailedNotification](../../notifications/onpaymentfailednotification.md)                       |
-| CheckoutSessionAsyncPaymentSucceeded | [OnPaymentSuccessNotification](../../notifications/onpaymentsuccessnotification.md)                     |
-| CheckoutSessionCompleted             | [OnCheckoutSessionCompletedNotification](../../notifications/oncheckoutsessioncompletednotification.md) |
-| CheckoutSessionExpired               | [OnCheckoutSessionExpiredNotification](../../notifications/oncheckoutsessionexpirednotification.md)     |
+| Stripe event                               | Notification                                                                                                |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `checkout.session.async_payment_failed`    | [OnPaymentFailedNotification](../../notifications/onpaymentfailednotification.md)                           |
+| `checkout.session.async_payment_succeeded` | [OnPaymentSuccessNotification](../../notifications/onpaymentsuccessnotification.md)                         |
+| `checkout.session.completed`               | [OnCheckoutSessionCompletedNotification](../../notifications/oncheckoutsessioncompletednotification.md)     |
+| `checkout.session.expired`                 | [OnCheckoutSessionExpiredNotification](../../notifications/oncheckoutsessionexpirednotification.md)         |
+| `charge.succeeded`                         | [OnChargeSucceededNotification](../../notifications/onchargesucceedednotification.md)                       |
+| `charge.failed`                            | [OnChargeFailedNotification](../../notifications/onchargefailednotification.md)                             |
+| `payment_intent.created`                   | [OnPaymentIntentCreatedNotification](../../notifications/onpaymentintentcreatednotification.md)             |
+| `payment_intent.canceled`                  | [OnPaymentIntentCancelledNotification](../../notifications/onpaymentintentcancellednotification.md)         |
+| `payment_intent.succeeded`                 | [OnPaymentIntentSucceededNotification](../../notifications/onpaymentintentsucceedednotification.md)         |
+| `payment_intent.payment_failed`            | [OnPaymentIntentPaymentFailedNotification](../../notifications/onpaymentintentpaymentfailednotification.md) |
+| `consent.promotions`                       | [OnPromotionalEmailConsentNotification](../../notifications/onpromotionalemailconsentnotification.md)       |
+
+In Stripe, select the events you want to receive when you add the endpoint. Other event types are logged as unhandled and ignored.
 
 
 

@@ -14,7 +14,7 @@ Dashboard -> Products -> Shipping rates -> Create shipping rate
 
 You can enter Shipping Rates into your Umbraco site by going to the following area:
 
-Settings -> UmbCheckout -> Stripe Shipping Rates -> Create Shipping Rate
+Settings -> UmbCheckout -> Stripe -> Stripe Shipping Rates -> Create Shipping Rate
 
 The shipping rate settings are as follows:
 

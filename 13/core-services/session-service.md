@@ -8,7 +8,7 @@ The session service is what creates and handles the creation, retrieval, updatin
 
 You can access the session service by injecting `ISessionService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
-#### Create
+#### Get
 
 Gets the current UmbCheckout session from the .NET session
 
@@ -35,5 +35,5 @@ Task<UmbCheckoutSession> Update(Basket basket);
 Clears the UmbCheckout session from the .NET session
 
 ```csharp
-Task Clear();
+Task<bool> Clear();
 ```

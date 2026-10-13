@@ -46,10 +46,12 @@ You can set the following properties
 | removeButtonCssClass    | remove-button-css-class    | The CSS class to be added to the remove ase button   | null                                                               |
 | removeButtonText        | remove-button-text         | The text shown on the remove button                  | Remove                                                             |
 | emptyBasketText         | empty-basket-text          | The text shown when the Basket is empty              | Your basket is empty!                                              |
+| emptyBasketButtonText   | empty-basket-button-text   | The text shown on the button that empties the Basket | Empty basket                                                       |
 | subTotalText            | sub-total-text             | The text shown before the SubTotal                   | Sub Total:                                                         |
-| formatCurrency          | format-currency            | The culture to format the SubTotal in                | GBP                                                                |
+| currencyNodeKey         | currency-node-key          | The key of the node whose `umbCheckoutCurrencyCode` sets the currency | null                                              |
 | subTotalInformationText | sub-total-information-text | The text shown below the SubTotal                    | Coupons, Shipping and Tax are calculated on the next checkout step |
 | checkoutButtonCssClass  | checkout-button-css-class  | The CSS class to be added to the checkout button     | null                                                               |
 | checkoutButtonText      | checkout-button-text       | The text shown on the checkout button                | Checkout                                                           |
 | productNameAlias        | product-name-alias         | The alias which should be used for the product name  | null                                                               |
+| productAnchorLinkCssClass | product-anchor-link-css-class | The CSS class to be added to the product name link | null                                                          |
 

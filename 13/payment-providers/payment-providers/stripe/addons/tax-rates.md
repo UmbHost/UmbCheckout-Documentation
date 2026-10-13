@@ -10,7 +10,7 @@ The Tax Rates are created within the Stripe Dashboard, you can then enter them i
 
 ### Stripe Dashboard
 
-You can create Shipping Rates in the following section of the Stripe Dashboard:
+You can create Tax Rates in the following section of the Stripe Dashboard:
 
 Dashboard -> Products -> Tax rates -> New
 
@@ -18,7 +18,9 @@ Dashboard -> Products -> Tax rates -> New
 
 You can enter Tax Rates into your Umbraco site by going to the following area:
 
-Settings -> UmbCheckout -> Stripe Tax Rates -> Create Tax Rate
+Settings -> UmbCheckout -> Stripe -> Stripe Tax Rates -> Create Tax Rate
+
+The Stripe Tax Rates item is only shown on licensed sites.
 
 The tax rate settings are as follows:
 

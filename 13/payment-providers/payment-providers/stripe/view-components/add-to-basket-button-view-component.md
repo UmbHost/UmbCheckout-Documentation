@@ -8,7 +8,7 @@ The `cshtml` partial can be found at the following path:
 
 Views -> Partials -> UmbCheckout -> \_StripeAddToBasketButton.cshtml
 
-To be able to use the Basket View Component you will need to add the following to your `_ViewImports.cshtml` file
+To be able to use the Add to Basket Button View Component you will need to add the following to your `_ViewImports.cshtml` file
 
 ```cshtml
 @addTagHelper *, UmbCheckout.Stripe
@@ -33,7 +33,7 @@ You can set the following properties
 | Property             | Property Alias          | Use                                                                  | Default Value |
 | -------------------- | ----------------------- | -------------------------------------------------------------------- | ------------- |
 | product              | product                 | <mark style="color:red;">**\[REQUIRED]**</mark> The Umbraco product  | null          |
-| buttonName           | button-name             | The text shown on the button                                         | Add to Basket |
+| buttonText           | button-text             | The text shown on the button                                         | Add to Basket |
 | buttonCssClass       | button-css-class        | The CSS class to be added to the button                              | null          |
 | returnGuid           | return-guid             | The Guid of the Umbraco page to return to after adding to the Basket | null          |
 | showQuantity         | show-quantity           | Shows or hides the quantity input                                    | true          |
@@ -44,4 +44,5 @@ You can set the following properties
 | labelCssClass        | label-css-class         | The CSS class added to the label elements                            | null          |
 | formGroupSpacerClass | form-group-spacer-class | The CSS class added to the outer form element Div                    | null          |
 | variantSelectLabel   | variant-select-label    | The text shown above the variant select input                        | null          |
+| currencyNodeKey      | currency-node-key       | The key of the node whose `umbCheckoutCurrencyCode` sets the currency | null          |
 

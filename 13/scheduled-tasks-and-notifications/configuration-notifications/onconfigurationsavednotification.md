@@ -1,7 +1,5 @@
 ---
-description: >-
-  Notification which is triggered after multiple line items are added to the
-  Basket
+description: Notification which is triggered after the UmbCheckout configuration is saved
 ---
 
 # OnConfigurationSavedNotification

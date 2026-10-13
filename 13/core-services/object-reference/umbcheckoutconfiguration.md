@@ -6,6 +6,7 @@ The UmbCheckoutConfiguration object contains the below properties
 | ---------------------- | ------------------------------------------------ | ------------------------------------------------------ |
 | Id                     | int                                              | The internal configuration Id                          |
 | Key                    | Guid                                             | The internal configuration Key                         |
+| CurrencyCode           | string                                           | The fallback 3-letter ISO currency code                |
 | SuccessPageUrl         | IEnumerable<[MultiUrlPicker](multiurlpicker.md)> | The success page                                       |
 | CancelPageUrl          | IEnumerable<[MultiUrlPicker](multiurlpicker.md)> | The cancel page                                        |
 | StoreBasketInCookie    | Boolean                                          | Whether the Basket is stored in a cookie               |

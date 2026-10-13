@@ -75,7 +75,7 @@ Removes the specified item, the example below would typically be used on the Bas
 ```cshtml
 @using (Html.BeginUmbracoForm<StripeBasketController>(nameof(StripeBasketController.Remove), FormMethod.Post))
 {
-    <input type="hidden" name="key" value="@lineItem.Id" />
+    <input type="hidden" name="key" value="@lineItem.Key" />
     <button type="submit">Remove</button>
 }
 ```
@@ -103,6 +103,14 @@ This method sets the following TempData
 | Key                      | Value                                                                                                                                                                 |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | UmbCheckout\_EmptyBasket | Returns true if there are 0 [LineItem](../../../../core-services/object-reference/lineitem.md)s in the [Basket](../../../../core-services/object-reference/basket.md) |
+
+#### EmptyBasket
+
+Removes every item from the Basket. It is a GET action, so it can be used as a link, the example below would typically be used on the Basket page
+
+```cshtml
+<a href="@Url.SurfaceAction("EmptyBasket", "StripeBasket")">Empty basket</a>
+```
 
 #### Change return page
 

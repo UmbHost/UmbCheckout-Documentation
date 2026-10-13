@@ -4,7 +4,7 @@
 UmbCheckout.Stripe.Forms requires UmbCheckout V1.4+
 {% endhint %}
 
-A workflow for Umbraco Forms that will redirect the user to the Stripe Checkout payment page.
+A workflow for Umbraco Forms that will redirect the user to the Stripe Checkout payment page. See [Umbraco Forms Workflow](../payment-providers/payment-providers/stripe/umbraco-forms-workflow.md) for its settings.
 
 The UmbCheckout.Stripe.Forms package is installed using the NuGet package manager using the below command:
 

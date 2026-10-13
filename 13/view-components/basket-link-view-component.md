@@ -30,8 +30,10 @@ Alternatively, you can load the View Component without using the tag helper:
 
 You can set the following properties
 
-| Property     | Property Alias | Use                                       |
-| ------------ | -------------- | ----------------------------------------- |
-| basketAlias  | basket-alias   | The Content Type alias of the Basket page |
-| linkName     | link-name      | The text shown on the link                |
-| linkCssClass | link-css-class | The CSS class to be added to the \<a> tag |
+| Property        | Property Alias    | Use                                                                                         | Default Value |
+| --------------- | ----------------- | ------------------------------------------------------------------------------------------- | ------------- |
+| basketAlias     | basket-alias      | The Content Type alias of the Basket page                                                   | basket        |
+| linkName        | link-name         | The text shown on the link                                                                  | Basket        |
+| linkCssClass    | link-css-class    | The CSS class to be added to the \<a> tag                                                   | null          |
+| linkType        | link-type         | What the link shows: `BasketLinkType.TotalCount` (item count) or `BasketLinkType.SubTotal` | TotalCount    |
+| currencyNodeKey | currency-node-key | The key of the node whose `umbCheckoutCurrencyCode` sets the currency                       | null          |

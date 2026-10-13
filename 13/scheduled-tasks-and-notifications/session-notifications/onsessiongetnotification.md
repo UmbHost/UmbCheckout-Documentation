@@ -1,5 +1,5 @@
 ---
-description: Notification which is triggered after the UmbCheckout session is created
+description: Notification which is triggered after the UmbCheckout session is collected
 ---
 
 # OnSessionGetNotification
@@ -9,6 +9,5 @@ The following properties are available within the notification
 | Property Name | Type                                                                                         |
 | ------------- | -------------------------------------------------------------------------------------------- |
 | HttpContext   | HttpContext                                                                                  |
-| SessionKey    | string                                                                                       |
-| Basket        | [Basket](../../core-services/object-reference/basket.md)                                     |
+| Session       | [UmbCheckoutSession](../../core-services/object-reference/umbcheckoutsession.md)             |
 | Configuration | [UmbCheckoutConfiguration](../../core-services/object-reference/umbcheckoutconfiguration.md) |

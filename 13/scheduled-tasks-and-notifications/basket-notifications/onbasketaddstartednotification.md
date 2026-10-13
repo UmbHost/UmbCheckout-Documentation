@@ -10,5 +10,5 @@ The following properties are available within the notification
 
 | Property Name | Type                                                                      |
 | ------------- | ------------------------------------------------------------------------- |
-| LineItems     | IEnumerable<[LineItem](../../core-services/object-reference/lineitem.md)> |
+| LineItem      | [LineItem](../../core-services/object-reference/lineitem.md)              |
 | Basket        | [Basket](../../core-services/object-reference/basket.md)                  |

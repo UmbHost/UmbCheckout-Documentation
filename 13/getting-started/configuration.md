@@ -23,3 +23,16 @@ Your product can have the following optional properties
 | Alias                  | Property Type |
 | ---------------------- | ------------- |
 | umbCheckoutDescription | Text Area     |
+
+If `umbCheckoutDescription` is empty, the `description` property is used.
+
+### Currency
+
+Each price is charged in one currency. UmbCheckout works out the currency on the server, in this order:
+
+1. The `umbCheckoutCurrencyCode` property on the currency node passed to the view component (its `currencyNodeKey` parameter).
+2. The `umbCheckoutCurrencyCode` property on the site root.
+3. The **Fallback Currency Code** in the [configuration](../configuration/configuration-options.md).
+4. The currency of the current UI culture.
+
+Use the 3-letter ISO 4217 code, for example `GBP`. To sell in more than one currency, give each site root (or each culture's root) its own `umbCheckoutCurrencyCode`.
