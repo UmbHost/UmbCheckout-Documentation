@@ -29,7 +29,7 @@ layout:
 {% hint style="info" %}
 These pages document **UmbCheckout 17 for Umbraco 17**.\
 \
-For UmbCheckout 1.x on Umbraco 10 or 13, choose **Umbraco 13 (v13)** in the version menu at the top of the page.
+For UmbCheckout 1.x on Umbraco 10 or 13, choose **UmbCheckout 13** in the version menu at the top of the page.
 {% endhint %}
 
 {% hint style="warning" %}
