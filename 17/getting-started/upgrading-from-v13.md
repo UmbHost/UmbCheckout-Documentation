@@ -52,5 +52,17 @@ These affect code that calls UmbCheckout's services. Members that were removed a
 * `LicenseService.RunLicenseCheck`: the license is checked in the background. Read `UmbCheckoutSettings.IsLicensed`, or call `RequestCheck`.
 * The constructors of `SessionService` and `BasketService` without `IEventMessagesFactory` (and, for `SessionService`, `IPaidCheckoutSessions`).
 * The constructor of `UmbCheckoutTelemetryNotificationHandler` without an `ILogger`.
+* The overloads without a `CancellationToken`. Use the overload that takes a `CancellationToken` as its last parameter (pass `CancellationToken.None` if you have no token). The compiler warning names the replacement.
+  * `ISessionService` (and `SessionService`): `Get`, `Update` and `Clear`, every overload.
+  * `IBasketService` (and `BasketService`): `Get`, `Add`, `Reduce`, `Remove`, `Clear`, `TotalItems` and `SubTotal`.
+  * `ICurrencyService`: `GetCurrencyAsync(currencyNodeKey = null)` and `GetCurrencyForContentAsync(content)`. For the global currency, call `GetCurrencyAsync(null, cancellationToken)`.
+  * `IBasketContext.GetCurrencyAsync()`.
+  * `IStripeSessionService`: `GetSessionAsync(id)`, `CreateSessionAsync(basket)` and `ClearSessionAsync(id)`.
+  * `IUmbCheckoutStripeClientFactory.CreateAsync()`, `IStripeLineItemPricingService.GetPriceAsync(product)`, `IStripeBasketPricingService.RepriceAsync(basket)`, `IStripeShippingOptionsService.GetShippingOptions(basket)` (and `StripeDefaultShippingOptionsService`), and `IStripeShippingRateApiService.GetShippingRates()` and `GetShippingRate(id)`.
+  * Add-ons: `ICookieService.GetFromCookie(session)`, and the Stripe customer, payments, invoices, refunds and tax rate API services (`GetCustomer`, `GetPayments`, `GetPayment`, `GetCharge`, `GetInvoices`, `GetInvoice`, `GetRefunds`, `GetRefund`, `CreateRefund`, `GetTaxRates`, `GetTaxRate`).
+* The add-on's `LicensedConfigurationService(IConfigurationService)` constructor. Use the one that also takes an `IEventAggregator` and an `IEventMessagesFactory`.
+* `UmbCheckoutSection` in the Stripe add-on. The section is registered in `umbraco-package.json`; its alias is `Consts.Sections.SectionAlias`.
+
+Implementing an obsolete interface member gives no warning, only calling one does. A class written before the token overloads keeps working: each token overload calls the old one by default.
 
 **Mocks and decorators:** UmbCheckout now calls the overloads that take a `CancellationToken`. They are default interface methods that call the old ones, so your implementations still compile. But a Moq mock set up only for the old overload returns `null` from the new one, and a decorator that overrides only the old method is bypassed. Set up or override the token overloads (see [Cancellation Tokens](../core-services/cancellation-tokens.md)).

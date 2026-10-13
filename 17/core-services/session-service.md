@@ -11,7 +11,7 @@ You can access the session service by injecting `ISessionService` which can be f
 A shopper has one Basket per site root culture and currency (see [Prices, Currencies and Baskets](../configuration/prices-currencies-and-baskets.md#one-basket-per-site-and-currency)). The overloads without a culture or currency use the current page's.
 
 {% hint style="info" %}
-Every method also has an overload that takes a `CancellationToken` as its last parameter. See [Cancellation Tokens](cancellation-tokens.md).
+Every method also has an overload that takes a `CancellationToken` as its last parameter. Call that one: the overloads without a token are `[Obsolete]`. See [Cancellation Tokens](cancellation-tokens.md).
 {% endhint %}
 
 #### Get
