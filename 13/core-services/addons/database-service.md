@@ -12,6 +12,8 @@ The database service is what handles the insertion, updating, and clearing of th
 
 You can access the database service by injecting `IDatabaseService` which can be found within the namespace `UmbCheckout.Core.Addons.Interfaces`
 
+Every method also has an overload that takes a `CancellationToken` as its last parameter (see [Cancellation Tokens](../cancellation-tokens.md)). `UpdateBasket(sessionId, basket)`, `DeleteBasket(sessionId, siteRootCulture, currencyCode)` and `DeleteBaskets(expiryDateTime)` without a token are `[Obsolete]`, scheduled for removal in 17.1.
+
 #### UpdateBasket
 
 Updates the stored Basket
