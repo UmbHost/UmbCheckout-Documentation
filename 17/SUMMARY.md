@@ -5,14 +5,17 @@
 ## 📔 Getting Started
 
 * [Overview](getting-started/overview.md)
+* [What's new in 17](getting-started/whats-new-in-17.md)
+* [Upgrading from v13](getting-started/upgrading-from-v13.md)
 * [License Comparison](getting-started/license-comparison.md)
+* [Licensing](getting-started/licensing.md)
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
 * [Starter Kits](getting-started/starter-kits/README.md)
   * [Stripe](getting-started/starter-kits/stripe/README.md)
     * [Installation](getting-started/starter-kits/stripe/installation.md)
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
-* [Developer License](getting-started/developer-license.md)
+* [Development Licenses and Development Mode](getting-started/developer-license.md)
 * [Affiliate Scheme](getting-started/affiliate-scheme.md)
 * [Buy a License](https://umbcheckout.net)
 
@@ -20,6 +23,7 @@
 
 * [Configuration Options](configuration/configuration-options.md)
 * [Product Variants](configuration/product-variants.md)
+* [Prices, Currencies and Baskets](configuration/prices-currencies-and-baskets.md)
 
 ## 🛒 Core Services
 

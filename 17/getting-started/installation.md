@@ -4,11 +4,11 @@ description: Installing UmbCheckout
 
 # Installation
 
-{% hint style="info" %}
-These pages are for UmbCheckout 1.x on Umbraco 10 and 13. For Umbraco 17, choose **Umbraco 17 (v17)** in the version menu at the top of the page.
-{% endhint %}
+**UmbCheckout 17 supports Umbraco 17.6 or later, on .NET 10.**
 
-**UmbCheckout currently only supports Umbraco v10 or v13.**
+{% hint style="info" %}
+Upgrading a site from Umbraco 13? Read [Upgrading from v13](upgrading-from-v13.md) first.
+{% endhint %}
 
 UmbCheckout is installed using the NuGet package manager using the below command:
 
@@ -16,46 +16,34 @@ UmbCheckout is installed using the NuGet package manager using the below command
 dotnet add package UmbCheckout
 ```
 
-Next, you need to enable .NET sessions, if not already enabled.\
-To do this add the `app.UseSession();` line to your startup.cs before `app.UseUmbraco()`\
-It should look similar to the below:
+You will also need to install a [payment provider](../payment-providers/payment-providers/README.md). The `UmbCheckout` package doesn't include one, so for Stripe also run:
 
-```csharp
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-    if (env.IsDevelopment())
-    {
-        app.UseDeveloperExceptionPage();
-    }
-
-    app.UseSession();
-
-    app.UseUmbraco()
-        .WithMiddleware(u =>
-        {
-            u.UseBackOffice();
-            u.UseWebsite();
-        })
-        .WithEndpoints(u =>
-        {
-            u.UseInstallerEndpoints();
-            u.UseBackOfficeEndpoints();
-            u.UseWebsiteEndpoints();
-        });
-}
 ```
-
-You will also need to install a [payment provider](../payment-providers/payment-providers/README.md).
+dotnet add package UmbCheckout.Stripe
+```
 
 Alternatively, you can install using the NuGet package manager GUI within Visual Studio.
 
+UmbCheckout stores the Basket in the .NET session. It adds the session middleware itself, so you don't need to add `app.UseSession()` to `Program.cs` (an existing call is harmless).
+
+* **To change the session settings** (for example the idle timeout or the cookie name), use `PostConfigure` in `Program.cs`. It works in any order:
+
+```csharp
+builder.Services.PostConfigure<SessionOptions>(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(2);
+});
+```
+
+* **Load-balanced sites:** the session is kept in memory unless your site registers a distributed cache. UmbCheckout registers an in-memory one only when none exists, so register a shared one (for example `AddStackExchangeRedisCache` or `AddDistributedSqlServerCache`) and every server sees the same Basket. `SessionOptions` are site-wide.
+
 ### Upgrades
 
-UmbCheckout uses Umbraco Migrations to install all of the tables required to function, this means that upgrades follow the same process as installation, you can either run the command found above or upgrade using the NuGet package manager GUI.
+UmbCheckout creates the tables it needs when the site starts, so upgrades follow the same process as installation: run the command found above or upgrade using the NuGet package manager GUI.
 
 ### Installing a License
 
-If you have purchased a license to enable more features, you simply need to add the following to your `appsettings.json` file:
+If you have purchased a license to enable more features, add the following to your `appsettings.json` file (or, better, to your environment's secrets or environment variables):
 
 ```json
   "UmbCheckout": {
@@ -65,13 +53,13 @@ If you have purchased a license to enable more features, you simply need to add 
 
 _Replacing_ `YOUR LICENSE KEY HERE` _with the key found in your_ [_UmbPanel account_](https://www.umbpanel.io)_._
 
-You are also required to configure the [UmbracoApplicationUrl](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings#umbraco-application-url) within the [Web routing settings](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings) within your appsettings.json file
+You are also required to configure the [UmbracoApplicationUrl](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings#umbraco-application-url) within the [Web routing settings](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings) within your appsettings.json file. The configuration screen shows a warning while it isn't set.
 
 ```json
 "Umbraco": {
   "CMS": {
     "WebRouting": {
-      "UmbracoApplicationUrl": "http://www.mysite.com/"
+      "UmbracoApplicationUrl": "https://www.mysite.com/"
     }
   }
 }
@@ -80,15 +68,11 @@ You are also required to configure the [UmbracoApplicationUrl](https://docs.umbr
 {% hint style="info" %}
 **When do I need a license?**
 
-UmbCheckout requires a license to use any of the Addon packages.
+UmbCheckout requires a license to use any of the Addon packages, and every running instance of a production site needs one. See [Licensing](licensing.md) for how licenses work in UmbCheckout 17.
 
-Using UmbCheckout without a license will disable the Tax Rates and disables being able to store the Basket in a Cookie or the Database.
+Using UmbCheckout without a license disables the Tax Rates, the payments, invoices and refunds screens, and storing the Basket in a Cookie or the Database.
 
 Licensed sites will also be able to make use of the support ticketing system.
 
-If you require a development license, [please see this linked page](developer-license.md).
-
-_(These restrictions may change in the future)_
-
-
+For development and staging sites, see [Development Licenses and Development Mode](developer-license.md).
 {% endhint %}

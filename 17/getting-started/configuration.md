@@ -26,13 +26,19 @@ Your product can have the following optional properties
 
 If `umbCheckoutDescription` is empty, the `description` property is used.
 
+The price is read from `umbCheckoutPrice` on the server whenever a product is added and again at checkout. A product with an empty price can't be added to the Basket (it is never sold at 0.00).
+
 ### Currency
 
-Each price is charged in one currency. UmbCheckout works out the currency on the server, in this order:
+Each price is charged in one currency, which UmbCheckout works out on the server. The browser never decides it.
 
-1. The `umbCheckoutCurrencyCode` property on the currency node passed to the view component (its `currencyNodeKey` parameter).
-2. The `umbCheckoutCurrencyCode` property on the site root.
-3. The **Fallback Currency Code** in the [configuration](../configuration/configuration-options.md).
-4. The currency of the current UI culture.
+The currency a product is sold in is:
 
-Use the 3-letter ISO 4217 code, for example `GBP`. To sell in more than one currency, give each site root (or each culture's root) its own `umbCheckoutCurrencyCode`.
+1. the `umbCheckoutCurrencyCode` property on the product's site root, or, if that is empty,
+2. the **Fallback Currency Code** in the [configuration](../configuration/configuration-options.md).
+
+If neither is set, the product can't be added to the Basket and an error is logged.
+
+Use the 3-letter ISO 4217 code, for example `GBP`. The code must be a currency Stripe supports: a typo such as `GPB` is refused. To sell in more than one currency, give each site root (or each culture's root) its own `umbCheckoutCurrencyCode`.
+
+See [Prices, Currencies and Baskets](../configuration/prices-currencies-and-baskets.md) for how amounts are rounded and charged.

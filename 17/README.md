@@ -27,22 +27,18 @@ layout:
 # 🛒 UmbCheckout Documentation
 
 {% hint style="info" %}
-These pages document **UmbCheckout 1.x for Umbraco 10 and 13**.\
+These pages document **UmbCheckout 17 for Umbraco 17**.\
 \
-For Umbraco 17, choose **Umbraco 17 (v17)** in the version menu at the top of the page.
+For UmbCheckout 1.x on Umbraco 10 or 13, choose **Umbraco 13 (v13)** in the version menu at the top of the page.
 {% endhint %}
 
 {% hint style="warning" %}
-The license and subscription changes announced for V2.0 apply to UmbCheckout 17 on Umbraco 17. Licenses for UmbCheckout 1.x on Umbraco 13 keep working as they do today.\
-\
-[Take a read in the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
-\
-[Discuss the change in the GitHub Discussion here](https://github.com/UmbHost/UmbCheckout/discussions/98)
+UmbCheckout 17 is licensed by annual subscription, and every running instance of a production site needs a license. See [What's new in 17](getting-started/whats-new-in-17.md) and [Licensing](getting-started/licensing.md).
 {% endhint %}
 
-UmbCheckout is an eCommerce solution for Umbraco v10 or v13 integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
+UmbCheckout is an eCommerce solution for Umbraco 17 integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
 
-If you need a lightweight eCommerce solution for a site powered by Umbraco V10 or V13 then UmbCheckout will allow you to make use of the Stripe Checkout service with minimal coding required.
+If you need a lightweight eCommerce solution for a site powered by Umbraco 17 then UmbCheckout will allow you to make use of the Stripe Checkout service with minimal coding required.
 
 Once the nuget package is installed it's completely possible to integrate it using the Views area of the Umbraco backoffice!
 
