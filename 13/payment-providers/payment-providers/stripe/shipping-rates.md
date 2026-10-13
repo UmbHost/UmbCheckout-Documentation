@@ -24,5 +24,5 @@ The shipping rate settings are as follows:
 | Shipping Rate ID   | The ID of the shipping rate as found in Stripe                   |
 
 {% hint style="info" %}
-Currently only fixed rate shipping rates are supported
+Currently only fixed rate shipping rates are supported. At checkout, only the rates that charge in the Basket's currency are offered
 {% endhint %}

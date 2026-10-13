@@ -6,6 +6,8 @@ It can be found within the namespace `UmbCheckout.Stripe.Controllers.Surface`
 
 It has a number of methods available as a starting point to allow UmbCheckout to be consumed without the need to write C# code.
 
+The price and currency are always read from the product on the server; a posted `currencyCode` field is ignored.
+
 #### Add
 
 Adds an item to the Basket, the example below would typically be used on the Product page
@@ -17,7 +19,6 @@ Adds an item to the Basket, the example below would typically be used on the Pro
     <label for="quantity">Quantity:</label>
     <input type="number" name="quantity" value="1" min="1" /> <br />
     <input type="hidden" name="key" value="@Model.Key" />
-    <input type="hidden" name="currencyCode" value="GBP" />
     <button type="submit">Buy</button>
 }
 ```
@@ -104,6 +105,8 @@ This method sets the following TempData
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | UmbCheckout\_EmptyBasket | Returns true if there are 0 [LineItem](../../../../core-services/object-reference/lineitem.md)s in the [Basket](../../../../core-services/object-reference/basket.md) |
 
+Before redirecting to Stripe, Checkout prices every line again from the published products. If anything changed, the customer is returned to the page to see the change instead of going to Stripe (see [Prices, Currencies and Baskets](../../../../configuration/prices-currencies-and-baskets.md#prices-are-checked-again-at-checkout)).
+
 #### EmptyBasket
 
 Removes every item from the Basket. It is a GET action, so it can be used as a link, the example below would typically be used on the Basket page
@@ -128,7 +131,6 @@ The example below shows how to do this with the Add method
     <label for="quantity">Quantity:</label>
     <input type="number" name="quantity" value="1" min="1" /> <br />
     <input type="hidden" name="key" value="@Model.Key" />
-    <input type="hidden" name="currencyCode" value="GBP" />
     <input type="hidden" name="redirectGuid" value="4a1f4198-e143-48ba-a0f5-1a7ef2df23aa" />
     <button type="submit">Buy</button>
 }

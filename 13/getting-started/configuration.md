@@ -35,4 +35,4 @@ Each price is charged in one currency. UmbCheckout works out the currency on the
 3. The **Fallback Currency Code** in the [configuration](../configuration/configuration-options.md).
 4. The currency of the current UI culture.
 
-Use the 3-letter ISO 4217 code, for example `GBP`. To sell in more than one currency, give each site root (or each culture's root) its own `umbCheckoutCurrencyCode`.
+The currency is always decided on the server, never by the browser. Use the 3-letter ISO 4217 code, for example `GBP`; it must be a currency Stripe supports. To sell in more than one currency, give each site root (or each culture's root) its own `umbCheckoutCurrencyCode`. See [Prices, Currencies and Baskets](../configuration/prices-currencies-and-baskets.md) for how amounts are rounded and charged, and for the Basket limits.

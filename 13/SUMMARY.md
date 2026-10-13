@@ -21,6 +21,7 @@
 
 * [Configuration Options](configuration/configuration-options.md)
 * [Product Variants](configuration/product-variants.md)
+* [Prices, Currencies and Baskets](configuration/prices-currencies-and-baskets.md)
 
 ## 🛒 Core Services
 

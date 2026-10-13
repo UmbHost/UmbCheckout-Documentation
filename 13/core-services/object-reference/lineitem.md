@@ -8,7 +8,7 @@ The LineItem object contains the below properties
 | Name          | string                      | The item name which fallsback to the Umbraco Node Name                                                                |
 | Description   | string?                     | The item description which fallsback to the Node property alias`umbCheckoutDescription`  and finally to `description` |
 | CurrencyCode  | string?                     | The 3-letter ISO currency code, in upper case                                                                                                 |
-| Price         | decimal                     | The price of the line item                                                                                            |
+| Price         | decimal                     | The price of the line item, read from the product on the server                                                                                            |
 | CurrencyPrice | string                      | The price formatted as currency                                                                                       |
 | Quantity      | long                        | The quantity of the line item                                                                                         |
 | MetaData      | Dictionary\<string, string> | Contains meta data for the line item, the node key gets added during checkout with a key of "nodeKey"                 |
