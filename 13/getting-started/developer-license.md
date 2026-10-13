@@ -12,6 +12,8 @@ To request a developer license please [create an account and open a support tick
 
 **Please include the domains to be added to the license in the request.**
 
+On your own machine you don't need a license key at all: see [development mode](license-checks.md#development-mode).
+
 It is only possible to request 1 license and 1 development license per domain.
 
 Production and Staging licenses are available on request for every domain hosted on an active UmbHost hosting package.

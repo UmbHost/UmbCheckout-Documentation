@@ -13,6 +13,7 @@
     * [Installation](getting-started/starter-kits/stripe/installation.md)
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
 * [Developer License](getting-started/developer-license.md)
+* [License Checks](getting-started/license-checks.md)
 * [Affiliate Scheme](getting-started/affiliate-scheme.md)
 * [Buy a License](https://umbcheckout.net)
 

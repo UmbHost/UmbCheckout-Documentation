@@ -65,13 +65,13 @@ If you have purchased a license to enable more features, you simply need to add 
 
 _Replacing_ `YOUR LICENSE KEY HERE` _with the key found in your_ [_UmbPanel account_](https://www.umbpanel.io)_._
 
-You are also required to configure the [UmbracoApplicationUrl](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings#umbraco-application-url) within the [Web routing settings](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings) within your appsettings.json file
+You are also required to configure the [UmbracoApplicationUrl](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings#umbraco-application-url) within the [Web routing settings](https://docs.umbraco.com/umbraco-cms/reference/configuration/webroutingsettings) within your appsettings.json file. It must be an absolute `http` or `https` URL, and its host must be one of the domains on your license.
 
 ```json
 "Umbraco": {
   "CMS": {
     "WebRouting": {
-      "UmbracoApplicationUrl": "http://www.mysite.com/"
+      "UmbracoApplicationUrl": "https://www.mysite.com/"
     }
   }
 }
@@ -86,7 +86,9 @@ Using UmbCheckout without a license will disable the Tax Rates and disables bein
 
 Licensed sites will also be able to make use of the support ticketing system.
 
-If you require a development license, [please see this linked page](developer-license.md).
+If you require a development license, [please see this linked page](developer-license.md). On your own machine you can also use [development mode](license-checks.md#development-mode).
+
+Licensed features only work for the domains on your license. See [License Checks](license-checks.md).
 
 _(These restrictions may change in the future)_
 
