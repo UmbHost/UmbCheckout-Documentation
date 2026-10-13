@@ -55,12 +55,14 @@ Settings -> UmbCheckout -> Stripe -> Settings
 | Name                                       | Use                                                                                                                    |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | Use live API details                       | Use the `Live` API key and webhook secret. When unticked, the `Test` ones are used                                     |
-| Allowed Shipping Countries                 | The countries Stripe Checkout accepts shipping addresses for, as 2-letter ISO codes separated by commas (e.g. `GB,IE`) |
+| Allowed Shipping Countries                 | The countries Stripe Checkout accepts shipping addresses for, as 2-letter ISO codes separated by commas (e.g. `GB,IE`). Used only when **Enable Shipping** is on in the configuration |
 | Collect Phone Number                       | Stripe Checkout asks the customer for a phone number                                                                   |
-| Collect Promotional Emails Consent         | Stripe Checkout asks the customer for consent to promotional emails                                                    |
+| Collect Promotional Emails Consent         | Stripe Checkout asks the customer for consent to promotional emails (Stripe offers this for US customers)             |
 | Allow Promotional Codes                    | Stripe Checkout accepts promotion codes created in Stripe                                                              |
-| Enable Abandoned Cart Recovery             | Stripe can email customers who leave the checkout a link to recover it (needs promotional emails consent)              |
-| Allow Promotional Codes On Recovered Carts | Recovered checkouts accept promotion codes                                                                             |
+| Enable Abandoned Cart Recovery             | Stripe can email customers who leave the checkout a link to recover it. Used only when **Collect Promotional Emails Consent** is on |
+| Allow Promotional Codes On Recovered Carts | Recovered checkouts accept promotion codes. Used only with **Enable Abandoned Cart Recovery**                          |
+
+Only users with access to the Settings section can see or change the Stripe settings. Saving them writes the uSync file when [uSync Stripe](usync/README.md) is installed.
 
 ### Product properties
 

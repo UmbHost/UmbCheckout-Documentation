@@ -1,8 +1,10 @@
 # Configuration Options
 
-There are a number of settings which can be configured within the backoffice on the configuration dashboard found here:
+There are a number of settings which can be configured within the backoffice on the configuration screen found here:
 
 Settings -> UmbCheckout -> Configuration
+
+Only users with access to the Settings section can see or change it. The screen also shows a **Help & Support** box and, on the right, the **License Details** (see [Licensing](../getting-started/licensing.md)).
 
 The configuration options and their possible options are as below:
 
@@ -21,4 +23,10 @@ The configuration options and their possible options are as below:
 Features marked with \* require a paid license. Without one, they aren't shown and are always off.
 {% endhint %}
 
-Storing the Basket in the database also turns on storing it in a cookie: the cookie is how a returning visitor's Basket is found again.
+{% hint style="warning" %}
+The screen shows a warning while `Umbraco:CMS:WebRouting:UmbracoApplicationUrl` isn't set. Licensing and the success page need it (see [Installing a License](../getting-started/installation.md#installing-a-license)).
+{% endhint %}
+
+Storing the Basket in the database also turns on storing it in a cookie: the cookie is how a returning visitor's Basket is found again. A Basket is stored in the database only when **Store Basket In The Database** is on, and viewing it doesn't extend its expiry.
+
+Saving shows a success toast. If a [Saving notification handler](../core-services/extending-umbcheckout.md) refuses the change, nothing is saved and the toast shows the handler's message.

@@ -2,6 +2,8 @@
 
 The MetaData property editor allows you to add metadata to your product, this is passed over to the Payment Provider.
 
+In the data type picker it is called **UmbCheckout MetaData** (in the eCommerce group). Use the alias `umbCheckoutMetaData` on your product. Editors add rows of Name and Value. It is stored as JSON; MetaData properties from UmbCheckout 1.x are moved to it when the site is upgraded.
+
 The returned type is: `Dictionary<string, string>`
 
 {% hint style="info" %}
