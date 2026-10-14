@@ -16,12 +16,11 @@ Development mode is on when **all** of these are true:
 * the site is a **Debug build** and runs in the **`Development` environment** (`ASPNETCORE_ENVIRONMENT=Development`);
 * **no live Stripe key** (`sk_live_…` or `rk_live_…`) is anywhere in the site's configuration;
 * **no live Stripe checkout session** has been created;
-* **every request so far has been local**: a local host name, from a loopback address (`127.0.0.0/8` or `::1`). An address on your network (for example `192.168.x.x`) is not local. A request that carries a client address that is not loopback in `X-Forwarded-For`, `Forwarded`, `X-Real-IP`, `CF-Connecting-IP` or `True-Client-IP` is not local either;
-* **both of the licensing request checks have seen a local request**. The licensing code observes requests in two independent places (a middleware at the start of Umbraco's pipeline, and Umbraco's own request notification). If a site removes either one, development mode never starts.
+* **every request so far has been local**: a local host name, from a loopback address (`127.0.0.0/8` or `::1`). An address on your network (for example `192.168.x.x`) is not local. A request that carries a client address that is not loopback in `X-Forwarded-For`, `Forwarded`, `X-Real-IP`, `CF-Connecting-IP` or `True-Client-IP` is not local either.
 
 One request from outside, or a live Stripe checkout, turns development mode off until the site restarts. If development mode isn't available, the log says why, once.
 
-The licensing request checks also **fail closed**: if a site removes the licensing request observer or the pipeline filter, no request is seen as licensed, so every request is unlicensed.
+Licence checks can't be switched off from the site: the licensing code sees every request through ASP.NET Core's own hosting events, not through anything a site registers. If a site interferes with that (for example by replacing the hosting diagnostics in DI), licensed features turn off for every request and background job until the interference is removed and the site restarts, the License Status reads "Licence checks were interfered with", and the log says why, once. Work that runs outside a request, such as your own scheduled jobs calling UmbCheckout services, is licensed whenever the site's license is.
 
 {% hint style="info" %}
 The Addon database tables (for Baskets and tax rates) are created when the site starts if it is licensed at that moment. Development mode starts with the first local request, after the site has started, so the tables are created on the first licensed request instead. A site that is never licensed never gets them.
