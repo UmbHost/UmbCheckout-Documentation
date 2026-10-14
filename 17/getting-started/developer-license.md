@@ -26,7 +26,7 @@ The Addon database tables (for Baskets and tax rates) are created when the site 
 
 ### Development licenses
 
-For a staging site, or any site that isn't on your own machine, ask for a free **development license**. It works like a normal license (in Release and Debug builds, for the domains and folder it lists) and is shown as **Development License: Yes** on the configuration screen. It mustn't be used to run a live shop.
+For a staging site, or any site that isn't on your own machine, ask for the **development license** included with each paid license. It works like a normal license (in Release and Debug builds, for the domains and folder it lists) and is shown as **Development License: Yes** on the configuration screen. It mustn't be used to run a live shop.
 
 To request a development license please [create an account and open a support ticket in UmbPanel](https://www.umbpanel.io).
 

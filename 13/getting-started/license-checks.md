@@ -4,7 +4,7 @@ description: How UmbCheckout checks your license
 
 # License Checks
 
-Your license key and the license itself don't change. This page explains how UmbCheckout checks it.
+Your license key doesn't change, but UmbCheckout 1.6.0 and later need an annual V1 license: see [Perpetual licenses](#perpetual-licenses). This page explains how UmbCheckout checks the license.
 
 ### The license is checked in the background
 
@@ -14,6 +14,7 @@ Your license key and the license itself don't change. This page explains how Umb
 * An expired, suspended or invalid answer switches the licensed features off at the next check.
 * **If the license can't be evaluated when the site starts,** the site still starts. The failure is logged and the add-on tables aren't created; they are created once a license is confirmed, on the first licensed request.
 * The **Re-Check License** button on the configuration screen checks with the license server at once and shows the result.
+* The site sends the license key, the domain and the site's directory to the license server.
 * The license server is contacted at `www.umbpanel.io` over HTTPS. If your server restricts outgoing traffic, allow it.
 
 ### Licensed domains are checked on every request
@@ -35,9 +36,18 @@ Background work (scheduled tasks, for example) isn't affected.
 | Active                    | Licensed                                                                                                               |
 | Development               | Licensed features are on in development mode                                                                           |
 | Domain not licensed       | This request is for a domain the license doesn't list                                                                  |
+| Perpetual license         | This licence doesn't cover UmbCheckout 1.6 or later: convert it to an annual licence                                   |
 | Not licensed for this site | The license is active but doesn't cover this site: for example the path or domain doesn't match, or a debugger is attached |
 
 The configuration screen treats any status other than Active or Development as unlicensed.
+
+### Perpetual licenses
+
+The V1 license is an annual subscription, with updates and support included until 31 December 2026, when Umbraco 13 reaches end of life. A V1 license bought as a one-off purchase before 14 October 2026 is a "perpetual" license. It keeps working with UmbCheckout versions before 1.6.0.
+
+From 1.6.0, a perpetual key shows the status **This licence doesn't cover UmbCheckout 1.6 or later: convert it to an annual licence**, and the licensed add-ons stop. The open-source core and your stored data are not affected. To convert, sign in to [UmbPanel](https://www.umbpanel.io) and convert the license to an annual V1 license. See the [License Comparison](license-comparison.md).
+
+When an annual license expires or is cancelled, the licensed add-ons stop in the same way.
 
 ### The license warning on your shop
 
