@@ -14,7 +14,7 @@ Development mode is on when **all** of these are true:
 
 * the site's address is local: `localhost`, a `*.localhost` or `*.local` name, or a loopback address. The address is taken from `UmbracoApplicationUrl`, or, if that isn't set, from the first request. A public `UmbracoApplicationUrl` rules development mode out;
 * the site is a **Debug build** and runs in the **`Development` environment** (`ASPNETCORE_ENVIRONMENT=Development`);
-* **no live Stripe key** (`sk_live_…` or `rk_live_…`) is anywhere in the site's configuration; A live-mode object read from Stripe by the add-on also ends it, so a key held outside the configuration is caught. Development mode needs the Stripe add-on installed: it registers the live-key check, and without it the key is treated as live.
+* **no live Stripe key** (`sk_live_…` or `rk_live_…`) is anywhere in the site's configuration; a live-mode object read from Stripe by the add-on also ends it, so a key held outside the configuration is caught. Development mode needs the Stripe add-on installed: it registers the live-key check, and without it the key is treated as live.
 * **no live Stripe checkout session** has been created;
 * **every request so far has been local**: a local host name, from a loopback address (`127.0.0.0/8` or `::1`). An address on your network (for example `192.168.x.x`) is not local. A request that carries a client address that is not loopback in `X-Forwarded-For`, `Forwarded`, `X-Real-IP`, `CF-Connecting-IP` or `True-Client-IP` is not local either.
 
