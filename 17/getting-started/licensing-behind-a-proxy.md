@@ -30,7 +30,7 @@ Some proxies replace `Host` with the name of the backend (for example `my-app.az
 
 ### Option 2: trust the proxy with ForwardedHeadersOptions
 
-If you cannot preserve the host, tell ASP.NET Core which proxies to trust and to apply `X-Forwarded-Host`. This is Microsoft's documented configuration; it only accepts the header from the proxies you list, which is why a visitor cannot spoof it.
+If you cannot preserve the host, tell ASP.NET Core which proxies to trust and which header carries the public host. This is Microsoft's documented configuration; it only accepts the header from the proxies you trust, which is why a visitor cannot spoof it.
 
 ```csharp
 using Microsoft.AspNetCore.HttpOverrides;
@@ -41,9 +41,14 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
                                | ForwardedHeaders.XForwardedHost
                                | ForwardedHeaders.XForwardedProto;
 
-    // Trust only your proxy. Add its address (or its network).
-    options.KnownProxies.Add(IPAddress.Parse("10.0.0.5"));
-    // options.KnownIPNetworks.Add(System.Net.IPNetwork.Parse("10.0.0.0/8"));
+    // Only for a proxy that uses a different header name (see the table below).
+    // options.ForwardedHostHeaderName = "X-Original-Host";
+
+    // Trust only your proxy's network (see "Trusting the proxy" below).
+    options.KnownIPNetworks.Add(System.Net.IPNetwork.Parse("203.0.113.0/24"));
+
+    // Recommended: only accept your own public hostnames.
+    options.AllowedHosts.Add("www.example.com");
 });
 
 var app = builder.Build();
@@ -52,9 +57,38 @@ var app = builder.Build();
 app.UseForwardedHeaders();
 ```
 
-Alternatively set the environment variable `ASPNETCORE_FORWARDEDHEADERS_ENABLED=true` (this enables `X-Forwarded-For` and `X-Forwarded-Proto` only and trusts every proxy; it does **not** apply `X-Forwarded-Host`, so it does not help a proxy that rewrites `Host`).
+Which header carries the public host depends on the proxy:
 
-Do not clear `KnownProxies` and `KnownIPNetworks` on a site that is reachable directly from the internet: any visitor could then send the header.
+| Proxy | Header with the public host | What to do |
+| --- | --- | --- |
+| Azure Front Door | `X-Forwarded-Host` | The default. Nothing extra. |
+| Azure Application Gateway | `X-Original-Host` (it does not send `X-Forwarded-Host`) | Set `options.ForwardedHostHeaderName = "X-Original-Host";` |
+| nginx | none unless you add it | Add `proxy_set_header X-Forwarded-Host $host;` in the `location` that has `proxy_pass`. |
+| Apache | `X-Forwarded-Host` (added by `mod_proxy`) | The default. |
+| AWS CloudFront | none | CloudFront sends no forwarded host header. Forward the `Host` header (Option 1) instead. If you cannot, use a CloudFront Function that copies the viewer's `Host` into a custom header (for example `X-Public-Host`), and set `options.ForwardedHostHeaderName = "X-Public-Host";`. The function must overwrite the header on every request, because a visitor can send it too. |
+
+#### Trusting the proxy
+
+A single `KnownProxies` address does not work for Azure Front Door, AWS CloudFront or Azure App Service, because the requests come from a large, changing set of addresses. Trust their published ranges with `KnownIPNetworks` instead:
+
+* **Azure Front Door**: the `AzureFrontDoor.Backend` service tag, from the [Azure IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=56519) download. Also check the `X-Azure-FDID` header against your Front Door ID, so that another customer's Front Door cannot reach your origin.
+* **AWS CloudFront**: the `CLOUDFRONT_ORIGIN_FACING` ranges in [ip-ranges.json](https://ip-ranges.amazonaws.com/ip-ranges.json), or the `com.amazonaws.global.cloudfront.origin-facing` managed prefix list.
+* **Azure App Service**: it preserves the host, so licensing needs none of this. If you trust its forwarded headers for other reasons, use the `ASPNETCORE_FORWARDEDHEADERS_ENABLED` setting App Service applies, not a single address.
+* **Azure Application Gateway**: the subnet the gateway is deployed in.
+* **nginx, Apache or any proxy you run**: its own address (`KnownProxies`) or subnet.
+
+These ranges change, so refresh them when the provider publishes an update.
+
+If you cannot list the ranges, you can clear both lists so that every sender is trusted:
+
+```csharp
+options.KnownIPNetworks.Clear();
+options.KnownProxies.Clear();
+```
+
+Only do this when the site cannot be reached except through the proxy: lock the origin down with a network security group, a security group, a firewall rule or an origin secret header, and set `AllowedHosts` as above. On a site that is reachable directly from the internet, any visitor could send the header.
+
+Alternatively set the environment variable `ASPNETCORE_FORWARDEDHEADERS_ENABLED=true` (this enables `X-Forwarded-For` and `X-Forwarded-Proto` only and trusts every proxy; it does **not** apply `X-Forwarded-Host`, so it does not help a proxy that rewrites `Host`).
 
 ## Development mode behind a proxy
 
