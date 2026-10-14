@@ -10,7 +10,10 @@ The UmbCheckout core is free and open source. A license unlocks the [Addon featu
 
 * **A license is an annual subscription for a production domain.** The domains it covers are listed on the license, and you can see them on the configuration screen.
 * **Every running instance needs a license.** A site served by two load-balanced servers (or two containers, or two App Service instances) is two instances. Add a **replica add-on** to your license for each extra instance.
-* **Staging and development sites** don't need a paid license. Use [development mode](developer-license.md#development-mode) on your own machine, or ask for a free [development license](developer-license.md#development-licenses) for a staging site.
+* **Each extra production domain needs a domain add-on.** If the same shop is served on more than one production domain, add a **domain add-on** for each extra one. A separate shop needs its own license.
+* **Some domains need no add-on:** domains that serve or redirect to the same website, such as the `www.` and non-`www.` versions of a domain, redirect domains, and staging-only host names.
+* **Each paid license includes one development license** for a staging or testing domain. Local development needs no license: use [development mode](developer-license.md#development-mode) on your own machine, or ask for the included [development license](developer-license.md#development-licenses) for a staging site.
+* **GreenStack hosting** includes a license on Umbraco 10, 13 and 17. It is only valid for sites hosted on GreenStack and ends with the hosting.
 
 ### Setting it up
 
@@ -26,7 +29,7 @@ Licensed features are only on for requests to a domain on the license (or to its
 * the configuration screen explains this and lists the licensed domains;
 * the site logs the domain, once.
 
-Domains must match exactly: `www.mysite.com` and `mysite.com` are different domains, and there are no wildcards. To add a domain, [open a ticket in UmbPanel](https://www.umbpanel.io) and ask UmbHost to add it.
+Domains must match exactly: `www.mysite.com` and `mysite.com` are different domains, and there are no wildcards. List each domain the site is served on (the free alias, redirect and staging domains need no add-on, but they are still listed on the license). To add a domain, [open a ticket in UmbPanel](https://www.umbpanel.io) and ask UmbHost to add it.
 
 Background work (scheduled tasks, the webhook's handlers outside a request) isn't affected.
 
@@ -54,11 +57,11 @@ The license is checked in the background, never while a page is loading.
 * **When the license has no room for another instance,** that instance is unlicensed (status **Invalid**, and the banner shows), and the log says "The licence has no room for another instance". It tries again regularly, so it is licensed once a place is free.
 * **After an outage of more than 30 days,** the licensed features switch off while the site is running, not only after a restart, and the log says so. They come back when the license server confirms the license.
 * **If the license can't be evaluated when the site starts,** the site still starts. The failure is logged and the add-on tables aren't created; they are created once a license is confirmed, on the first licensed request.
-* An expired, suspended or cancelled license switches the licensed features off at the next check.
+* An expired, suspended or cancelled license switches the licensed add-ons off at the next check. The open-source core and your stored data are not affected.
 
 The **Re-Check License** button on the configuration screen checks with the license server at once and shows the result. It can be used once every 5 minutes.
 
-The license server is only ever contacted at `www.umbpanel.io` over HTTPS. If your server restricts outgoing traffic, allow it.
+The site sends the license key, the domain and the site's directory to the license server, which is only ever contacted at `www.umbpanel.io` over HTTPS. If your server restricts outgoing traffic, allow it.
 
 ### License statuses
 
