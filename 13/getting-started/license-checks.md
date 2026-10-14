@@ -58,12 +58,12 @@ When a site has a license key but a request isn't licensed, every front-end page
 On your own machine, licensed features work without a license key, and the license status reads **Development**. This needs all of these:
 
 * the site's address is local: `localhost`, a `*.localhost` or `*.local` name, or a loopback address;
-* the site is a **Debug build**;
-* no live Stripe key (`sk_live_…` or `rk_live_…`) is in the site's configuration, and no live Stripe checkout session has been created;
-* every request so far has been local, including any forwarding headers.
+* the site is a **Debug build** and runs in the **`Development` environment** (`ASPNETCORE_ENVIRONMENT=Development`);
+* no live Stripe key (`sk_live_…` or `rk_live_…`) is in the site's configuration, no live Stripe checkout session has been created, and nothing the Stripe add-on reads from Stripe belongs to live mode (a live key held outside the configuration is caught that way);
+* every request so far has been local: a local host name, from a loopback address (`127.0.0.0/8` or `::1`; an address on your network does not count), with no client address that is not loopback in a forwarding header (`X-Forwarded-For`, `Forwarded`, `X-Real-IP`, `CF-Connecting-IP`, `True-Client-IP`).
 
-One request from outside, or a live checkout, turns development mode off until the site restarts. If development mode isn't available, the log says why, once. For a staging site, use a [development license](developer-license.md).
+One request from outside, or a live checkout, turns development mode off until the site restarts. The licence checks detect interference and turn licensed features off; they cannot be made to see a different licence. They rely on ASP.NET Core's own hosting events (not on anything a site registers), and code that handles a request cross-checks that the request was seen. If a site interferes with that (for example by replacing the hosting diagnostics in DI), licensed features turn off for every request and background job until the interference is removed and the site restarts, the License Status reads "Licence checks were interfered with", and the log says why, once. Code that builds its own HttpContext (prerendering, a static export, a warm-up) is not interference. A request is read for its host when a licence decision is made, so after your own UseForwardedHeaders(). Work that runs outside a request, such as your own scheduled jobs calling UmbCheckout services, is licensed whenever the site's license is. If development mode isn't available, the log says why, once. For a staging site, use a [development license](developer-license.md).
 
 {% hint style="info" %}
-While a debugger is attached, a production license is off (development licenses and development mode are exempt). Licensed features come back when the debugger detaches.
+While a debugger is attached, a production license is off (development licenses, and local hosts in a Debug build, are exempt). Licensed features come back when the debugger detaches.
 {% endhint %}

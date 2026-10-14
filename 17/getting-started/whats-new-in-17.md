@@ -19,7 +19,7 @@ To move a site from Umbraco 13, see [Upgrading from v13](upgrading-from-v13.md).
 
 * Licenses are an annual subscription for one production domain and one running instance. Each extra production domain served by the same shop needs a domain add-on. Domains that serve or redirect to the same website (`www.` or non-`www.`, redirect domains, staging-only host names) need no add-on.
 * Every running instance of a production site needs a license. Replica add-ons license the extra instances of a load-balanced site.
-* Licensed features work on `localhost` and `*.local` in Debug builds without a license (development mode), and each paid license includes one development license for a staging or testing domain.
+* Licensed features work without a license on `localhost` and `*.local` in a Debug build running in the Development environment, on loopback requests only (development mode), licence checks can't be removed from the site (interfering with them turns licensed features off until restart), and each paid license includes one development license for a staging or testing domain.
 * A licensed site only enables the licensed features for the domains on its license, and shows a banner on the shop when a request isn't licensed.
 * The license is checked in the background. A short outage of the license server doesn't switch your features off.
 
