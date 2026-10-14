@@ -9,6 +9,7 @@
 * [Upgrading from v13](getting-started/upgrading-from-v13.md)
 * [License Comparison](getting-started/license-comparison.md)
 * [Licensing](getting-started/licensing.md)
+* [Licensing behind a proxy or CDN](getting-started/licensing-behind-a-proxy.md)
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
 * [Starter Kits](getting-started/starter-kits/README.md)
