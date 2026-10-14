@@ -13,15 +13,22 @@ On your own machine, licensed features work without a license key. The license s
 Development mode is on when **all** of these are true:
 
 * the site's address is local: `localhost`, a `*.localhost` or `*.local` name, or a loopback address. The address is taken from `UmbracoApplicationUrl`, or, if that isn't set, from the first request. A public `UmbracoApplicationUrl` rules development mode out;
-* the site is a **Debug build**;
+* the site is a **Debug build** and runs in the **`Development` environment** (`ASPNETCORE_ENVIRONMENT=Development`);
 * **no live Stripe key** (`sk_live_…` or `rk_live_…`) is anywhere in the site's configuration;
 * **no live Stripe checkout session** has been created;
-* **every request so far has been local**: a local host name, from a local network address, including any forwarding headers.
+* **every request so far has been local**: a local host name, from a loopback address (`127.0.0.0/8` or `::1`). An address on your network (for example `192.168.x.x`) is not local. A request that carries a client address that is not loopback in `X-Forwarded-For`, `Forwarded`, `X-Real-IP`, `CF-Connecting-IP` or `True-Client-IP` is not local either;
+* **both of the licensing request checks have seen a local request**. The licensing code observes requests in two independent places (a middleware at the start of Umbraco's pipeline, and Umbraco's own request notification). If a site removes either one, development mode never starts.
 
 One request from outside, or a live Stripe checkout, turns development mode off until the site restarts. If development mode isn't available, the log says why, once.
 
-{% hint style="warning" %}
-The Addon database tables (for Baskets and tax rates) are created when the site starts, and only if the site is licensed at that moment. Development mode starts with the first local request, after that, so a site with no license key may not get these tables. If you need them, use a development license.
+The licensing request checks also **fail closed**: if a site removes the licensing request observer or the pipeline filter, no request is seen as licensed, so every request is unlicensed.
+
+{% hint style="info" %}
+The Addon database tables (for Baskets and tax rates) are created when the site starts if it is licensed at that moment. Development mode starts with the first local request, after the site has started, so the tables are created on the first licensed request instead. A site that is never licensed never gets them.
+{% endhint %}
+
+{% hint style="info" %}
+While a debugger is attached, a production license is off. Development licenses, and local hosts in a Debug build, are exempt.
 {% endhint %}
 
 ### Development licenses

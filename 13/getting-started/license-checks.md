@@ -58,12 +58,13 @@ When a site has a license key but a request isn't licensed, every front-end page
 On your own machine, licensed features work without a license key, and the license status reads **Development**. This needs all of these:
 
 * the site's address is local: `localhost`, a `*.localhost` or `*.local` name, or a loopback address;
-* the site is a **Debug build**;
+* the site is a **Debug build** and runs in the **`Development` environment** (`ASPNETCORE_ENVIRONMENT=Development`);
 * no live Stripe key (`sk_live_…` or `rk_live_…`) is in the site's configuration, and no live Stripe checkout session has been created;
-* every request so far has been local, including any forwarding headers.
+* every request so far has been local: a local host name, from a loopback address (`127.0.0.0/8` or `::1`; an address on your network does not count), with no client address that is not loopback in a forwarding header (`X-Forwarded-For`, `Forwarded`, `X-Real-IP`, `CF-Connecting-IP`, `True-Client-IP`);
+* both of the licensing request checks (a middleware at the start of Umbraco's pipeline, and Umbraco's own request notification) have seen a local request. If a site removes either one, development mode never starts.
 
-One request from outside, or a live checkout, turns development mode off until the site restarts. If development mode isn't available, the log says why, once. For a staging site, use a [development license](developer-license.md).
+One request from outside, or a live checkout, turns development mode off until the site restarts. The licensing request checks also **fail closed**: if a site removes the licensing request observer or the pipeline filter, no request is seen as licensed, so every request is unlicensed. If development mode isn't available, the log says why, once. For a staging site, use a [development license](developer-license.md).
 
 {% hint style="info" %}
-While a debugger is attached, a production license is off (development licenses and development mode are exempt). Licensed features come back when the debugger detaches.
+While a debugger is attached, a production license is off (development licenses, and local hosts in a Debug build, are exempt). Licensed features come back when the debugger detaches.
 {% endhint %}
