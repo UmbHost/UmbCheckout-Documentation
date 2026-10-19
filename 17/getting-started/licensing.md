@@ -35,16 +35,25 @@ Background work (scheduled tasks, the webhook's handlers outside a request) isn'
 
 ### The license warning on your shop
 
-When a site has a license key but a request isn't licensed, every front-end page shows a red banner at the bottom:
+When a site has a paid add-on installed but a request isn't licensed, every front-end page shows a red banner at the bottom. This includes a site with no license key:
 
 > **UmbCheckout is not licensed for www.mysite.com** (Domain not licensed). Licensed shop features are switched off. Site owner: see the licence details in the UmbCheckout settings in the Umbraco backoffice.
 
 The status in brackets says why. The banner is never shown:
 
-* on a site without a license key (the free version);
+* on a site without a paid add-on installed (the free version), whatever its license key says;
 * in the backoffice;
 * before the license has been checked for the first time;
 * on responses that aren't HTML pages.
+
+### The unlicensed message in the backoffice
+
+The UmbCheckout screens in the backoffice show "UmbCheckout is running in unlicensed mode, please purchase a license to support development" when the site isn't licensed:
+
+* with a paid add-on installed, it is a red alert;
+* without one, nothing needs a license, so it is a blue information bar asking you to support development. This includes `localhost`: development mode needs the Stripe add-on.
+
+A licensed site, or one in development mode, shows neither.
 
 ### How the license is checked
 
