@@ -51,7 +51,11 @@ When an annual license expires or is cancelled, the licensed add-ons stop in the
 
 ### The license warning on your shop
 
-When a site has a license key but a request isn't licensed, every front-end page shows a red banner at the bottom saying that UmbCheckout is not licensed for that domain, and why. The banner is never shown on a site without a license key, in the backoffice, before the license has been checked for the first time, or on responses that aren't HTML pages.
+When a site has a paid add-on installed but a request isn't licensed, every front-end page shows a red banner at the bottom saying that UmbCheckout is not licensed for that domain, and why. This includes a site with no license key. The banner is never shown on a site without a paid add-on installed (whatever its license key says), in the backoffice, before the license has been checked for the first time, or on responses that aren't HTML pages.
+
+### The unlicensed message in the backoffice
+
+When the site isn't licensed, the UmbCheckout configuration and shipping rate screens show "UmbCheckout is running in unlicensed mode". With a paid add-on installed it is red text. Without one, nothing needs a license, so it is a blue information box asking you to support development. A licensed site, or one in development mode, shows neither.
 
 ### Development mode
 
