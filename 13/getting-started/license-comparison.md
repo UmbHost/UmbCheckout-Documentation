@@ -19,7 +19,7 @@ You can purchase a license from the link below:
 |                              |    Free Version   | Paid & Hosted Version           |
 | :--------------------------: | :---------------: | ------------------------------- |
 |       Access to source       |         ✅         | <p>Core: ✅<br>Addons: ❌</p>     |
-|  Includes Developer License  | Valid for 60 Days | ✅\*\*                           |
+|  Includes Developer License  | Before 1.6.0: valid for 60 days | ✅\*\*                           |
 |   Access to Shipping Rates   |         ✅         | ✅                               |
 |      Access to Tax Rates     |         ❌         | ✅                               |
 | Store Basket in .NET Session |         ✅         | ✅                               |
