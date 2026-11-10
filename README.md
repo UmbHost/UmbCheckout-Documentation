@@ -35,10 +35,10 @@ To add a version (say Umbraco 18):
 
 ## Old URLs
 
-The docs used to be on GitBook, which served the latest version without a version in the URL (`/getting-started/installation`) and v13 under `/v13/`. The build writes `dist/_redirects` so those URLs keep working:
+The docs used to be on GitBook, which served v13 without a version in the URL (`/getting-started/installation`) and v17 under `/v17/`. The build writes `dist/_redirects` so those URLs keep working:
 
-- every page of the latest version at its old unversioned URL, with and without a trailing slash;
-- `/v13/*` to `/13/*`;
+- every v13 page at its old unversioned URL, with and without a trailing slash (`GITBOOK_ROOT_VERSION` in `astro.config.mjs`);
+- `/v17/*` to `/17/*` and `/v13/*` to `/13/*`;
 - the old GitBook redirects, kept in `GITBOOK_REDIRECTS` in `astro.config.mjs`.
 
 When a page moves or is renamed, add its old path to `GITBOOK_REDIRECTS` (or to the rules in `redirectRules()`) so links to it keep working.

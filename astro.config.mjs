@@ -101,26 +101,28 @@ function versionPages(version) {
 }
 
 /**
- * The GitBook site served the latest version without a version in the URL (/getting-started/installation),
- * v13 under /v13/, and kept GitBook redirects for moved pages. Those URLs keep working.
+ * The GitBook site served v13 without a version in the URL (/getting-started/installation)
+ * and v17 under /v17/, and kept a GitBook redirect for a moved v17 page. Those URLs keep working.
  */
+const GITBOOK_ROOT_VERSION = '13';
 const GITBOOK_REDIRECTS = {
-	'core-services/database-service': 'core-services/addons/database-service/',
+	'/v17/core-services/database-service': '/17/core-services/addons/database-service/',
 };
 
 function redirectRules() {
-	const v = latestVersion.id;
-	const rules = [`/ /${v}/ 302`];
-	for (const page of versionPages(latestVersion)) {
+	const rules = [`/ /${latestVersion.id}/ 302`];
+	// Specific rules first: Cloudflare uses the first rule that matches.
+	for (const [from, to] of Object.entries(GITBOOK_REDIRECTS)) {
+		rules.push(`${from} ${to} 301`, `${from}/ ${to} 301`);
+	}
+	const root = versions.find((v) => v.id === GITBOOK_ROOT_VERSION);
+	for (const page of versionPages(root)) {
 		const url = pageUrl(page);
-		const old = url.slice(v.length + 1).replace(/\/$/, '');
+		const old = url.slice(root.id.length + 1).replace(/\/$/, '');
 		if (old === '') continue;
 		rules.push(`${old} ${url} 301`, `${old}/ ${url} 301`);
 	}
-	for (const [from, to] of Object.entries(GITBOOK_REDIRECTS)) {
-		rules.push(`/${from} /${v}/${to} 301`, `/${from}/ /${v}/${to} 301`);
-	}
-	rules.push('/v13 /13/ 301', '/v13/* /13/:splat 301');
+	for (const v of versions) rules.push(`/v${v.id} /${v.id}/ 301`, `/v${v.id}/* /${v.id}/:splat 301`);
 	return rules;
 }
 
