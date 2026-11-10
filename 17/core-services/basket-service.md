@@ -1,16 +1,15 @@
 ---
+title: Basket Service
 description: A service which handles all things around the basket
 ---
-
-# Basket Service
 
 The basket service is what and handles all the UmbCheckout Basket operations.
 
 You can access the basket service by injecting `IBasketService` which can be found within the namespace `UmbCheckout.Core.Interfaces`
 
-{% hint style="info" %}
+:::note
 Every method also has an overload that takes a `CancellationToken` as its last parameter. Call that one: the overloads without a token are `[Obsolete]`. See [Cancellation Tokens](cancellation-tokens.md).
-{% endhint %}
+:::
 
 Adding throws an `ArgumentException` (or `ArgumentOutOfRangeException`) when a line has no currency, when a quantity is outside 1–999,999, when the Basket would hold more than 100 products, or when several lines added together have different currencies. A single line is added to the Basket for its own currency.
 

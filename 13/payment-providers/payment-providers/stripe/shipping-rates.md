@@ -1,4 +1,6 @@
-# Shipping Rates
+---
+title: Shipping Rates
+---
 
 Shipping Rates allow you to charge various shipping options - such as standard, express next day etc...
 
@@ -23,8 +25,8 @@ The shipping rate settings are as follows:
 | Shipping Rate Name | The name of the shipping rate as shown in the Umbraco Backoffice |
 | Shipping Rate ID   | The ID of the shipping rate as found in Stripe                   |
 
-{% hint style="info" %}
+:::note
 Currently only fixed rate shipping rates are supported. At checkout, only the rates that charge in the Basket's currency are offered
-{% endhint %}
+:::
 
 To calculate shipping yourself, for example per product, see [Custom Shipping Calculator](services/custom-shipping-calculator.md).

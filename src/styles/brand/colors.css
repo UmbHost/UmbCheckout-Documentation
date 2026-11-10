@@ -1,0 +1,51 @@
+:root {
+	--brand-bg: #15001F;
+	--brand-bg-lifted: #1f0a2e;
+	--brand-bg-accent: #2a0f3a;
+	--brand-accent: #C7EA46;
+	--brand-accent-soft: #d8f084;
+	--brand-text: #f4f5f7;
+	--brand-text-muted: #9ca3af;
+	--brand-border: rgba(255, 255, 255, 0.08);
+	--brand-success: #00a63e;
+	--brand-info: #155dfc;
+	--brand-notice: #7f22fe;
+	--brand-warning: #f54a00;
+	--brand-error: #e7000b;
+}
+
+[data-theme='dark'],
+:root {
+	--sl-color-bg: var(--brand-bg);
+	--sl-color-bg-nav: var(--brand-bg-lifted);
+	--sl-color-bg-sidebar: var(--brand-bg-lifted);
+	--sl-color-bg-inline-code: var(--brand-bg-accent);
+
+	--sl-color-white: var(--brand-text);
+	--sl-color-text: var(--brand-text);
+	--sl-color-text-accent: var(--brand-accent);
+
+	--sl-color-gray-1: #e5e7eb;
+	--sl-color-gray-2: #d1d5db;
+	--sl-color-gray-3: #9ca3af;
+	--sl-color-gray-4: #6b7280;
+	--sl-color-gray-5: #374151;
+	--sl-color-gray-6: #1f2937;
+	--sl-color-hairline: var(--brand-border);
+	--sl-color-hairline-shade: var(--brand-border);
+
+	--sl-color-accent-low: #2c3a0e;
+	--sl-color-accent: var(--brand-accent);
+	--sl-color-accent-high: var(--brand-accent-soft);
+
+	--sl-color-asides-text-accent: var(--brand-accent);
+	--sl-color-blue: var(--brand-info);
+	--sl-color-green: var(--brand-success);
+	--sl-color-orange: var(--brand-warning);
+	--sl-color-red: var(--brand-error);
+}
+
+/* Hide Starlight's theme toggle — the brand is dark-only. */
+starlight-theme-select {
+	display: none !important;
+}

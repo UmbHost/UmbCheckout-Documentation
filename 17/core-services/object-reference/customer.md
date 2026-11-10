@@ -1,4 +1,6 @@
-# Customer
+---
+title: Customer
+---
 
 The Customer object contains the below properties
 

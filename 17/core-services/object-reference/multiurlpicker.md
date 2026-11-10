@@ -1,4 +1,6 @@
-# MultiUrlPicker
+---
+title: MultiUrlPicker
+---
 
 The MultiUrlPicker object contains the below properties
 

@@ -1,4 +1,6 @@
-# Basket Link View Component
+---
+title: Basket Link View Component
+---
 
 A prebuilt basket link which incudes the Basket Count is included.
 

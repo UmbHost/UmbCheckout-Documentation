@@ -1,15 +1,17 @@
-# Stripe Webhook Api
+---
+title: Stripe Webhook Api
+---
 
 Please ensure you have added the webhook secret as per the [configuration](../../configuration.md).
 
-{% hint style="info" %}
+:::note
 Create your webhook endpoint on the [Stripe API version](https://dashboard.stripe.com/developers) used by the Stripe.net package UmbCheckout is built with. UmbCheckout 1.5 uses Stripe.net 50.x, which uses `2026-01-28.clover`
 
 If you cannot use this version, please install a newer version of the [Stripe.net NuGet package](https://www.nuget.org/packages/Stripe.net), which matches the Stripe API versions available in your account.\
 Use the [Stripe.net changelog](https://github.com/stripe/stripe-dotnet/blob/master/CHANGELOG.md) to find which version of the NuGet package you need.
 
 **NOTE:** When upgrading between major versions of the Stripe.net NuGet package, there may be breaking changes, if you encounter these and have a paid license, open a [support ticket](../../../../../support/support-tickets.md); otherwise, open an issue on [the tracker](https://github.com/UmbHost/UmbCheckout/issues)
-{% endhint %}
+:::
 
 You can configure Stripe to send the webhook request to the below api:
 
@@ -46,11 +48,11 @@ Stripe delivers each event at least once, and retries for up to 3 days until it 
 
 
 
-{% hint style="info" %}
+:::note
 To be able to test the Webhook on localhost you need to install the [Stripe CLI](https://github.com/stripe/stripe-cli) you can find the instructions on how to configure the CLI to test the Webhook on the Stripe website using the link below, look for step 3 entitled "**Test the webhook**":
 
 [https://stripe.com/docs/webhooks/quickstart?lang=dotnet#run](https://stripe.com/docs/webhooks/quickstart?lang=dotnet#run)
-{% endhint %}
+:::
 
 ### Replacing the event store
 

@@ -1,8 +1,7 @@
 ---
+title: Convert Extensions
 description: Useful extensions which convert from one type to another
 ---
-
-# Convert Extensions
 
 These extensions can be found within the namespace `UmbCheckout.Shared.Extensions`
 
@@ -10,11 +9,9 @@ These extensions can be found within the namespace `UmbCheckout.Shared.Extension
 
 Converts a string to boolean
 
-{% code title="Example" %}
-```csharp
+```csharp title="Example"
 Model.StringBoolean.ToBoolean()
 ```
-{% endcode %}
 
 | String Value | Returned Boolean |
 | ------------ | ---------------- |

@@ -1,4 +1,6 @@
-# LineItem
+---
+title: LineItem
+---
 
 The LineItem object contains the below properties
 

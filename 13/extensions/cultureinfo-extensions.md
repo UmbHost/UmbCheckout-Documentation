@@ -1,8 +1,7 @@
 ---
+title: CultureInfo Extensions
 description: Useful extensions to return culture related data
 ---
-
-# CultureInfo Extensions
 
 These extensions can be found within the namespace `UmbCheckout.Shared.Extensions`
 
@@ -10,8 +9,6 @@ These extensions can be found within the namespace `UmbCheckout.Shared.Extension
 
 Gets the 3 letter ISO4217 currency code
 
-{% code title="Example" %}
-```csharp
+```csharp title="Example"
 CultureInfo.CurrentUICulture.GetISOCurrencySymbol()
 ```
-{% endcode %}

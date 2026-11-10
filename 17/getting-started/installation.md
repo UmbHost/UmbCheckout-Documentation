@@ -1,14 +1,13 @@
 ---
+title: Installation
 description: Installing UmbCheckout
 ---
 
-# Installation
-
 **UmbCheckout 17 supports Umbraco 17.6 or later, on .NET 10.**
 
-{% hint style="info" %}
+:::note
 Upgrading a site from Umbraco 13? Read [Upgrading from v13](upgrading-from-v13.md) first.
-{% endhint %}
+:::
 
 UmbCheckout is installed using the NuGet package manager using the below command:
 
@@ -65,7 +64,7 @@ You are also required to configure the [UmbracoApplicationUrl](https://docs.umbr
 }
 ```
 
-{% hint style="info" %}
+:::note
 **When do I need a license?**
 
 UmbCheckout requires a license to use any of the Addon packages, and every running instance of a production site needs one. See [Licensing](licensing.md) for how licenses work in UmbCheckout 17.
@@ -75,4 +74,4 @@ Using UmbCheckout without a license disables the Tax Rates, the payments, invoic
 Licensed sites will also be able to make use of the support ticketing system.
 
 For development and staging sites, see [Development Licenses and Development Mode](developer-license.md).
-{% endhint %}
+:::

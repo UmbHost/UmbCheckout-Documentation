@@ -1,8 +1,10 @@
-# License Comparison
+---
+title: License Comparison
+---
 
-{% hint style="info" %}
+:::note
 UmbCheckout 17 licenses are an annual subscription for one production domain and one running instance. Extra instances need a replica add-on, and extra production domains served by the same shop need a domain add-on. See [Licensing](licensing.md) for how they work.
-{% endhint %}
+:::
 
 The UmbCheckout core is open source under the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/), the table below outlines what the differences are between the free version and the paid for version.\
 \
@@ -31,9 +33,9 @@ You can purchase a license from the link below:
 |   Each running instance licensed |     -      | ✅ (replica add-ons for extra instances) |
 |   Extra production domains   |         -         | ✅ (domain add-ons; alias, redirect and staging domains are free) |
 
-{% hint style="info" %}
+:::note
 \*When the feature is released\
 \*\*Hosted licenses are only valid for the lifetime of the subscription
-{% endhint %}
+:::
 
 [_If you require a development license, please see this linked page_](developer-license.md)

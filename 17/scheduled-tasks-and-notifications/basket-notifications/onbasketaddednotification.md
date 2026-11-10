@@ -1,10 +1,7 @@
 ---
-description: >-
-  Notification which is triggered after a single line item is added to the
-  Basket
+title: OnBasketAddedNotification
+description: Notification which is triggered after a single line item is added to the Basket
 ---
-
-# OnBasketAddedNotification
 
 The following properties are available within the notification
 

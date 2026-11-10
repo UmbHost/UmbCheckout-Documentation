@@ -1,0 +1,27 @@
+---
+import { versions, latestVersion } from '../../versions.mjs';
+
+const id = Astro.locals.starlightRoute.id;
+const current = versions.find((v) => id === v.id || id.startsWith(v.id + '/'));
+const outdated = current && !current.latest;
+---
+
+{
+	outdated && (
+		<aside class="version-notice" role="note">
+			You're reading the docs for {current.label}. The latest is{' '}
+			<a href={`/${latestVersion.id}/`}>{latestVersion.label}</a>.
+		</aside>
+	)
+}
+
+<style>
+	.version-notice {
+		margin-bottom: 1.25rem;
+		padding: 0.75rem 1rem;
+		border: 1px solid var(--brand-warning, #f54a00);
+		border-radius: 0.5rem;
+		background: var(--brand-bg-accent, transparent);
+		font-size: var(--sl-text-sm);
+	}
+</style>

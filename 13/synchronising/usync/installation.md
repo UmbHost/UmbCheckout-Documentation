@@ -1,8 +1,7 @@
 ---
+title: Installation
 description: Installing uSync
 ---
-
-# Installation
 
 The uSync package is installed using the NuGet package manager using the below command:
 

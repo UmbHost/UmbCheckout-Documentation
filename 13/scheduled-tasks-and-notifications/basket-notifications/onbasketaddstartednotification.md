@@ -1,10 +1,7 @@
 ---
-description: >-
-  Notification which is triggered before a single line item is added to the
-  Basket
+title: OnBasketAddStartedNotification
+description: Notification which is triggered before a single line item is added to the Basket
 ---
-
-# OnBasketAddStartedNotification
 
 The following properties are available within the notification
 

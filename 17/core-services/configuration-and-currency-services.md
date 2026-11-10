@@ -1,8 +1,7 @@
 ---
+title: Configuration and Currency Services
 description: Services to read the configuration and the currency, and to check paid checkout sessions
 ---
-
-# Configuration and Currency Services
 
 These services can be found within the namespace `UmbCheckout.Core.Interfaces`. Inject them where you need them.
 

@@ -1,10 +1,7 @@
 ---
-description: >-
-  Notification which is triggered on the Stripe CheckoutSessionExpired Webhook
-  response
+title: OnCheckoutSessionExpiredNotification
+description: Notification which is triggered on the Stripe CheckoutSessionExpired Webhook response
 ---
-
-# OnCheckoutSessionExpiredNotification
 
 The following properties are available within the notification
 

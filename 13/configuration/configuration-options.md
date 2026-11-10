@@ -1,4 +1,6 @@
-# Configuration Options
+---
+title: Configuration Options
+---
 
 There are a number of settings which can be configured within the backoffice on the configuration dashboard found here:
 
@@ -19,8 +21,8 @@ The configuration options and their possible options are as below:
 | \*Store Basket In The Database | Boolean | <p><strong>True:</strong> The users current Basket is stored in the database<br><br><strong>False:</strong> The Basket is not stored</p>                                |
 | \*Basket Expiry (Database)     | Integer | The maximum number of days the Basket is stored in the database                                                                                                         |
 
-{% hint style="info" %}
+:::note
 Features marked with \* require a paid license. Without one, they aren't shown and are always off.
-{% endhint %}
+:::
 
 Storing the Basket in the database also turns on storing it in a cookie: the cookie is how a returning visitor's Basket is found again.

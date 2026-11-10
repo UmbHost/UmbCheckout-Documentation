@@ -1,8 +1,7 @@
 ---
+title: Decimal Extensions
 description: Useful extensions for use with decimals
 ---
-
-# Decimal Extensions
 
 These extensions can be found within the namespace `UmbCheckout.Shared.Extensions`
 
@@ -14,8 +13,6 @@ Returns the decimal as currency, with the currency's symbol and number of decima
 string FormatCurrency(this decimal amount, string? currencyCode, CultureInfo? culture = null)
 ```
 
-{% code title="Example" %}
-```csharp
+```csharp title="Example"
 Model.SubTotal.FormatCurrency(CultureInfo.CurrentUICulture.GetISOCurrencySymbol())
 ```
-{% endcode %}

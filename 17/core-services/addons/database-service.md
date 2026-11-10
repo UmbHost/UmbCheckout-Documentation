@@ -1,12 +1,11 @@
 ---
+title: Database Service
 description: A service which handles storing of the Basket in the database
 ---
 
-# Database Service
-
-{% hint style="info" %}
+:::note
 This feature requires a paid license. On an unlicensed site the service reads and writes nothing.
-{% endhint %}
+:::
 
 The database service is what handles the retrieval, insertion, updating, and clearing of the UmbCheckout Basket within the database. A Basket is stored only when **Store Basket In The Database** is on in the [configuration](../../configuration/configuration-options.md), and there is one row per session, site root culture and currency.
 

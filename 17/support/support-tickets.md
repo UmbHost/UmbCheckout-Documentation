@@ -1,4 +1,6 @@
-# Support Tickets
+---
+title: Support Tickets
+---
 
 Users with an active Support License can open support tickets to be dealt with quicker than waiting for the community via the [Issue Tracker](https://github.com/UmbHost/UmbCheckout/issues).
 

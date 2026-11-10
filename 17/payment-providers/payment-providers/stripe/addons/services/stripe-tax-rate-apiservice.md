@@ -1,20 +1,19 @@
 ---
+title: Stripe Tax Rate ApiService
 description: A service which handles getting the Stripe Tax Rates from the Stripe API
 ---
 
-# Stripe Tax Rate ApiService
-
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 The Stripe Tax Rate API service is what handles the retrieval of the Tax Rates from the Stripe API.
 
 You can access the API service by injecting `IStripeTaxRateApiService` which can be found within the namespace `UmbCheckout.Stripe.Addons.Interfaces`
 
-{% hint style="info" %}
+:::note
 Every method also has an overload that takes a `CancellationToken` as its last parameter. See [Cancellation Tokens](../../../../../core-services/cancellation-tokens.md).
-{% endhint %}
+:::
 
 
 #### GetTaxRates

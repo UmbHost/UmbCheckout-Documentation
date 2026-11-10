@@ -1,8 +1,7 @@
 ---
+title: Property
 description: The editable properties as shown in the backoffice
 ---
-
-# Property
 
 The Property object contains the below properties
 

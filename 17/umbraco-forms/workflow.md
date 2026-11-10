@@ -1,8 +1,10 @@
-# Workflow
+---
+title: Workflow
+---
 
-{% hint style="info" %}
+:::note
 UmbCheckout.Stripe.Forms 17 requires Umbraco Forms 17
-{% endhint %}
+:::
 
 A workflow for Umbraco Forms that will redirect the user to the Stripe Checkout payment page. See [Umbraco Forms Workflow](../payment-providers/payment-providers/stripe/umbraco-forms-workflow.md) for its settings.
 

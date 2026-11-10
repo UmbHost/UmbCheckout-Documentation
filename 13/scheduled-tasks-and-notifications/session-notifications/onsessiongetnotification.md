@@ -1,8 +1,7 @@
 ---
+title: OnSessionGetNotification
 description: Notification which is triggered after the UmbCheckout session is collected
 ---
-
-# OnSessionGetNotification
 
 The following properties are available within the notification
 

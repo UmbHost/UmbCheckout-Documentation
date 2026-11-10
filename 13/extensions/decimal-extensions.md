@@ -1,8 +1,7 @@
 ---
+title: Decimal Extensions
 description: Useful extensions for use with decimals
 ---
-
-# Decimal Extensions
 
 These extensions can be found within the namespace `UmbCheckout.Shared.Extensions`
 
@@ -10,8 +9,6 @@ These extensions can be found within the namespace `UmbCheckout.Shared.Extension
 
 Returns the decimal as currency with the symbol, this can be combined with [GetIsoCurrencySymbol](cultureinfo-extensions.md#getisocurrencysymbol)
 
-{% code title="Example" %}
-```csharp
+```csharp title="Example"
 Model.SubTotal.FormatCurrency(CultureInfo.CurrentUICulture.GetISOCurrencySymbol())
 ```
-{% endcode %}

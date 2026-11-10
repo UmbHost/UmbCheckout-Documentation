@@ -1,0 +1,95 @@
+/* Primary hero CTA: filled lime pill. */
+.sl-link-button[data-variant='primary'] {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	padding: 0.5rem 1rem;
+	border-radius: 70px;
+	border: 1px solid var(--brand-accent);
+	background: var(--brand-accent);
+	color: var(--brand-bg);
+	font-family: 'AllianceNo.2Medium', var(--sl-font);
+	font-weight: 500;
+	font-size: 0.9625rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+.sl-link-button[data-variant='primary']:hover,
+.sl-link-button[data-variant='primary']:focus-visible {
+	background: var(--brand-accent);
+	color: var(--brand-bg);
+	transform: scale(1.015);
+	filter: brightness(110%);
+	outline: none;
+}
+
+/* Secondary hero CTA: lime-outlined pill, fills lime on hover. */
+.sl-link-button[data-variant='secondary'] {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	padding: 0.5rem 1rem;
+	border-radius: 70px;
+	border: 1px solid var(--brand-accent);
+	background: transparent;
+	color: var(--brand-text);
+	font-family: 'AllianceNo.2Medium', var(--sl-font);
+	font-weight: 500;
+	font-size: 0.9625rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+.sl-link-button[data-variant='secondary']:hover,
+.sl-link-button[data-variant='secondary']:focus-visible {
+	background: var(--brand-accent);
+	color: var(--brand-bg);
+	transform: scale(1.015);
+	filter: brightness(110%);
+	outline: none;
+}
+
+/* Minimal hero CTA: text + accent on hover. */
+.sl-link-button[data-variant='minimal'] {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.5rem 0.5rem;
+	color: var(--brand-text);
+	font-family: 'AllianceNo.2Medium', var(--sl-font);
+	font-weight: 500;
+	font-size: 0.9625rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	transition: color 0.2s ease;
+}
+
+.sl-link-button[data-variant='minimal']:hover,
+.sl-link-button[data-variant='minimal']:focus-visible {
+	color: var(--brand-accent);
+	outline: none;
+}
+
+/* Header action buttons: smaller pill scale. */
+.hdr-action {
+	border-color: var(--brand-accent);
+	font-family: 'AllianceNo.2Medium', var(--sl-font);
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.hdr-action:hover,
+.hdr-action:focus-visible {
+	background: var(--brand-accent);
+	color: var(--brand-bg);
+	border-color: var(--brand-accent);
+	transform: scale(1.015);
+	filter: brightness(110%);
+}
+

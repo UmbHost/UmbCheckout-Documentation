@@ -1,8 +1,7 @@
 ---
+title: Session Service
 description: A service to handle the Get, Update and Clearing of the Session
 ---
-
-# Session Service
 
 The session service is what creates and handles the creation, retrieval, updating and clearing of the UmbCheckout Basket within the .NET session.
 
@@ -10,9 +9,9 @@ You can access the session service by injecting `ISessionService` which can be f
 
 A shopper has one Basket per site root culture and currency (see [Prices, Currencies and Baskets](../configuration/prices-currencies-and-baskets.md#one-basket-per-site-and-currency)). The overloads without a culture or currency use the current page's.
 
-{% hint style="info" %}
+:::note
 Every method also has an overload that takes a `CancellationToken` as its last parameter. Call that one: the overloads without a token are `[Obsolete]`. See [Cancellation Tokens](cancellation-tokens.md).
-{% endhint %}
+:::
 
 #### Get
 

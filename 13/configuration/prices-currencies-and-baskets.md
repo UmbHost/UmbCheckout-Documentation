@@ -1,8 +1,7 @@
 ---
+title: Prices, Currencies and Baskets
 description: How UmbCheckout prices products, charges currencies and keeps baskets
 ---
-
-# Prices, Currencies and Baskets
 
 ### Prices are decided on the server
 

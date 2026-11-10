@@ -1,8 +1,7 @@
 ---
+title: Stripe Session Service
 description: A service which handles all things around the Stripe Session
 ---
-
-# Stripe Session Service
 
 The Stripe session service is what creates and handles the creation, updating and clearing of the Stripe session.
 

@@ -1,4 +1,6 @@
-# Shipping Rates
+---
+title: Shipping Rates
+---
 
 Shipping Rates allow you to charge various shipping options - such as standard, express next day etc...
 
@@ -29,8 +31,8 @@ Below the settings, the screen shows the rate's details from Stripe (name, ID an
 
 Changing a rate's Stripe ID updates the rate. Two rates can't have the same Stripe ID. Only users with access to the Settings section can manage shipping rates.
 
-{% hint style="info" %}
+:::note
 Currently only fixed rate shipping rates are supported. At checkout, only the rates that charge in the Basket's currency are offered, at most 5 (see [Prices, Currencies and Baskets](../../../configuration/prices-currencies-and-baskets.md#shipping-rates-follow-the-basket-currency)).
-{% endhint %}
+:::
 
 To calculate shipping yourself, for example per product, see [Custom Shipping Calculator](services/custom-shipping-calculator.md).

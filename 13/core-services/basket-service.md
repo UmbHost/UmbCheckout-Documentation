@@ -1,16 +1,15 @@
 ---
+title: Basket Service
 description: A service which handles all things around the basket
 ---
-
-# Basket Service
 
 The basket service is what and handles all the UmbCheckout Basket operations.
 
 You can access the basket service by injecting `IBasketService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
-{% hint style="info" %}
+:::note
 Every method also has an overload that takes a `CancellationToken` as its last parameter. Call that one: the overloads without a token are `[Obsolete]`, scheduled for removal in 17.1. See [Cancellation Tokens](cancellation-tokens.md). If you mock or decorate this service, set up or override the token overloads too: UmbCheckout calls those.
-{% endhint %}
+:::
 
 #### Get
 

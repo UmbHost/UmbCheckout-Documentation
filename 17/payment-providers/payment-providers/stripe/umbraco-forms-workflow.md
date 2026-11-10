@@ -1,8 +1,7 @@
 ---
+title: Umbraco Forms Workflow
 description: Redirect to Stripe Checkout on Form Submission
 ---
-
-# Umbraco Forms Workflow
 
 Using the Stripe Umbraco Forms Workflow package you can redirect to the Stripe Checkout on submission of a form.
 
@@ -18,6 +17,6 @@ The Basket's `CustomerReferenceId` is set to `{form id}@{record id}` and sent to
 
 The workflow charges the Basket as stored, with every price checked again from the published products. Unlike the Basket page's Checkout, it doesn't stop to show changed prices: Stripe Checkout shows the final amount before payment.
 
-{% hint style="warning" %}
+:::caution
 The workflow doesn't record the checkout session on the Basket, so the Basket isn't cleared automatically after payment, either on the success page or by the webhook. Clear it in your own code if you need to, for example in an `OnCheckoutSessionCompletedNotification` handler that finds the form entry from the client reference ID.
-{% endhint %}
+:::

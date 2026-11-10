@@ -1,16 +1,15 @@
 ---
+title: Stripe Shipping Rate ApiService
 description: A service which handles getting the Stripe Shipping Rates from the Stripe API
 ---
-
-# Stripe Shipping Rate ApiService
 
 The Stripe Shipping Rate API service is what handles the retrieval of the Shipping Rates from the Stripe API.
 
 You can access the API service by injecting `IStripeShippingRateApiService` which can be found within the namespace `UmbCheckout.Stripe.Interfaces`
 
-{% hint style="info" %}
+:::note
 Every method also has an overload that takes a `CancellationToken` as its last parameter. Pass the request's token (`HttpContext.RequestAborted`) so the work stops when the shopper leaves. If you mock or decorate this service, set up or override the token overloads too: UmbCheckout calls those.
-{% endhint %}
+:::
 
 #### GetShippingRates
 

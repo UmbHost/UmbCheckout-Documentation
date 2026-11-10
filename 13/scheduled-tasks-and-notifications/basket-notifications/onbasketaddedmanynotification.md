@@ -1,10 +1,7 @@
 ---
-description: >-
-  Notification which is triggered after multiple line items are added to the
-  Basket.
+title: OnBasketAddedManyNotification
+description: Notification which is triggered after multiple line items are added to the Basket.
 ---
-
-# OnBasketAddedManyNotification
 
 The following properties are available within the notification
 

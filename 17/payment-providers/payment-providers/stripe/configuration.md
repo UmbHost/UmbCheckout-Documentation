@@ -1,8 +1,7 @@
 ---
+title: Configuration
 description: Configuring Stripe Payment Provider
 ---
-
-# Configuration
 
 You will need to add your Stripe Secret API key to the site's configuration, as below. Keep the keys out of committed settings files: use [user secrets](https://learn.microsoft.com/aspnet/core/security/app-secrets) in development and environment variables or your host's secret store elsewhere (for example `UmbCheckout__Stripe__Live__ApiKey`).
 

@@ -1,8 +1,7 @@
 ---
+title: Anonymous Telemetry
 description: What data do we collect and why?
 ---
-
-# Anonymous Telemetry
 
 By default, anonymous telemetry is sent to us every time you save the UmbCheckout configuration and after a remote license check has been completed. It is sent in the background, with a 5 second time limit, so it never slows the site or the license check down. Nothing is sent if the site has no Umbraco global ID (`Umbraco:CMS:Global:Id`).
 

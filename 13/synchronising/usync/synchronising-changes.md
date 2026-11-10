@@ -1,4 +1,6 @@
-# Synchronising Changes
+---
+title: Synchronising Changes
+---
 
 Once installed uSync will create config files on disk in the uSync folder alongside other uSync content.
 

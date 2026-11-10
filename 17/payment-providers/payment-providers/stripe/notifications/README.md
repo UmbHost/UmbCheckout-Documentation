@@ -1,2 +1,5 @@
-# Notifications
+---
+title: Notifications
+---
+
 

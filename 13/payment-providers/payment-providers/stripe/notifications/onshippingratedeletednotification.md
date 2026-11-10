@@ -1,8 +1,7 @@
 ---
+title: OnShippingRateDeletedNotification
 description: Notification which is triggered a Stripe Shipping Rate is deleted
 ---
-
-# OnShippingRateDeletedNotification
 
 The following properties are available within the notification
 

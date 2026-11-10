@@ -1,8 +1,10 @@
-# ShippingRateResponse
+---
+title: ShippingRateResponse
+---
 
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 The TaxRate object contains the below properties
 

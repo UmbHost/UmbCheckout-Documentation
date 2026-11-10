@@ -1,12 +1,11 @@
 ---
+title: Stripe Tax Rate Database Service
 description: A service which handles getting the Stripe Tax Rates from the database
 ---
 
-# Stripe Tax Rate Database Service
-
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 The Stripe database service is what handles the insertion, retrieval, updating, and deletion of the Tax Rates within the database.
 

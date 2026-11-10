@@ -1,8 +1,7 @@
 ---
+title: Payment Flow / Lifecycle
 description: Learn how the payment flow / lifecycle works with Stripe
 ---
-
-# Payment Flow / Lifecycle
 
 When you use the Stripe payment provider it makes use of the [Stripe Checkout](https://stripe.com/docs/payments/checkout) features.
 
@@ -27,5 +26,4 @@ A checkout session created before the update has no Basket details. When the cus
 
 An expired or unpaid checkout session never clears the Basket, so a customer who abandons the payment keeps their Basket.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-08-18 130555.png" alt=""><figcaption></figcaption></figure>
-
+![Payment Flow / Lifecycle](../../../assets/screenshot-2023-08-18-130555.png)

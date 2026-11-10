@@ -1,12 +1,11 @@
 ---
+title: Database Service
 description: A service which handles storing of the Basket in the database
 ---
 
-# Database Service
-
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 The database service is what handles the insertion, updating, and clearing of the UmbCheckout Basket within the database. Clearing a Basket also deletes its stored copy.
 

@@ -1,8 +1,7 @@
 ---
+title: Installation
 description: Installing uSync Stripe
 ---
-
-# Installation
 
 The uSync Stripe package is installed using the NuGet package manager using the below command:
 

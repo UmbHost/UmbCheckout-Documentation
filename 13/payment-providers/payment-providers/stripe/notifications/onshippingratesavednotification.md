@@ -1,8 +1,7 @@
 ---
+title: OnShippingRateSavedNotification
 description: Notification which is triggered a Stripe Shipping Rate is saved
 ---
-
-# OnShippingRateSavedNotification
 
 The following properties are available within the notification
 

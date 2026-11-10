@@ -1,0 +1,16 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import VersionNotice from '../components/VersionNotice.astro';
+import ArticleToolbar from '../components/ArticleToolbar.astro';
+
+const { entry } = Astro.locals.starlightRoute;
+const isSplash = entry.data.template === 'splash';
+
+const siteUrl = Astro.site ?? new URL('https://docs.umbcheckout.net');
+const fullUrl = new URL(Astro.url.pathname, siteUrl).toString();
+---
+
+<VersionNotice />
+{!isSplash && <ArticleToolbar url={fullUrl} title={entry.data.title} />}
+
+<Default><slot /></Default>

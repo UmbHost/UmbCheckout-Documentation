@@ -1,4 +1,6 @@
-# Licensing behind a proxy or CDN
+---
+title: Licensing behind a proxy or CDN
+---
 
 UmbCheckout checks your licence against the **host of the request as ASP.NET Core sees it** (`HttpContext.Request.Host`). It never reads the `X-Forwarded-Host` header itself, so a visitor cannot send a header to make an unlicensed domain look licensed. The check runs inside Umbraco's pipeline, after your site's own forwarded headers middleware, so anything you have configured to trust a proxy has already been applied.
 

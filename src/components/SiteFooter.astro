@@ -1,0 +1,55 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer print:hidden" data-pagefind-ignore>
+	<p class="site-footer__copyright">
+		&copy; <span data-site-footer-year>{year}</span> UmbHost Limited. All rights reserved.
+	</p>
+	<ul class="site-footer__links">
+		<li><a href="https://umbhost.net/legal" target="_blank" rel="noopener noreferrer">Legal</a></li>
+		<li><a href="https://umbhost.net/contact-us" target="_blank" rel="noopener noreferrer">Contact us</a></li>
+		<li><a href="https://umbhost.net/feedback" target="_blank" rel="noopener noreferrer">Feedback</a></li>
+	</ul>
+</footer>
+
+<script>
+	const el = document.querySelector('[data-site-footer-year]');
+	if (el) el.textContent = String(new Date().getFullYear());
+</script>
+
+<style>
+	.site-footer {
+		margin-top: 3rem;
+		padding: 2rem 0 1.5rem;
+		border-top: 1px solid var(--sl-color-hairline-shade);
+		text-align: center;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.site-footer__copyright {
+		margin: 0 0 0.5rem;
+	}
+	.site-footer__links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem 0.75rem;
+	}
+	.site-footer__links li + li::before {
+		content: '·';
+		margin-inline-end: 0.75rem;
+		color: var(--sl-color-gray-4);
+	}
+	.site-footer__links a {
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+	}
+	.site-footer__links a:hover {
+		color: var(--sl-color-white);
+	}
+</style>

@@ -1,2 +1,5 @@
-# Configuration Notifications
+---
+title: Configuration Notifications
+---
+
 

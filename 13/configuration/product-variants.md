@@ -1,8 +1,7 @@
 ---
+title: Product Variants
 description: How to create product variants
 ---
-
-# Product Variants
 
 You can use product variants to define different variants of a product, such as giving the option to select a colour or size.
 

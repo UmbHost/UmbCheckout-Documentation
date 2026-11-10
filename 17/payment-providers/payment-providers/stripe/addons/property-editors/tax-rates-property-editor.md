@@ -1,4 +1,6 @@
-# Tax Rates Property Editor
+---
+title: Tax Rates Property Editor
+---
 
 The Tax Rates property editor allows you to assign a [TaxRate](../../object-reference/taxrate.md) to a product which is used to calculate owed tax during the checkout
 
@@ -8,4 +10,4 @@ In the data type picker it is called **UmbCheckout Tax Rates** (in the eCommerce
 * A selected rate that has since been removed stays visible, struck through, as a "(legacy option)".
 * On an unlicensed site it shows a message instead, and tax rates aren't sent to Stripe.
 
-<figure><img src="../../../../../.gitbook/assets/TaxRatePropertyEditor.png" alt=""><figcaption></figcaption></figure>
+![Tax Rates Property Editor](../../../../../assets/tax-rate-property-editor.png)
