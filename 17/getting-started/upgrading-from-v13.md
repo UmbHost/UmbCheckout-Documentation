@@ -1,8 +1,7 @@
 ---
+title: Upgrading from v13
 description: Moving a site from UmbCheckout 1.x on Umbraco 13 to UmbCheckout 17
 ---
-
-# Upgrading from v13
 
 UmbCheckout 17 keeps the screens, settings, data and front-end of UmbCheckout 1.x, so most sites upgrade by updating the packages. Read this page first if your site has custom code that calls UmbCheckout's services.
 

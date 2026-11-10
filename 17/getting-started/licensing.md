@@ -1,8 +1,7 @@
 ---
+title: Licensing
 description: How UmbCheckout 17 licenses work
 ---
-
-# Licensing
 
 The UmbCheckout core is free and open source. A license unlocks the [Addon features](license-comparison.md) and the support desk. You can [buy a license at umbcheckout.net](https://umbcheckout.net).
 
@@ -84,9 +83,9 @@ The site sends the license key, the domain and the site's directory to the licen
 | Expired, Suspended  | The subscription has ended or been suspended                                                  |
 | Unlicensed          | No license key, no valid `UmbracoApplicationUrl`, or the license hasn't been checked yet      |
 
-{% hint style="info" %}
+:::note
 While a debugger is attached, a production license is off (development licenses and development mode are exempt). Licensed features come back when the debugger detaches.
-{% endhint %}
+:::
 
 ### Upgrading from v13
 

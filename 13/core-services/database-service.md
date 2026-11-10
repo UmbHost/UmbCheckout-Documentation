@@ -1,8 +1,7 @@
 ---
+title: Database Service
 description: A service which handles storing of the Basket in the database
 ---
-
-# Database Service
 
 The database service is what handles the retrieval of the UmbCheckout Basket within the database.
 

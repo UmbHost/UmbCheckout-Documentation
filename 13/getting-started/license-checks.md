@@ -1,8 +1,7 @@
 ---
+title: License Checks
 description: How UmbCheckout checks your license
 ---
-
-# License Checks
 
 Your license key doesn't change, but UmbCheckout 1.6.0 and later need an annual V1 license: see [Perpetual licenses](#perpetual-licenses). This page explains how UmbCheckout checks the license.
 
@@ -68,6 +67,6 @@ On your own machine, licensed features work without a license key, and the licen
 
 One request from outside, or a live checkout, turns development mode off until the site restarts. The licence checks detect interference and turn licensed features off; they cannot be made to see a different licence. They rely on ASP.NET Core's own hosting events (not on anything a site registers), and code that handles a request cross-checks that the request was seen. If a site interferes with that (for example by replacing the hosting diagnostics in DI), licensed features turn off for every request and background job until the interference is removed and the site restarts, the License Status reads "Licence checks were interfered with", and the log says why, once. Code that builds its own HttpContext (prerendering, a static export, a warm-up) is not interference. A request is read for its host when a licence decision is made, so after your own UseForwardedHeaders(). Work that runs outside a request, such as your own scheduled jobs calling UmbCheckout services, is licensed whenever the site's license is. If development mode isn't available, the log says why, once. For a staging site, use a [development license](developer-license.md).
 
-{% hint style="info" %}
+:::note
 While a debugger is attached, a production license is off (development licenses, and local hosts in a Debug build, are exempt). Licensed features come back when the debugger detaches.
-{% endhint %}
+:::

@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'AllianceNo.1Light';
+	src: url('/fonts/AllianceNo1Light/font.woff2') format('woff2'),
+	     url('/fonts/AllianceNo1Light/font.woff') format('woff');
+	font-display: swap;
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AllianceNo.1Light';
+	src: url('/fonts/AllianceNo1LightItalic/font.woff2') format('woff2'),
+	     url('/fonts/AllianceNo1LightItalic/font.woff') format('woff');
+	font-display: swap;
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'AllianceNo.1Regular';
+	src: url('/fonts/AllianceNo1Regular/font.woff2') format('woff2'),
+	     url('/fonts/AllianceNo1Regular/font.woff') format('woff');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AllianceNo.1Bold';
+	src: url('/fonts/AllianceNo1Bold/font.woff2') format('woff2'),
+	     url('/fonts/AllianceNo1Bold/font.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AllianceNo.2Medium';
+	src: url('/fonts/AllianceNo2Medium/font.woff2') format('woff2'),
+	     url('/fonts/AllianceNo2Medium/font.woff') format('woff');
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+:root {
+	--sl-font: 'AllianceNo.1Light', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--sl-font-system: var(--sl-font);
+	--sl-font-system-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6),
+.sl-heading-wrapper :is(h1, h2, h3, h4, h5, h6),
+.hero h1,
+.sl-link-card,
+.cat-listing__title {
+	font-family: 'AllianceNo.2Medium', var(--sl-font);
+	font-weight: 500;
+	letter-spacing: -0.01em;
+}
+
+.sl-markdown-content :is(b, strong) {
+	font-family: 'AllianceNo.1Bold', var(--sl-font);
+	font-weight: 700;
+}

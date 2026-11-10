@@ -1,4 +1,6 @@
-# Basket View Component
+---
+title: Basket View Component
+---
 
 A prebuilt basket that uses an HTML table is included.
 
@@ -54,4 +56,3 @@ You can set the following properties
 | checkoutButtonText      | checkout-button-text       | The text shown on the checkout button                | Checkout                                                           |
 | productNameAlias        | product-name-alias         | The alias which should be used for the product name  | null                                                               |
 | productAnchorLinkCssClass | product-anchor-link-css-class | The CSS class to be added to the product name link | null                                                          |
-

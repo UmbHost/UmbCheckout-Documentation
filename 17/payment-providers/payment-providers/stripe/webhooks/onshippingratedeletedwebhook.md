@@ -1,5 +1,7 @@
-# OnShippingRateDeletedWebhook
+---
+title: OnShippingRateDeletedWebhook
+---
 
-{% hint style="info" %}
+:::note
 Choose this event when you create a webhook in the backoffice under Settings -> Webhooks.
-{% endhint %}
+:::

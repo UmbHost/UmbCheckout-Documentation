@@ -1,10 +1,7 @@
 ---
-description: >-
-  Notification which is triggered after multiple line items are removed from the
-  Basket
+title: OnBasketRemovedManyNotification
+description: Notification which is triggered after multiple line items are removed from the Basket
 ---
-
-# OnBasketRemovedManyNotification
 
 The following properties are available within the notification
 

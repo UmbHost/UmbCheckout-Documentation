@@ -1,8 +1,7 @@
 ---
+title: Development Licenses and Development Mode
 description: Using the licensed features on development and staging sites
 ---
-
-# Development Licenses and Development Mode
 
 You don't need a paid license to build and test a site with the licensed features.
 
@@ -22,13 +21,13 @@ One request from outside, or a live Stripe checkout, turns development mode off 
 
 The licence checks detect interference and turn licensed features off; they cannot be made to see a different licence. They rely on ASP.NET Core's own hosting events (not on anything a site registers), and code that handles a request cross-checks that the request was seen. If a site interferes with that (for example by replacing the hosting diagnostics in DI), licensed features turn off for every request and background job until the interference is removed and the site restarts, the License Status reads "Licence checks were interfered with", and the log says why, once. Code that builds its own HttpContext (prerendering, a static export, a warm-up) is not interference. A request is read for its host when a licence decision is made, so after your own UseForwardedHeaders(). Work that runs outside a request, such as your own scheduled jobs calling UmbCheckout services, is licensed whenever the site's license is.
 
-{% hint style="info" %}
+:::note
 The Addon database tables (for Baskets and tax rates) are created when the site starts if it is licensed at that moment. Development mode starts with the first local request, after the site has started, so the tables are created on the first licensed request instead. A site that is never licensed never gets them.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 While a debugger is attached, a production license is off. Development licenses, and local hosts in a Debug build, are exempt.
-{% endhint %}
+:::
 
 ### Development licenses
 

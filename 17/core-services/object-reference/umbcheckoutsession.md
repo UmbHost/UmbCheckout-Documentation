@@ -1,4 +1,6 @@
-# UmbCheckoutSession
+---
+title: UmbCheckoutSession
+---
 
 The UmbCheckoutSession object contains the below properties
 

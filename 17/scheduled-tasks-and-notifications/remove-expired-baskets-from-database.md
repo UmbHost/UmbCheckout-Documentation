@@ -1,8 +1,10 @@
-# Remove Expired Baskets From Database
+---
+title: Remove Expired Baskets From Database
+---
 
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 This task runs once a day (first one minute after the site starts) as an Umbraco recurring background job, and removes any [Baskets ](../core-services/object-reference/basket.md)stored in the database that haven't been updated for longer than the number of days specified in the [configuration](../configuration/configuration-options.md) (**Basket Expiry (Database)**).
 

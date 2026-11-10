@@ -1,9 +1,7 @@
 ---
+title: Affiliate Scheme
 description: Earn commission on each license or hosting referral
-hidden: true
 ---
-
-# Affiliate Scheme
 
 You can earn 20% from each successful [purchase of either UmbCheckout](https://umbcheckout.net) or any one of the [services offered by UmbHost](https://umbhost.net/affiliate-scheme).
 

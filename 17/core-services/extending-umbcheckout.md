@@ -1,15 +1,13 @@
 ---
+title: Extending UmbCheckout
 description: Change or refuse data going in, and change data coming out, without changing UmbCheckout
 ---
-
-# Extending UmbCheckout
 
 UmbCheckout publishes Umbraco notifications around its data. A site can change or refuse data before it is saved, and change data after it is read, without changing UmbCheckout itself.
 
 Register handlers in a composer as usual:
 
-{% code title="MyComposer.cs" %}
-```csharp
+```csharp title="MyComposer.cs"
 public class MyComposer : IComposer
 {
     public void Compose(IUmbracoBuilder builder)
@@ -19,7 +17,6 @@ public class MyComposer : IComposer
     }
 }
 ```
-{% endcode %}
 
 ### Data hooks
 
@@ -39,8 +36,7 @@ public class MyComposer : IComposer
 
 Cancel with `CancelOperation(...)` and an `Error` or `Warning` event message. That message is what the person sees.
 
-{% code title="StripeShippingRateIds.cs" %}
-```csharp
+```csharp title="StripeShippingRateIds.cs"
 public sealed class StripeShippingRateIds : INotificationAsyncHandler<OnShippingRateSavingNotification>
 {
     public Task HandleAsync(OnShippingRateSavingNotification notification, CancellationToken cancellationToken)
@@ -54,7 +50,6 @@ public sealed class StripeShippingRateIds : INotificationAsyncHandler<OnShipping
     }
 }
 ```
-{% endcode %}
 
 Nothing is saved.
 
@@ -64,8 +59,7 @@ Nothing is saved.
 
 ### Change what is read
 
-{% code title="HideInternalShippingRates.cs" %}
-```csharp
+```csharp title="HideInternalShippingRates.cs"
 public sealed class HideInternalShippingRates : INotificationAsyncHandler<OnShippingRatesLoadedNotification>
 {
     public Task HandleAsync(OnShippingRatesLoadedNotification notification, CancellationToken cancellationToken)
@@ -75,7 +69,6 @@ public sealed class HideInternalShippingRates : INotificationAsyncHandler<OnShip
     }
 }
 ```
-{% endcode %}
 
 ### Rules
 

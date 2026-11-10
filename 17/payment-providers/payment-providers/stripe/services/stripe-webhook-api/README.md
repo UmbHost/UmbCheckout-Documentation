@@ -1,4 +1,6 @@
-# Stripe Webhook Api
+---
+title: Stripe Webhook Api
+---
 
 Please ensure you have added the webhook secret as per the [configuration](../../configuration.md).
 
@@ -10,9 +12,9 @@ In the Stripe Dashboard, go to `Developers -> Webhooks -> Add endpoint` and ente
 
 Then copy the endpoint's signing secret into `UmbCheckout:Stripe:Test:WebHookSecret` (or `Live`, for the live endpoint).
 
-{% hint style="info" %}
+:::note
 UmbCheckout 17 uses Stripe.net 50.x, which uses [Stripe API version](https://dashboard.stripe.com/developers) `2026-01-28.clover`. Create the endpoint on that version where you can: the Stripe API and CLI accept an `api_version`, while the Dashboard may only offer your account's default. Events on another version are still handled, with a warning in the log once per version.
-{% endhint %}
+:::
 
 Select at least these events:
 
@@ -73,9 +75,9 @@ To change how the endpoint behaves, subclass `UmbCheckout.Stripe.Controllers.Api
 * a subclass without its own `[Route]` takes over `/umbraco/api/stripewebhookapi/checkoutevents`;
 * a subclass with its own `[Route]` answers only at that route, so point the Stripe endpoint at it.
 
-{% hint style="info" %}
+:::note
 To be able to test the Webhook on localhost you need to install the [Stripe CLI](https://github.com/stripe/stripe-cli), see [How to test the Stripe Webhook on localhost](how-to-test-the-stripe-webhook-on-localhost.md).
-{% endhint %}
+:::
 
 ### Replacing the event store
 

@@ -1,4 +1,6 @@
-# Add to Basket Button View Component
+---
+title: Add to Basket Button View Component
+---
 
 A prebuilt button using a form that adds a product to the Basket.
 
@@ -45,4 +47,3 @@ You can set the following properties
 | formGroupSpacerClass | form-group-spacer-class | The CSS class added to the outer form element Div                    | null          |
 | variantSelectLabel   | variant-select-label    | The text shown above the variant select input                        | null          |
 | currencyNodeKey      | currency-node-key       | The key of the node whose `umbCheckoutCurrencyCode` sets the currency | null          |
-

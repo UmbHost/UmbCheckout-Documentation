@@ -1,12 +1,11 @@
 ---
+title: Installation
 description: Installing UmbCheckout
 ---
 
-# Installation
-
-{% hint style="info" %}
+:::note
 These pages are for UmbCheckout 1.x on Umbraco 10 and 13. For Umbraco 17, choose **UmbCheckout 17** in the version menu at the top of the page.
-{% endhint %}
+:::
 
 **UmbCheckout currently only supports Umbraco v10 or v13.**
 
@@ -77,7 +76,7 @@ You are also required to configure the [UmbracoApplicationUrl](https://docs.umbr
 }
 ```
 
-{% hint style="info" %}
+:::note
 **When do I need a license?**
 
 UmbCheckout requires a license to use any of the Addon packages.
@@ -93,4 +92,4 @@ Licensed features only work for the domains on your license. See [License Checks
 _(These restrictions may change in the future)_
 
 
-{% endhint %}
+:::

@@ -1,8 +1,7 @@
 ---
+title: Configuration
 description: Configuring Stripe Payment Provider
 ---
-
-# Configuration
 
 You will need to add your Stripe Secret API key into your `appsettings.json` below the `LicenseKey` as below:
 

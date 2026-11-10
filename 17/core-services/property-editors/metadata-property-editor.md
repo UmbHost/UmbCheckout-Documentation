@@ -1,4 +1,6 @@
-# MetaData Property Editor
+---
+title: MetaData Property Editor
+---
 
 The MetaData property editor allows you to add metadata to your product, this is passed over to the Payment Provider.
 
@@ -6,18 +8,17 @@ In the data type picker it is called **UmbCheckout MetaData** (in the eCommerce 
 
 The returned type is: `Dictionary<string, string>`
 
-{% hint style="info" %}
+:::note
 The node key gets added in the Stripe Session service in a key called "nodeKey"
-{% endhint %}
+:::
 
-<figure><img src="../../.gitbook/assets/MetaDataPropertyEditor.png" alt=""><figcaption></figcaption></figure>
+![MetaData Property Editor](../../assets/meta-data-property-editor.png)
 
 ### Programmatically add metadata
 
 You can programmatically add metadata by creating an `IEnumerable<UmbCheckoutMetaData>()` object
 
-{% code title="Create object example" %}
-```csharp
+```csharp title="Create object example"
 var metaData = new List<UmbCheckoutMetaData>
 {
     new()
@@ -32,4 +33,3 @@ var metaData = new List<UmbCheckoutMetaData>
     }
 }
 ```
-{% endcode %}

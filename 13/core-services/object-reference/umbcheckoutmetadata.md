@@ -1,4 +1,6 @@
-# UmbCheckoutMetaData
+---
+title: UmbCheckoutMetaData
+---
 
 The UmbCheckoutMetaData object contains the below properties
 

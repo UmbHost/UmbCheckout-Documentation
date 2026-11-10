@@ -1,40 +1,16 @@
 ---
-cover: .gitbook/assets/Asset 3.png
-coverY: 0
-layout:
-  width: default
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
-  tags:
-    visible: true
-  actions:
-    visible: true
+title: UmbCheckout Documentation
 ---
 
-# 🛒 UmbCheckout Documentation
-
-{% hint style="info" %}
+:::note
 These pages document **UmbCheckout 17 for Umbraco 17**.\
 \
 For UmbCheckout 1.x on Umbraco 10 or 13, choose **UmbCheckout 13** in the version menu at the top of the page.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 UmbCheckout 17 is licensed by annual subscription, and every running instance of a production site needs a license. See [What's new in 17](getting-started/whats-new-in-17.md) and [Licensing](getting-started/licensing.md).
-{% endhint %}
+:::
 
 UmbCheckout is an eCommerce solution for Umbraco 17 integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
 

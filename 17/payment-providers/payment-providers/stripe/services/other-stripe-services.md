@@ -1,8 +1,7 @@
 ---
+title: Other Stripe Services
 description: The other public services in UmbCheckout.Stripe
 ---
-
-# Other Stripe Services
 
 These services can be found within the namespace `UmbCheckout.Stripe.Interfaces`. Each async method also has an overload that takes a `CancellationToken` (see [Cancellation Tokens](../../../../core-services/cancellation-tokens.md)).
 

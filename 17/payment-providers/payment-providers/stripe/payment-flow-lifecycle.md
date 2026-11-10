@@ -1,8 +1,7 @@
 ---
+title: Payment Flow / Lifecycle
 description: Learn how the payment flow / lifecycle works with Stripe
 ---
-
-# Payment Flow / Lifecycle
 
 When you use the Stripe payment provider it makes use of the [Stripe Checkout](https://stripe.com/docs/payments/checkout) features.
 
@@ -28,5 +27,4 @@ A checkout session created by UmbCheckout 1.x has no Basket details. When the cu
 
 An expired or unpaid checkout session never clears the Basket, so a customer who abandons the payment keeps their Basket. If the customer changes the Basket after starting checkout, and before the payment has been recorded, the Basket forgets the checkout session and is no longer cleared automatically. Once the payment has been recorded, the next read clears the Basket before any change is made.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-08-18 130555.png" alt=""><figcaption></figcaption></figure>
-
+![Payment Flow / Lifecycle](../../../assets/screenshot-2023-08-18-130555.png)

@@ -1,2 +1,5 @@
-# Addons
+---
+title: Addons
+---
+
 

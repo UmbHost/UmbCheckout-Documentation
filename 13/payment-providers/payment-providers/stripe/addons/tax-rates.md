@@ -1,8 +1,10 @@
-# Tax Rates
+---
+title: Tax Rates
+---
 
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 Tax Rates allow you to define any number of tax rates and assign them to products.
 

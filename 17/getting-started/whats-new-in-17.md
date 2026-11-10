@@ -1,8 +1,7 @@
 ---
+title: What's new in 17
 description: What changed in UmbCheckout 17 for Umbraco 17
 ---
-
-# What's new in 17
 
 UmbCheckout 17 brings UmbCheckout to Umbraco 17. The screens, the settings and the way you build a shop are the same as in UmbCheckout 1.x for Umbraco 13. What changed is the technology underneath, the license, and many fixes to how money and baskets are handled.
 

@@ -1,8 +1,7 @@
 ---
+title: Installation
 description: Installing Stripe Payment Provider
 ---
-
-# Installation
 
 The Stripe Payment Provider is installed using the NuGet package manager using the below command:
 

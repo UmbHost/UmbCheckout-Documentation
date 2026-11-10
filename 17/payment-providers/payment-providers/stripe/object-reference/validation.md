@@ -1,8 +1,7 @@
 ---
+title: Validation
 description: The validation settings for a property used in the backoffice
 ---
-
-# Validation
 
 The Validation object contains the below properties
 

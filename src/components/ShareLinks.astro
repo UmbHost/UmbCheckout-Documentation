@@ -1,0 +1,59 @@
+---
+interface Props {
+	url: string;
+	title: string;
+}
+const { url, title } = Astro.props;
+
+const enc = encodeURIComponent;
+const text = `${title}\n${url}`;
+
+type Target = {
+	name: string;
+	href: string;
+	icon: string;
+};
+
+const TARGETS: Target[] = [
+	{
+		name: 'Facebook',
+		href: `https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`,
+		icon: '<path fill="currentColor" d="M14 8h-2.5a1.5 1.5 0 0 0-1.5 1.5V12H7.5v3H10v6h3v-6h2.5l.5-3H13V10a.5.5 0 0 1 .5-.5H16V6.5h-2z"/>',
+	},
+	{
+		name: 'LinkedIn',
+		href: `https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`,
+		icon: '<rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 10v8M8 7v.01M12 18v-5a3 3 0 0 1 6 0v5M12 13v-3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>',
+	},
+	{
+		name: 'Bluesky',
+		href: `https://bsky.app/intent/compose?text=${enc(text)}`,
+		icon: '<path d="M6.5 4.5c2 1 4 3.5 5.5 6 1.5-2.5 3.5-5 5.5-6 2.5-.5 3 1.5 2.5 3.5-.4 1.6-1.7 4-2.5 5 1.5.3 2.5 1.5 2 3.4-.6 2-2.5 2.6-4 1.6-1-.7-2.4-2.5-3.5-4-1.1 1.5-2.5 3.3-3.5 4-1.5 1-3.4.4-4-1.6-.5-1.9.5-3.1 2-3.4-.8-1-2.1-3.4-2.5-5C3.5 6 4 4 6.5 4.5z" fill="currentColor"/>',
+	},
+	{
+		name: 'Mastodon',
+		href: `https://toot.kytta.dev/?text=${enc(text)}`,
+		icon: '<path d="M19 9.5c0-3.6-2.3-4.6-2.3-4.6C15.5 4.3 13.6 4 11.6 4h-.1c-2 0-3.9.3-5 .9 0 0-2.3 1-2.3 4.6 0 .8 0 1.7.1 2.6.2 3.3.7 6.5 3.7 7.3 1.4.4 2.6.5 3.5.5 1.7 0 2.6-.5 2.6-.5l-.1-1.3s-1.2.4-2.5.4c-1.3-.1-2.7-.2-2.9-1.7 0-.1 0-.2-.1-.4 2.6.6 4.8.3 5.4.2 1.7-.2 3.2-1.2 3.4-2.1.3-1.5.3-3.5.3-4.5z" fill="currentColor"/><path d="M16.6 9.4v3.9h-1.5V9.5c0-.8-.3-1.2-1-1.2-.7 0-1.1.5-1.1 1.4v1.9h-1.5V9.7c0-.9-.4-1.4-1.1-1.4-.7 0-1 .4-1 1.2v3.8H8V9.4c0-.8.2-1.5.6-1.9.4-.5 1-.7 1.7-.7.8 0 1.4.3 1.8.9l.4.6.4-.6c.4-.6 1-.9 1.8-.9.7 0 1.3.2 1.7.7.4.4.6 1 .6 1.9z" fill="var(--sl-color-bg, #1a1a1a)"/>',
+	},
+	{
+		name: 'Email',
+		href: `mailto:?subject=${enc(title)}&body=${enc(url)}`,
+		icon: '<rect x="3" y="5" width="18" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
+	},
+];
+---
+
+<div class="art-share" role="group" aria-label="Share this page">
+	{TARGETS.map((t) => (
+		<a
+			class={`art-btn art-btn--icon art-share__${t.name.toLowerCase()}`}
+			href={t.href}
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label={`Share on ${t.name}`}
+			title={`Share on ${t.name}`}
+		>
+			<svg viewBox="0 0 24 24" aria-hidden="true" set:html={t.icon} />
+		</a>
+	))}
+</div>

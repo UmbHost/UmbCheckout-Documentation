@@ -1,2 +1,5 @@
-# View Components
+---
+title: View Components
+---
+
 

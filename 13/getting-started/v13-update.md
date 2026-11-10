@@ -1,8 +1,7 @@
 ---
+title: Changes in the v13 Update
 description: What changed in the latest UmbCheckout update for Umbraco 13
 ---
-
-# Changes in the v13 Update
 
 The latest UmbCheckout 1.x update brings the fixes made for UmbCheckout 17 to Umbraco 13. Your settings and data stay as they are. Your license key stays the same too, but a perpetual V1 license (a one-off purchase made before 14 October 2026) doesn't cover 1.6.0 or later: see [Perpetual licenses](license-checks.md#perpetual-licenses).
 

@@ -1,12 +1,11 @@
 ---
+title: Stripe Tax Rate ApiService
 description: A service which handles getting the Stripe Shipping Rates from the Stripe API
 ---
 
-# Stripe Tax Rate ApiService
-
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 The Stripe Tax Rate API service is what handles the retrieval of the Tax Rates from the Stripe API.
 

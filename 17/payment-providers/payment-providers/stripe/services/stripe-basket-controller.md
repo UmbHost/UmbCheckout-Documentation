@@ -1,4 +1,6 @@
-# Stripe Basket Controller
+---
+title: Stripe Basket Controller
+---
 
 The `StripeBasketController` is a preconfigured Umbraco Surface Controller which interacts with the [BasketService](../../../../core-services/basket-service.md).
 
@@ -12,8 +14,7 @@ The POST actions need an antiforgery token: `Html.BeginUmbracoForm` adds it. The
 
 Adds an item to the Basket, the example below would typically be used on the Product page
 
-{% code title="Example add form" %}
-```cshtml
+```cshtml title="Example add form"
 @using (Html.BeginUmbracoForm<StripeBasketController>(nameof(StripeBasketController.Add), FormMethod.Post))
 {
     <label for="quantity">Quantity:</label>
@@ -22,7 +23,6 @@ Adds an item to the Basket, the example below would typically be used on the Pro
     <button type="submit">Buy</button>
 }
 ```
-{% endcode %}
 
 This method sets the following TempData
 
@@ -53,15 +53,13 @@ This method sets the following TempData
 
 Reduces the specified item quantity, the example below would typically be used on the Basket page
 
-{% code title="Example reduce item" %}
-```cshtml
+```cshtml title="Example reduce item"
 @using (Html.BeginUmbracoForm<StripeBasketController>(nameof(StripeBasketController.Reduce), FormMethod.Post))
 {
     <input type="hidden" name="key" value="@lineItem.Key" />
     <button type="submit">-</button>
 }
 ```
-{% endcode %}
 
 This method sets the following TempData
 
@@ -73,15 +71,13 @@ This method sets the following TempData
 
 Removes the specified item, the example below would typically be used on the Basket page
 
-{% code title="Example remove item" %}
-```cshtml
+```cshtml title="Example remove item"
 @using (Html.BeginUmbracoForm<StripeBasketController>(nameof(StripeBasketController.Remove), FormMethod.Post))
 {
     <input type="hidden" name="key" value="@lineItem.Key" />
     <button type="submit">Remove</button>
 }
 ```
-{% endcode %}
 
 This method sets the following TempData
 

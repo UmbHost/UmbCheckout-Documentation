@@ -1,12 +1,11 @@
 ---
+title: Payments, Invoices and Refunds
 description: View Stripe payments and invoices, and refund payments, from the backoffice
 ---
 
-# Payments, Invoices and Refunds
-
-{% hint style="info" %}
+:::note
 This feature requires a paid license
-{% endhint %}
+:::
 
 The Stripe add-on adds an **UmbCheckout** section to the backoffice, next to Settings. It shows the payments, invoices and refunds in your Stripe account, for the mode selected in the [Stripe settings](../configuration.md#stripe-settings) (test or live).
 

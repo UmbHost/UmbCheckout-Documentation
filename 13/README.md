@@ -1,44 +1,20 @@
 ---
-cover: .gitbook/assets/Asset 3.png
-coverY: 0
-layout:
-  width: default
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
-  tags:
-    visible: true
-  actions:
-    visible: true
+title: UmbCheckout Documentation
 ---
 
-# 🛒 UmbCheckout Documentation
-
-{% hint style="info" %}
+:::note
 These pages document **UmbCheckout 1.x for Umbraco 10 and 13**.\
 \
 For Umbraco 17, choose **UmbCheckout 17** in the version menu at the top of the page.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 The license and subscription changes announced for V2.0 apply to UmbCheckout 17 on Umbraco 17. Licenses for UmbCheckout 1.x on Umbraco 13 keep working as they do today.\
 \
 [Take a read in the GitHub Issue here](https://github.com/UmbHost/UmbCheckout/issues/97)\
 \
 [Discuss the change in the GitHub Discussion here](https://github.com/UmbHost/UmbCheckout/discussions/98)
-{% endhint %}
+:::
 
 UmbCheckout is an eCommerce solution for Umbraco v10 or v13 integrated with [Stripe Checkout](https://stripe.com/docs/payments/checkout).
 

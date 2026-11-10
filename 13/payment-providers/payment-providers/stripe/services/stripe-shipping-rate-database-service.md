@@ -1,8 +1,7 @@
 ---
+title: Stripe Shipping Rate Database Service
 description: A service which handles getting the Stripe Shipping Rates from the database
 ---
-
-# Stripe Shipping Rate Database Service
 
 The Stripe Shipping Rate database service is what handles the insertion, retrieval, updating, and deletion of the Shipping Rates within the database.
 

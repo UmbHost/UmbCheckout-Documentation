@@ -1,12 +1,11 @@
 ---
+title: Stripe Tax Rate Database Service
 description: A service which handles getting the Stripe Tax Rates from the database
 ---
 
-# Stripe Tax Rate Database Service
-
-{% hint style="info" %}
+:::note
 This feature requires a paid license. On an unlicensed site the service reads and writes nothing.
-{% endhint %}
+:::
 
 Reads publish `OnStripeTaxRatesLoadedNotification`, and saves and deletes publish the cancellable `OnStripeTaxRateSavingNotification` and `OnStripeTaxRateDeletingNotification` (see [Extending UmbCheckout](../../../../../core-services/extending-umbcheckout.md)).
 

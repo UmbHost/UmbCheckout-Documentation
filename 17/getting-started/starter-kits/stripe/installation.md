@@ -1,8 +1,7 @@
 ---
+title: Installation
 description: Installing the UmbCheckout Stripe Starter Kit
 ---
-
-# Installation
 
 The UmbCheckout Stripe Starter Kit makes use of [dotnet templates](https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates) and is installed using the NuGet package manager using the below command:
 

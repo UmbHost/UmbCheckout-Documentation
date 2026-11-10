@@ -1,8 +1,7 @@
 ---
+title: Developer License
 description: Where to get a developer license
 ---
-
-# Developer License
 
 Upon purchasing a paid license or hosting package, you can request a developer license. The V1 license includes a development license for staging and testing domains. From 1.6.0 it has no time limit: it works for the domains listed on it. Before 1.6.0, it can be used on localhost, \*.local or \*.mypc domains, otherwise it's valid for 60 days.
 

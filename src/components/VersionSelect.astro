@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import { versions } from '../../versions.mjs';
+
+const id = Astro.locals.starlightRoute.id;
+const current = versions.find((v) => id === v.id || id.startsWith(v.id + '/'));
+
+let options: { id: string; label: string; href: string }[] = [];
+if (current && versions.length > 1) {
+	const rest = id.slice(current.id.length + 1); // '' for the version home
+	const ids = new Set((await getCollection('docs')).map((e) => e.id));
+	options = versions.map((v) => ({
+		id: v.id,
+		label: v.label + (v.latest ? ' (latest)' : ''),
+		href: rest && ids.has(`${v.id}/${rest}`) ? `/${v.id}/${rest}/` : `/${v.id}/`,
+	}));
+}
+---
+
+{
+	current && (
+		<label class="version-select print:hidden">
+			<span class="sr-only">Version</span>
+			<select data-version-select aria-label="Version">
+				{options.length === 0 ? (
+					<option selected>{current.label}</option>
+				) : (
+					options.map((o) => (
+						<option value={o.href} selected={o.id === current.id}>{o.label}</option>
+					))
+				)}
+			</select>
+		</label>
+	)
+}
+
+<script>
+	document.addEventListener('change', (e) => {
+		const el = e.target;
+		if (el instanceof HTMLSelectElement && el.hasAttribute('data-version-select') && el.value) {
+			window.location.href = el.value;
+		}
+	});
+</script>
+
+<style>
+	.version-select {
+		display: inline-flex;
+		align-items: center;
+		margin-inline-end: 0.4rem;
+	}
+	select {
+		appearance: none;
+		padding: 0.35rem 1.8rem 0.35rem 0.7rem;
+		border: 1px solid color-mix(in srgb, var(--sl-color-gray-5, #444) 70%, transparent);
+		border-radius: 999px;
+		background-color: var(--brand-bg-accent, transparent);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23C7EA46' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4.5l3 3 3-3'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 0.6rem center;
+		background-size: 0.7rem;
+		color: var(--brand-text, var(--sl-color-text));
+		font: inherit;
+		font-size: 0.78rem;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		cursor: pointer;
+		transition: border-color 0.15s ease;
+	}
+	select:hover,
+	select:focus-visible {
+		border-color: var(--brand-accent, currentColor);
+		outline: none;
+	}
+	select option {
+		background: var(--brand-bg-lifted, #1f0a2e);
+		color: var(--brand-text, #fff);
+	}
+</style>

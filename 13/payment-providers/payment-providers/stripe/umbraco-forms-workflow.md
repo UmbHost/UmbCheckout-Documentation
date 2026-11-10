@@ -1,8 +1,7 @@
 ---
+title: Umbraco Forms Workflow
 description: Redirect to Stripe Checkout on Form Submission
 ---
-
-# Umbraco Forms Workflow
 
 Using the Stripe Umbraco Forms Workflow package you can redirect to the Stripe Checkout on submission of a form.
 

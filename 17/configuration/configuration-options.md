@@ -1,4 +1,6 @@
-# Configuration Options
+---
+title: Configuration Options
+---
 
 There are a number of settings which can be configured within the backoffice on the configuration screen found here:
 
@@ -19,13 +21,13 @@ The configuration options and their possible options are as below:
 | \*Store Basket In The Database | Boolean | <p><strong>True:</strong> The users current Basket is stored in the database<br><br><strong>False:</strong> The Basket is not stored</p>                                |
 | \*Basket Expiry (Database)     | Integer | The maximum number of days the Basket is stored in the database                                                                                                         |
 
-{% hint style="info" %}
+:::note
 Features marked with \* require a paid license. Without one, they aren't shown and are always off.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 The screen shows a warning while `Umbraco:CMS:WebRouting:UmbracoApplicationUrl` isn't set. Licensing and the success page need it (see [Installing a License](../getting-started/installation.md#installing-a-license)).
-{% endhint %}
+:::
 
 Storing the Basket in the database also turns on storing it in a cookie: the cookie is how a returning visitor's Basket is found again. A Basket is stored in the database only when **Store Basket In The Database** is on, and viewing it doesn't extend its expiry.
 

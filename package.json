@@ -1,0 +1,24 @@
+{
+  "name": "umbcheckout-documentation",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check-links": "python scripts/check-links.py"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/starlight": "^0.38.4",
+    "astro": "^6.1.9",
+    "rehype-external-links": "^3.0.0",
+    "sharp": "^0.34.5"
+  }
+}

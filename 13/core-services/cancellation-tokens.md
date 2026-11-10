@@ -1,8 +1,7 @@
 ---
+title: Cancellation Tokens
 description: Passing a CancellationToken to UmbCheckout's services
 ---
-
-# Cancellation Tokens
 
 Every public async service method in UmbCheckout can take a `CancellationToken`. Pass the request's token (`HttpContext.RequestAborted`, or the `cancellationToken` your notification handler receives), so work stops when the shopper leaves.
 

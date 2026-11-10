@@ -1,4 +1,6 @@
-# ShippingRate
+---
+title: ShippingRate
+---
 
 The ShippingRate object contains the below properties
 

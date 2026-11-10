@@ -1,4 +1,6 @@
-# UmbCheckoutConfiguration
+---
+title: UmbCheckoutConfiguration
+---
 
 The UmbCheckoutConfiguration object contains the below properties
 

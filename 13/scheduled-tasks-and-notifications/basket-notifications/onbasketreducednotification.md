@@ -1,4 +1,6 @@
-# OnBasketReducedNotification
+---
+title: OnBasketReducedNotification
+---
 
 The following properties are available within the notification
 

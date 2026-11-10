@@ -1,8 +1,7 @@
 ---
+title: Custom Shipping Calculator
 description: Replace the shipping options offered at Stripe Checkout with your own calculation
 ---
-
-# Custom Shipping Calculator
 
 By default UmbCheckout offers the [shipping rates](../shipping-rates.md) configured in the backoffice: the active rates that charge in the Basket's currency, at most 5. To calculate shipping yourself, for example from each product rather than per Basket, implement `IStripeShippingOptionsService` and register it from your own composer.
 

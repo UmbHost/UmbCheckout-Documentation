@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check every internal link and image path in the versioned docs.
 
-Usage: python scripts/check-links.py [version-dir ...]   (default: 13 17)
+Usage: python scripts/check-links.py [version-dir ...]   (default: every numbered folder listed in versions.mjs)
 
 For each version directory it checks:
   - every page listed in SUMMARY.md exists;
@@ -97,7 +97,10 @@ def check(version):
 
 
 def main():
-    versions = sys.argv[1:] or ['13', '17']
+    versions = sys.argv[1:]
+    if not versions:
+        with open(os.path.join(ROOT, 'versions.mjs'), encoding='utf-8') as f:
+            versions = re.findall(r"id:\s*'([^']+)'", f.read())
     failed = False
     for v in versions:
         if not os.path.isdir(os.path.join(ROOT, v)):

@@ -1,4 +1,6 @@
-# Basket View Component
+---
+title: Basket View Component
+---
 
 A prebuilt basket that uses an HTML table is included.
 
@@ -58,4 +60,3 @@ You can set the following properties
 | pricesChangedText       | prices-changed-text        | The notice shown, before the changed products' names, when checkout found changed prices | Your basket was updated to current prices before checkout; please check it and continue: |
 | productNameAlias        | product-name-alias         | The alias which should be used for the product name  | null                                                               |
 | productAnchorLinkCssClass | product-anchor-link-css-class | The CSS class to be added to the product name link | null                                                          |
-

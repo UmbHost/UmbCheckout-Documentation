@@ -1,8 +1,7 @@
 ---
+title: Configuration
 description: Configuring UmbCheckout
 ---
-
-# Configuration
 
 There is no additional coding required to make use of UmbCheckout after being installed.
 

@@ -1,0 +1,25 @@
+name: Docs build check
+
+# Cloudflare Pages builds and deploys the site itself from this repository (Git integration).
+# This workflow only checks that the site builds, so a broken page fails the pull request.
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build

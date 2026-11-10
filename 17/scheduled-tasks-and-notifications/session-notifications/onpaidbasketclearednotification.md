@@ -1,10 +1,7 @@
 ---
-description: >-
-  Notification which is triggered after a Basket is cleared because its checkout
-  session was paid, when the customer didn't return to the success page
+title: OnPaidBasketClearedNotification
+description: Notification which is triggered after a Basket is cleared because its checkout session was paid, when the customer didn't return to the success page
 ---
-
-# OnPaidBasketClearedNotification
 
 The following properties are available within the notification
 

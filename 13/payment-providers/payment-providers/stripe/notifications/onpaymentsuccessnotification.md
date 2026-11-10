@@ -1,10 +1,7 @@
 ---
-description: >-
-  Notification which is triggered on the Stripe
-  CheckoutSessionAsyncPaymentSucceeded Webhook response
+title: OnPaymentSuccessNotification
+description: Notification which is triggered on the Stripe CheckoutSessionAsyncPaymentSucceeded Webhook response
 ---
-
-# OnPaymentSuccessNotification
 
 The following properties are available within the notification
 
