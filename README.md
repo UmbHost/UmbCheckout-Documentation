@@ -43,6 +43,14 @@ The docs used to be on GitBook, which served v13 without a version in the URL (`
 
 When a page moves or is renamed, add its old path to `GITBOOK_REDIRECTS` (or to the rules in `redirectRules()`) so links to it keep working.
 
+## AI assistants (MCP and llms.txt)
+
+As on the UmbHost knowledgebase, the docs can be searched from AI assistants. The [Using AI Assistants](17/getting-started/ai-assistants.md) page tells readers how to connect.
+
+- **MCP server** at `/mcp` ([`starlight-mcp`](https://www.npmjs.com/package/starlight-mcp)). The build writes every page to `/mcp/docs-index.json` and the tool catalog to `/mcp-schema.json`. `worker/index.ts` answers `/mcp` from that file; `run_worker_first` in `wrangler.jsonc` means the Worker runs for `/mcp` only and every other request is served straight from `dist/`. The server's name and the instructions it gives assistants (which version a path belongs to) are in `mcp.config.mjs`, shared by the build and the Worker. Opening `/mcp` in a browser redirects to the help page.
+- **llms.txt** ([`starlight-llms-txt`](https://www.npmjs.com/package/starlight-llms-txt)): `/llms.txt`, `/llms-full.txt`, `/llms-small.txt`, and one file per version from `versions.mjs`.
+- **Structured data**: every page's head carries schema.org `Organization` and `WebSite` data. There is no analytics and no cookie banner.
+
 ## Building the site
 
 Node 22.12 or later.
@@ -84,7 +92,7 @@ It reports links that don't resolve, anchors that don't exist, `broken-reference
 
 ### Owner setup
 
-Cloudflare (Workers with static assets, connected to this repository) pulls each push, builds the site and serves `dist/` as `wrangler.jsonc` describes. Node 22 comes from `.node-version`.
+Cloudflare (Workers with static assets, connected to this repository) pulls each push, builds the site and serves `dist/` as `wrangler.jsonc` describes, with the small `/mcp` Worker in `worker/index.ts`. Node 22 comes from `.node-version`.
 
 - [ ] In Cloudflare, create the application from Git: `UmbHost/UmbCheckout-Documentation`, project name `umbcheckout-documentation`, production branch `master`.
 - [ ] Build command `npm run build`; deploy command `npx wrangler deploy`; preview builds on.

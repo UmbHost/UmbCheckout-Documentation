@@ -6,9 +6,14 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
+import starlightLlmsTxt from 'starlight-llms-txt';
+import starlightMcp from 'starlight-mcp';
 import { versions, latestVersion } from './versions.mjs';
+import { MCP } from './mcp.config.mjs';
 
 const SITE = 'https://docs.umbcheckout.net';
+const SITE_DESCRIPTION =
+	'Documentation for UmbCheckout, an eCommerce package for Umbraco CMS integrated with Stripe Checkout.';
 const ROOT = fileURLToPath(new URL('./', import.meta.url));
 
 /** Page file (relative to the repo root, e.g. 17/x.md) to site URL path. README.md is a folder index. */
@@ -140,6 +145,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'UmbCheckout Documentation',
+			description: SITE_DESCRIPTION,
 			titleDelimiter: '-',
 			markdown: { processedDirs: versions.map((v) => v.folder) },
 			// GitBook pages tag Razor views as cshtml.
@@ -169,11 +175,57 @@ export default defineConfig({
 				{ icon: 'mastodon', label: 'Mastodon', href: 'https://umbracocommunity.social/@UmbHost' },
 				{ icon: 'blueSky', label: 'Bluesky', href: 'https://bsky.app/profile/umbhost.net' },
 			],
-			head: [{ tag: 'link', attrs: { rel: 'sitemap', href: '/sitemap-index.xml' } }],
+			head: [
+				{ tag: 'link', attrs: { rel: 'sitemap', href: '/sitemap-index.xml' } },
+				{
+					tag: 'script',
+					attrs: { type: 'application/ld+json' },
+					content: JSON.stringify([
+						{
+							'@context': 'https://schema.org',
+							'@type': 'Organization',
+							name: 'UmbHost Limited',
+							url: 'https://umbhost.net',
+							logo: `${SITE}/umbhost-logo-no-slogon.svg`,
+						},
+						{
+							'@context': 'https://schema.org',
+							'@type': 'WebSite',
+							name: 'UmbCheckout Documentation',
+							url: SITE,
+							description: SITE_DESCRIPTION,
+							publisher: { '@type': 'Organization', name: 'UmbHost Limited', url: 'https://umbhost.net' },
+						},
+					]),
+				},
+			],
+			plugins: [
+				starlightLlmsTxt({
+					projectName: 'UmbCheckout',
+					description: SITE_DESCRIPTION,
+					details: [
+						'There is one set of pages per version. Paths starting `/17/` document UmbCheckout 17 for Umbraco 17 (the latest);',
+						'paths starting `/13/` document UmbCheckout 1.x for Umbraco 13. Use the version the reader\'s site runs.',
+						'',
+						'An MCP server is available for structured search of these docs:',
+						'',
+						`- Endpoint: ${SITE}/mcp (streamable HTTP)`,
+						`- Claude Code: \`claude mcp add --transport http ${MCP.serverName} ${SITE}/mcp\``,
+						`- Tool catalog: ${SITE}/mcp-schema.json`,
+					].join('\n'),
+					customSets: versions.map((v) => ({
+						label: v.label,
+						description: `the documentation for ${v.label}${v.latest ? ' (the latest version)' : ''}`,
+						paths: [`${v.id}/**`],
+					})),
+					promote: [`${latestVersion.id}/**`],
+				}),
+			],
 			// One group per version; src/routeData.ts shows only the current version's entries.
 			sidebar: versions.map((v) => ({ label: v.id, items: sidebarFromSummary(v) })),
 			routeMiddleware: './src/routeData.ts',
 		}),
+		starlightMcp(MCP),
 		sitemap(),
 		{
 			// Cloudflare serves _redirects for static assets: a real redirect beats the HTML redirect page.
@@ -181,6 +233,22 @@ export default defineConfig({
 			hooks: {
 				'astro:build:done': ({ dir }) => {
 					fs.writeFileSync(path.join(fileURLToPath(dir), '_redirects'), redirectRules().join('\n') + '\n');
+				},
+			},
+		},
+		{
+			// A folder's README.md has the id <folder>/index, but its page is served at <folder>/.
+			// starlight-mcp builds each result's path and URL from the id, so point them at the page.
+			name: 'mcp-index-urls',
+			hooks: {
+				'astro:build:done': ({ dir }) => {
+					const file = path.join(fileURLToPath(dir), 'mcp', 'docs-index.json');
+					const docs = JSON.parse(fs.readFileSync(file, 'utf8'));
+					for (const doc of docs) {
+						doc.path = doc.path.replace(/\/index$/, '');
+						doc.url = doc.url.replace(/\/index\/$/, '/');
+					}
+					fs.writeFileSync(file, JSON.stringify(docs));
 				},
 			},
 		},

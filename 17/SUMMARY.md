@@ -16,6 +16,7 @@
   * [Stripe](getting-started/starter-kits/stripe/README.md)
     * [Installation](getting-started/starter-kits/stripe/installation.md)
 * [Anonymous Telemetry](getting-started/anonymous-telemetry.md)
+* [Using AI Assistants](getting-started/ai-assistants.md)
 * [Development Licenses and Development Mode](getting-started/developer-license.md)
 * [Affiliate Scheme](getting-started/affiliate-scheme.md)
 * [Buy a License](https://umbcheckout.net)
