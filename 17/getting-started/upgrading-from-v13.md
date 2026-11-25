@@ -45,7 +45,7 @@ These affect code that calls UmbCheckout's services. Members that were removed a
 | `BasketAdd.CurrencyCode`                                                                                                   | Removed: the currency is decided on the server                                                                                                                    |
 | `StripeWebhookApiController` was an `UmbracoApiController`                                                                 | A plain ASP.NET Core controller with the route `umbraco/api/stripewebhookapi`; see [replacing the webhook controller](../payment-providers/payment-providers/stripe/services/stripe-webhook-api/README.md#replacing-the-webhook-controller) |
 
-**Obsolete, still working** (scheduled for removal in 17.1, [UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)):
+**Obsolete, still working** (scheduled for removal in 17.3, [UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)):
 
 * `IStripeSessionService.GetSession`, `CreateSession` and `ClearSession`: they block a thread. Use the `…Async` methods with a `CancellationToken`.
 * `LicenseService.RunLicenseCheck`: the license is checked in the background. Read `UmbCheckoutSettings.IsLicensed`, or call `RequestCheck`.
