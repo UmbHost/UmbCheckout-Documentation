@@ -50,7 +50,7 @@ The status in brackets says why. The banner is never shown:
 The UmbCheckout screens in the backoffice show "UmbCheckout is running in unlicensed mode, please purchase a license to support development" when the site isn't licensed:
 
 * with a paid add-on installed, it is a red alert;
-* without one, nothing needs a license, so it is a blue information bar asking you to support development. This includes `localhost`: development mode needs the Stripe add-on.
+* without one, nothing needs a license, so it is a blue information bar asking you to support development. This includes `localhost`: development mode applies only with a paid add-on installed.
 
 A licensed site, or one in development mode, shows neither.
 

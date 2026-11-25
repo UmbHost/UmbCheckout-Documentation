@@ -7,7 +7,7 @@ UmbCheckout 17 keeps the screens, settings, data and front-end of UmbCheckout 1.
 
 ### Steps
 
-1. **Upgrade the site to Umbraco 17.6 or later and .NET 10**, following [Umbraco's upgrade guide](https://docs.umbraco.com/umbraco-cms/fundamentals/setup/upgrading).
+1. **Upgrade the site to Umbraco 17.8 or later and .NET 10**, following [Umbraco's upgrade guide](https://docs.umbraco.com/umbraco-cms/fundamentals/setup/upgrading).
 2. **Update every UmbCheckout package to 17.x**: `UmbCheckout`, `UmbCheckout.Stripe` and any of `UmbCheckout.uSync`, `UmbCheckout.Stripe.uSync`, `UmbCheckout.Stripe.Forms`, `UmbCheckout.Core.Addons`, `UmbCheckout.Stripe.Addons` and `UmbCheckout.Stripe.Addons.uSync` that you use.
 3. **Get an UmbCheckout 17 license** if you use the licensed features. UmbCheckout 17 is licensed by subscription, per production domain and per running instance (see [Licensing](licensing.md)). Put the new key in `UmbCheckout:LicenseKey`. Deploy while the license server can be reached: the first check after the upgrade always asks it.
 4. **Remove `app.UseSession()`** from `Program.cs` if you like. UmbCheckout adds the session middleware itself, and an existing call is harmless.

@@ -3,7 +3,7 @@ title: Installation
 description: Installing UmbCheckout
 ---
 
-**UmbCheckout 17 supports Umbraco 17.6 or later, on .NET 10.**
+**UmbCheckout 17 supports Umbraco 17.8 or later, on .NET 10.** (UmbCheckout 17.0 and 17.1: Umbraco 17.6 or later.)
 
 :::note
 Upgrading a site from Umbraco 13? Read [Upgrading from v13](upgrading-from-v13.md) first.

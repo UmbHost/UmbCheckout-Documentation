@@ -9,7 +9,7 @@ To move a site from Umbraco 13, see [Upgrading from v13](upgrading-from-v13.md).
 
 ### Umbraco 17 and .NET 10
 
-* Requires Umbraco 17.6 or later and .NET 10.
+* Requires Umbraco 17.8 or later (17.6 for UmbCheckout 17.0 and 17.1) and .NET 10.
 * The backoffice screens are rebuilt for Umbraco 17's backoffice, with the same layout, fields and messages as in v13. They are under **Settings → UmbCheckout**; the payments, invoices and refunds screens are in the **UmbCheckout** section.
 * Data is stored with Entity Framework Core, on SQL Server or SQLite. An existing database is adopted on first start: no data is copied or lost.
 * You no longer need `app.UseSession()` in `Program.cs`.

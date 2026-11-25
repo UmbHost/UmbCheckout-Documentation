@@ -21,7 +21,7 @@ You can see the UmbCheckout demo here:
 
 The minimum requirements for using UmbCheckout are:
 
-* Umbraco 17.6 or later
+* Umbraco 17.8 or later
 * .NET 10
 * SQL Server or SQLite Database
 * Stripe Account
