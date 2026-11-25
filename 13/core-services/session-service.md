@@ -8,7 +8,7 @@ The session service is what creates and handles the creation, retrieval, updatin
 You can access the session service by injecting `ISessionService` which can be found within the namespace`UmbCheckout.Core.Interfaces`
 
 :::note
-Every method also has an overload that takes a `CancellationToken` as its last parameter. Call that one: the overloads without a token are `[Obsolete]`, scheduled for removal in 17.1. See [Cancellation Tokens](cancellation-tokens.md). If you mock or decorate this service, set up or override the token overloads too: UmbCheckout calls those.
+Every method also has an overload that takes a `CancellationToken` as its last parameter. Call that one: the overloads without a token are `[Obsolete]`, scheduled for removal in 17.3. See [Cancellation Tokens](cancellation-tokens.md). If you mock or decorate this service, set up or override the token overloads too: UmbCheckout calls those.
 :::
 
 #### Get

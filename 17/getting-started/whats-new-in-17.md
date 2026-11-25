@@ -9,7 +9,7 @@ To move a site from Umbraco 13, see [Upgrading from v13](upgrading-from-v13.md).
 
 ### Umbraco 17 and .NET 10
 
-* Requires Umbraco 17.6 or later and .NET 10.
+* Requires Umbraco 17.8 or later (17.6 for UmbCheckout 17.0 and 17.1) and .NET 10.
 * The backoffice screens are rebuilt for Umbraco 17's backoffice, with the same layout, fields and messages as in v13. They are under **Settings → UmbCheckout**; the payments, invoices and refunds screens are in the **UmbCheckout** section.
 * Data is stored with Entity Framework Core, on SQL Server or SQLite. An existing database is adopted on first start: no data is copied or lost.
 * You no longer need `app.UseSession()` in `Program.cs`.
@@ -71,5 +71,5 @@ See [Upgrading from v13](upgrading-from-v13.md#breaking-changes) for the API cha
 * **Stripe errors:** a key Stripe rejects shows a fixed message that never includes the key. A Stripe timeout is logged as a warning, a request the customer or editor abandoned ends quietly, and a refund always completes.
 * **Licensed add-ons:** the cookie-clear handler and the tax rate uSync items need a license.
 * **Telemetry:** the `installedPackages` list is sent. See [Anonymous Telemetry](anonymous-telemetry.md).
-* **Obsolete members:** the overloads without a `CancellationToken`, the blocking `IStripeSessionService` methods and the replaced constructors are `[Obsolete]`, scheduled for removal in 17.1 ([UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)). See [Upgrading from v13](upgrading-from-v13.md#breaking-changes).
+* **Obsolete members:** the overloads without a `CancellationToken`, the blocking `IStripeSessionService` methods and the replaced constructors are `[Obsolete]`, scheduled for removal in 17.3 ([UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)). See [Upgrading from v13](upgrading-from-v13.md#breaking-changes).
 * **New public members:** `IPaidCheckoutSessions`, `OnPaidBasketClearedNotification`, `SettingsCache<TEntity>`, `StripeKeyRejection`, and `ClaimAsync` and token overloads of `CompleteAsync` and `ForgetAsync` on `IStripeWebhookEventStore`. See [Extending UmbCheckout](../core-services/extending-umbcheckout.md).

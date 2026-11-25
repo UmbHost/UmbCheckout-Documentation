@@ -58,7 +58,7 @@ When the site isn't licensed, the UmbCheckout configuration and shipping rate sc
 
 ### Development mode
 
-On your own machine, licensed features work without a license key, and the license status reads **Development**. This needs all of these:
+On your own machine, licensed features work without a license key, and the license status reads **Development**. Either paid add-on is enough (before UmbCheckout 1.6.1 it needed the Stripe add-on). This needs all of these:
 
 * the site's address is local: `localhost`, a `*.localhost` or `*.local` name, or a loopback address;
 * the site is a **Debug build** and runs in the **`Development` environment** (`ASPNETCORE_ENVIRONMENT=Development`);

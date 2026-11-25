@@ -18,7 +18,7 @@ The latest UmbCheckout 1.x update brings the fixes made for UmbCheckout 17 to Um
 
 ### Obsolete members
 
-These still work, but calling one gives a compiler warning that names the replacement. They are scheduled for removal in 17.1 ([UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)).
+These still work, but calling one gives a compiler warning that names the replacement. They are scheduled for removal in 17.3 ([UmbHost/UmbCheckout#108](https://github.com/UmbHost/UmbCheckout/issues/108)).
 
 * The overloads without a `CancellationToken`. Use the overload that takes a `CancellationToken` as its last parameter (pass `CancellationToken.None` if you have no token). See [Cancellation Tokens](../core-services/cancellation-tokens.md).
   * `ISessionService` (and `SessionService`): `Get`, `Update` and `Clear`, every overload.
